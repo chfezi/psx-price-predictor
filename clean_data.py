@@ -60,14 +60,17 @@ def clean_stock_data(input_path, output_path):
     errors = 0
 
     # Check High >= Low
-    if (df["High"] < df["Low"]).any():
-        print(f"  WARNING: {(df['High'] < df['Low']).sum()} rows have High < Low")
+    bad_high_low = df["High"] < df["Low"]
+    if bad_high_low.any():
+        print(f"  WARNING: {bad_high_low.sum()} rows have High < Low, dropping them")
+        df = df[~bad_high_low]
         errors += 1
 
     # Check Close within High-Low range
     impossible_close = (df["Close"] > df["High"]) | (df["Close"] < df["Low"])
     if impossible_close.any():
-        print(f"  WARNING: {impossible_close.sum()} rows have Close outside High-Low range")
+        print(f"  WARNING: {impossible_close.sum()} rows have Close outside High-Low range, dropping them")
+        df = df[~impossible_close]
         errors += 1
 
     # Check negative prices

@@ -1,9 +1,9 @@
 Model,Target,MAE,RMSE,MAPE,R2,Accuracy_%
-Random Forest,High,13.0,79.75,1.54,0.9967,98.46
-Linear Regression,High,11.12,54.28,2.26,0.9985,97.74
-XGBoost,High,29.56,158.26,2.69,0.9871,97.31
-LSTM,High,31.71,114.74,10.59,0.9929,89.41
-Random Forest,Low,13.16,81.8,1.51,0.9964,98.49
-Linear Regression,Low,9.9,49.16,2.21,0.9987,97.79
-XGBoost,Low,27.41,144.06,2.62,0.9887,97.38
-LSTM,Low,26.04,105.62,9.0,0.9936,91.0
+Random Forest,High,11.29,58.34,1.53,0.9982,98.47
+Linear Regression,High,9.19,51.34,1.76,0.9986,98.24
+XGBoost,High,21.94,114.34,2.07,0.9932,97.93
+LSTM,High,27.89,103.24,8.93,0.9942,91.07
+Random Forest,Low,11.87,59.1,1.51,0.9981,98.49
+Linear Regression,Low,8.62,48.0,1.76,0.9987,98.24
+XGBoost,Low,21.23,108.08,2.07,0.9936,97.93
+LSTM,Low,29.69,103.17,11.44,0.9939,88.56
