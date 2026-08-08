@@ -26,8 +26,8 @@ MODELS_DIR = BASE_DIR / "models"
 # Release the first time the app runs. Fill these in after creating the
 # release (see README / setup instructions).
 MODEL_DOWNLOAD_URLS = {
-    "rf_high.pkl": "",
-    "rf_low.pkl": "",
+    "rf_high.pkl": "https://github.com/chfezi/psx-price-predictor/releases/download/v1.0-models/rf_high.pkl",
+    "rf_low.pkl": "https://github.com/chfezi/psx-price-predictor/releases/download/v1.0-models/rf_low.pkl",
 }
 
 
