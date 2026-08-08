@@ -66,6 +66,24 @@ PSX_HOLIDAYS_2026 = [
     "2026-02-05", "2026-03-23", "2026-05-01", "2026-08-14", "2026-12-25",
 ]
 
+LSTM_WINDOW_SIZE = 30
+
+
+def get_model_input(ticker_df, latest_row, model_name, scaler):
+    if model_name == "LSTM":
+        seq = ticker_df.tail(LSTM_WINDOW_SIZE)[FEATURE_COLUMNS]
+        seq_scaled = scaler.transform(seq)
+        return seq_scaled.reshape(1, LSTM_WINDOW_SIZE, len(FEATURE_COLUMNS))
+    if model_name == "Linear Regression":
+        return scaler.transform(latest_row[FEATURE_COLUMNS])
+    return latest_row[FEATURE_COLUMNS]
+
+
+def get_prediction(model, model_name, model_input):
+    if model_name == "LSTM":
+        return float(model.predict(model_input, verbose=0)[0][0])
+    return float(model.predict(model_input)[0])
+
 
 @st.cache_data
 def load_master_data():
@@ -82,6 +100,7 @@ def load_per_stock_comparison():
 @st.cache_resource
 def load_models():
     import xgboost as xgb
+    from tensorflow.keras.models import load_model
 
     xgb_high = xgb.XGBRegressor()
     xgb_high.load_model(str(MODELS_DIR / "xgb_high.json"))
@@ -101,10 +120,14 @@ def load_models():
     with open(MODELS_DIR / "feature_scaler.pkl", "rb") as f:
         scaler = pickle.load(f)
 
+    lstm_high = load_model(str(MODELS_DIR / "lstm_high.keras"))
+    lstm_low = load_model(str(MODELS_DIR / "lstm_low.keras"))
+
     return {
         "XGBoost": {"High": xgb_high, "Low": xgb_low},
         "Random Forest": {"High": rf_high, "Low": rf_low},
         "Linear Regression": {"High": lr_high, "Low": lr_low},
+        "LSTM": {"High": lstm_high, "Low": lstm_low},
         "scaler": scaler,
     }
 
@@ -178,13 +201,14 @@ def predict_for_ticker(ticker, override_high_model=None, override_low_model=None
         (stock_comparison["Target"] == "Target_Low") & (stock_comparison["Model"] == low_model_name)
     ]["Accuracy_%"].values[0]
 
-    # Linear Regression was fit on scaler-transformed features; the tree
-    # models were fit on raw features and must not be scaled here.
-    X_high_input = model_map["scaler"].transform(X_latest) if high_model_name == "Linear Regression" else X_latest
-    X_low_input = model_map["scaler"].transform(X_latest) if low_model_name == "Linear Regression" else X_latest
+    # Linear Regression and LSTM were fit on scaler-transformed features; the
+    # tree models were fit on raw features and must not be scaled here. LSTM
+    # additionally needs the last 30 days as a sequence, not a single row.
+    X_high_input = get_model_input(ticker_df, latest_row, high_model_name, model_map["scaler"])
+    X_low_input = get_model_input(ticker_df, latest_row, low_model_name, model_map["scaler"])
 
-    predicted_high = model_map[high_model_name]["High"].predict(X_high_input)[0]
-    predicted_low = model_map[low_model_name]["Low"].predict(X_low_input)[0]
+    predicted_high = get_prediction(model_map[high_model_name]["High"], high_model_name, X_high_input)
+    predicted_low = get_prediction(model_map[low_model_name]["Low"], low_model_name, X_low_input)
 
     if predicted_low > predicted_high:
         predicted_low, predicted_high = predicted_high, predicted_low
@@ -262,8 +286,8 @@ with col2:
     st.caption(f"As of {pd.Timestamp(result['latest_date']).date()}")
 
 with col3:
-    st.metric("Model Used (High)", result["high_model_used"], f"{result['high_accuracy']}% accuracy")
-    st.metric("Model Used (Low)", result["low_model_used"], f"{result['low_accuracy']}% accuracy")
+    st.metric("Model Used (High)", result["high_model_used"])
+    st.metric("Model Used (Low)", result["low_model_used"])
 
 st.divider()
 
@@ -297,27 +321,3 @@ fig.add_trace(go.Scatter(
 
 fig.update_layout(height=450, hovermode="x unified", legend=dict(orientation="h", y=1.1))
 st.plotly_chart(fig, use_container_width=True)
-
-st.divider()
-
-# --- Model Comparison, Side by Side (High vs Low) ---
-st.subheader(f"Model Accuracy Comparison - {selected_ticker}")
-st.caption(
-    "\"Naive Baseline\" makes no prediction at all — it just repeats today's "
-    "price as tomorrow's. Stock prices barely move day to day, so this scores "
-    "surprisingly high too; a model is only genuinely useful where it beats it."
-)
-
-stock_comparison = comparison_df[comparison_df["Ticker"] == selected_ticker]
-
-col_a, col_b = st.columns(2)
-
-with col_a:
-    st.write("**Predicting High**")
-    high_comp = stock_comparison[stock_comparison["Target"] == "Target_High"][["Model", "MAE", "Accuracy_%"]]
-    st.dataframe(high_comp.sort_values("Accuracy_%", ascending=False), hide_index=True, use_container_width=True)
-
-with col_b:
-    st.write("**Predicting Low**")
-    low_comp = stock_comparison[stock_comparison["Target"] == "Target_Low"][["Model", "MAE", "Accuracy_%"]]
-    st.dataframe(low_comp.sort_values("Accuracy_%", ascending=False), hide_index=True, use_container_width=True)
