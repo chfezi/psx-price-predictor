@@ -160,8 +160,12 @@ def predict_for_ticker(ticker, override_high_model=None, override_low_model=None
 
     stock_comparison = comparison_df[comparison_df["Ticker"] == ticker]
 
-    best_high_row = stock_comparison[stock_comparison["Target"] == "Target_High"].sort_values("Accuracy_%", ascending=False).iloc[0]
-    best_low_row = stock_comparison[stock_comparison["Target"] == "Target_Low"].sort_values("Accuracy_%", ascending=False).iloc[0]
+    # "Naive Baseline" (predict tomorrow = today) is shown for comparison but
+    # isn't a loadable model, so it's excluded when picking the auto-selected
+    # "best" model even if it happens to score highest for this stock/target.
+    selectable_comparison = stock_comparison[stock_comparison["Model"] != "Naive Baseline"]
+    best_high_row = selectable_comparison[selectable_comparison["Target"] == "Target_High"].sort_values("Accuracy_%", ascending=False).iloc[0]
+    best_low_row = selectable_comparison[selectable_comparison["Target"] == "Target_Low"].sort_values("Accuracy_%", ascending=False).iloc[0]
 
     high_model_name = override_high_model if override_high_model else best_high_row["Model"]
     low_model_name = override_low_model if override_low_model else best_low_row["Model"]
@@ -298,6 +302,11 @@ st.divider()
 
 # --- Model Comparison, Side by Side (High vs Low) ---
 st.subheader(f"Model Accuracy Comparison - {selected_ticker}")
+st.caption(
+    "\"Naive Baseline\" makes no prediction at all — it just repeats today's "
+    "price as tomorrow's. Stock prices barely move day to day, so this scores "
+    "surprisingly high too; a model is only genuinely useful where it beats it."
+)
 
 stock_comparison = comparison_df[comparison_df["Ticker"] == selected_ticker]
 
