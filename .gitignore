@@ -1,0 +1,24 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Raw / intermediate pipeline data (regenerable via the pipeline scripts,
+# not needed to run the Streamlit app)
+psx_data_8years/
+processed/
+data/train.csv
+data/test.csv
+data/validate.csv
+data/final_validation.csv
+
+# Large model files fetched at runtime by app.py (see MODEL_DOWNLOAD_URLS)
+models/rf_high.pkl
+models/rf_low.pkl
+
+# Streamlit run artifacts
+streamlit_run.log
+streamlit_stdout.log
+streamlit_stderr.log
