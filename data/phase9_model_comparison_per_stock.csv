@@ -1,0 +1,1251 @@
+Ticker,Model,Target,MAE,MAPE,Horizon,Directional_Accuracy_%,Improvement_over_Naive_%
+BAHL,LSTM,Target_Close,1.6,1.5,1,52.31,-0.95
+BAHL,Random Forest,Target_Close,1.54,1.47,1,51.63,-1.62
+BAHL,Linear Regression,Target_Close,1.54,1.47,1,50.41,-1.69
+BAHL,XGBoost,Target_Close,1.54,1.48,1,49.19,-1.73
+BAHL,GRU,Target_Close,1.65,1.55,1,49.54,-4.48
+BAHL,Random Forest,Target_Open,0.75,0.73,1,59.76,1.03
+BAHL,XGBoost,Target_Open,0.76,0.74,1,55.69,-0.18
+BAHL,Linear Regression,Target_Open,0.76,0.74,1,50.0,-0.42
+BAHL,LSTM,Target_Open,0.81,0.78,1,52.31,-3.01
+BAHL,GRU,Target_Open,0.86,0.82,1,48.61,-9.51
+COLG,Random Forest,Target_Close,10.15,0.77,1,52.85,1.96
+COLG,XGBoost,Target_Close,10.37,0.78,1,56.1,-0.23
+COLG,Linear Regression,Target_Close,10.55,0.8,1,52.44,-1.94
+COLG,LSTM,Target_Close,11.38,0.88,1,44.91,-13.56
+COLG,GRU,Target_Close,11.72,0.91,1,49.54,-16.9
+COLG,Linear Regression,Target_Open,6.71,0.51,1,58.94,-0.43
+COLG,LSTM,Target_Open,6.11,0.48,1,67.13,-0.61
+COLG,Random Forest,Target_Open,6.74,0.51,1,58.54,-0.9
+COLG,XGBoost,Target_Open,6.79,0.51,1,53.25,-1.74
+COLG,GRU,Target_Open,6.86,0.54,1,60.19,-12.92
+DGKC,Linear Regression,Target_Close,1.59,1.92,1,52.03,-0.74
+DGKC,LSTM,Target_Close,1.63,1.94,1,48.61,-1.03
+DGKC,XGBoost,Target_Close,1.59,1.92,1,52.85,-1.05
+DGKC,Random Forest,Target_Close,1.6,1.92,1,49.19,-1.37
+DGKC,GRU,Target_Close,1.65,1.96,1,48.15,-1.99
+DGKC,XGBoost,Target_Open,0.42,0.52,1,74.8,19.85
+DGKC,Random Forest,Target_Open,0.43,0.53,1,77.24,18.3
+DGKC,LSTM,Target_Open,0.44,0.53,1,74.07,16.79
+DGKC,Linear Regression,Target_Open,0.45,0.55,1,65.45,15.01
+DGKC,GRU,Target_Open,0.5,0.61,1,64.35,4.15
+EFERT,LSTM,Target_Close,2.2,1.26,1,53.7,-0.93
+EFERT,Random Forest,Target_Close,2.2,1.32,1,43.5,-2.02
+EFERT,Linear Regression,Target_Close,2.24,1.34,1,45.12,-3.55
+EFERT,XGBoost,Target_Close,2.24,1.35,1,41.06,-3.94
+EFERT,GRU,Target_Close,2.27,1.3,1,44.44,-4.2
+EFERT,Random Forest,Target_Open,0.65,0.39,1,62.6,1.81
+EFERT,Linear Regression,Target_Open,0.65,0.39,1,58.13,1.38
+EFERT,XGBoost,Target_Open,0.66,0.39,1,58.94,-0.1
+EFERT,LSTM,Target_Open,0.74,0.43,1,62.04,-7.98
+EFERT,GRU,Target_Open,0.81,0.48,1,46.3,-17.37
+ENGROH,Linear Regression,Target_Close,2.39,1.51,1,50.81,1.64
+ENGROH,Random Forest,Target_Close,2.43,1.55,1,51.22,-0.14
+ENGROH,LSTM,Target_Close,2.67,1.65,1,48.15,-1.2
+ENGROH,XGBoost,Target_Close,2.48,1.58,1,50.41,-2.05
+ENGROH,GRU,Target_Close,2.71,1.68,1,47.69,-2.75
+ENGROH,Linear Regression,Target_Open,1.38,0.87,1,56.1,7.26
+ENGROH,Random Forest,Target_Open,1.45,0.91,1,45.53,2.22
+ENGROH,LSTM,Target_Open,1.56,0.95,1,56.48,1.66
+ENGROH,XGBoost,Target_Open,1.47,0.92,1,52.44,1.36
+ENGROH,GRU,Target_Open,1.7,1.04,1,46.3,-6.92
+FFC,LSTM,Target_Close,3.85,1.73,1,56.48,0.63
+FFC,Linear Regression,Target_Close,3.51,1.61,1,53.25,-0.4
+FFC,Random Forest,Target_Close,3.53,1.62,1,52.85,-0.86
+FFC,GRU,Target_Close,3.99,1.78,1,52.31,-2.99
+FFC,XGBoost,Target_Close,3.64,1.66,1,54.47,-4.09
+FFC,Linear Regression,Target_Open,0.91,0.45,1,65.85,7.59
+FFC,LSTM,Target_Open,0.98,0.47,1,70.37,7.41
+FFC,XGBoost,Target_Open,0.98,0.48,1,68.29,0.87
+FFC,Random Forest,Target_Open,1.1,0.51,1,59.76,-11.91
+FFC,GRU,Target_Open,1.36,0.61,1,43.06,-28.99
+HBL,XGBoost,Target_Close,1.75,1.33,1,52.85,5.21
+HBL,Random Forest,Target_Close,1.77,1.34,1,58.13,4.12
+HBL,Linear Regression,Target_Close,1.82,1.37,1,57.32,1.57
+HBL,LSTM,Target_Close,2.0,1.49,1,48.15,-2.04
+HBL,GRU,Target_Close,2.04,1.52,1,56.94,-4.09
+HBL,Random Forest,Target_Open,0.58,0.45,1,60.57,3.13
+HBL,XGBoost,Target_Open,0.59,0.46,1,60.16,0.87
+HBL,Linear Regression,Target_Open,0.59,0.46,1,60.98,0.77
+HBL,LSTM,Target_Open,0.63,0.48,1,58.8,-7.36
+HBL,GRU,Target_Open,0.64,0.49,1,53.7,-10.05
+HUBC,LSTM,Target_Close,2.19,1.7,1,51.85,-0.52
+HUBC,Random Forest,Target_Close,2.09,1.63,1,42.28,-2.05
+HUBC,Linear Regression,Target_Close,2.09,1.64,1,43.9,-2.21
+HUBC,XGBoost,Target_Close,2.14,1.68,1,47.97,-4.65
+HUBC,GRU,Target_Close,2.28,1.78,1,50.46,-4.92
+HUBC,Random Forest,Target_Open,0.61,0.48,1,78.05,15.81
+HUBC,Linear Regression,Target_Open,0.63,0.49,1,71.14,12.72
+HUBC,XGBoost,Target_Open,0.65,0.51,1,71.14,10.11
+HUBC,LSTM,Target_Open,0.66,0.51,1,75.0,9.91
+HUBC,GRU,Target_Open,0.79,0.61,1,59.26,-7.86
+ILP,Random Forest,Target_Close,1.1,1.53,1,50.0,-1.43
+ILP,LSTM,Target_Close,1.13,1.57,1,50.0,-1.84
+ILP,XGBoost,Target_Close,1.12,1.56,1,45.93,-2.95
+ILP,Linear Regression,Target_Close,1.12,1.56,1,44.31,-3.25
+ILP,GRU,Target_Close,1.18,1.64,1,52.78,-6.45
+ILP,Random Forest,Target_Open,0.45,0.62,1,70.33,9.66
+ILP,XGBoost,Target_Open,0.45,0.62,1,67.89,9.3
+ILP,LSTM,Target_Open,0.46,0.63,1,68.06,7.03
+ILP,Linear Regression,Target_Open,0.48,0.66,1,58.94,3.47
+ILP,GRU,Target_Open,0.53,0.73,1,60.65,-6.63
+INDU,Random Forest,Target_Close,14.83,0.87,1,47.15,-4.14
+INDU,Linear Regression,Target_Close,15.02,0.88,1,44.72,-5.46
+INDU,LSTM,Target_Close,14.76,0.84,1,50.0,-6.04
+INDU,XGBoost,Target_Close,15.35,0.9,1,47.97,-7.79
+INDU,GRU,Target_Close,16.63,0.95,1,49.07,-19.54
+INDU,LSTM,Target_Open,17.96,1.02,1,70.83,4.38
+INDU,GRU,Target_Open,18.99,1.08,1,55.09,-1.1
+INDU,Linear Regression,Target_Open,18.33,1.06,1,43.5,-2.63
+INDU,XGBoost,Target_Open,18.57,1.07,1,60.98,-3.97
+INDU,Random Forest,Target_Open,18.82,1.08,1,59.76,-5.33
+LUCK,Linear Regression,Target_Close,11.94,1.31,1,49.19,0.01
+LUCK,GRU,Target_Close,12.72,1.38,1,50.93,-0.35
+LUCK,LSTM,Target_Close,12.75,1.38,1,50.93,-0.57
+LUCK,XGBoost,Target_Close,12.05,1.32,1,55.69,-0.93
+LUCK,Random Forest,Target_Close,12.16,1.33,1,52.85,-1.8
+LUCK,LSTM,Target_Open,4.83,0.54,1,72.22,7.21
+LUCK,XGBoost,Target_Open,4.71,0.53,1,69.11,6.61
+LUCK,Random Forest,Target_Open,4.72,0.53,1,72.36,6.42
+LUCK,Linear Regression,Target_Open,4.87,0.55,1,58.94,3.36
+LUCK,GRU,Target_Open,5.41,0.6,1,61.57,-3.83
+MARI,Random Forest,Target_Close,42.91,4.89,1,56.5,2.17
+MARI,XGBoost,Target_Close,43.78,5.03,1,50.0,0.19
+MARI,LSTM,Target_Close,43.56,5.41,1,56.48,-0.99
+MARI,GRU,Target_Close,47.27,6.02,1,51.85,-9.59
+MARI,Linear Regression,Target_Close,49.38,6.27,1,56.5,-12.59
+MARI,LSTM,Target_Open,27.28,4.39,1,66.2,-0.26
+MARI,GRU,Target_Open,32.48,4.72,1,62.04,-19.34
+MARI,Linear Regression,Target_Open,30.44,4.74,1,46.34,-20.27
+MARI,XGBoost,Target_Open,32.73,4.1,1,39.84,-29.31
+MARI,Random Forest,Target_Open,33.39,4.09,1,38.21,-31.91
+MCB,Random Forest,Target_Close,2.95,1.28,1,51.63,0.41
+MCB,Linear Regression,Target_Close,2.96,1.28,1,52.85,0.15
+MCB,XGBoost,Target_Close,2.96,1.28,1,56.91,0.11
+MCB,LSTM,Target_Close,3.24,1.39,1,52.31,-0.3
+MCB,GRU,Target_Close,3.34,1.43,1,50.46,-3.29
+MCB,LSTM,Target_Open,1.38,0.61,1,64.35,3.99
+MCB,Random Forest,Target_Open,1.36,0.61,1,64.23,0.93
+MCB,XGBoost,Target_Open,1.36,0.61,1,64.23,0.6
+MCB,Linear Regression,Target_Open,1.39,0.62,1,54.88,-1.82
+MCB,GRU,Target_Open,1.56,0.68,1,55.09,-8.14
+MEBL,Random Forest,Target_Close,2.84,1.29,1,56.1,2.73
+MEBL,Linear Regression,Target_Close,2.9,1.32,1,53.66,0.62
+MEBL,XGBoost,Target_Close,2.9,1.32,1,56.91,0.5
+MEBL,LSTM,Target_Close,3.13,1.38,1,48.61,-2.4
+MEBL,GRU,Target_Close,3.19,1.4,1,50.46,-4.42
+MEBL,Random Forest,Target_Open,1.0,0.47,1,65.45,5.53
+MEBL,XGBoost,Target_Open,1.01,0.47,1,64.63,4.91
+MEBL,Linear Regression,Target_Open,1.04,0.48,1,59.76,2.15
+MEBL,LSTM,Target_Open,1.05,0.47,1,64.81,0.78
+MEBL,GRU,Target_Open,1.21,0.54,1,49.07,-14.4
+MLCF,XGBoost,Target_Close,0.67,1.72,1,52.03,-0.16
+MLCF,Random Forest,Target_Close,0.68,1.73,1,50.81,-0.66
+MLCF,Linear Regression,Target_Close,0.68,1.75,1,51.63,-1.65
+MLCF,GRU,Target_Close,0.73,1.86,1,50.93,-2.11
+MLCF,LSTM,Target_Close,0.73,1.86,1,43.98,-2.35
+MLCF,XGBoost,Target_Open,0.2,0.52,1,68.29,12.52
+MLCF,Random Forest,Target_Open,0.2,0.52,1,68.29,11.46
+MLCF,Linear Regression,Target_Open,0.2,0.53,1,65.85,9.96
+MLCF,LSTM,Target_Open,0.21,0.54,1,67.13,8.95
+MLCF,GRU,Target_Open,0.22,0.56,1,62.96,3.87
+NESTLE,Linear Regression,Target_Close,75.04,1.03,1,50.94,-1.81
+NESTLE,Random Forest,Target_Close,75.25,1.03,1,50.0,-2.1
+NESTLE,XGBoost,Target_Close,75.49,1.03,1,53.3,-2.42
+NESTLE,LSTM,Target_Close,68.74,0.97,1,44.51,-7.28
+NESTLE,GRU,Target_Close,77.95,1.1,1,53.3,-21.65
+NESTLE,LSTM,Target_Open,83.88,1.19,1,50.0,-3.21
+NESTLE,Random Forest,Target_Open,95.75,1.32,1,56.13,-3.88
+NESTLE,Linear Regression,Target_Open,98.23,1.36,1,52.36,-6.57
+NESTLE,XGBoost,Target_Open,103.31,1.42,1,51.89,-12.08
+NESTLE,GRU,Target_Open,97.59,1.38,1,47.8,-20.07
+NETSOL,Linear Regression,Target_Close,2.71,2.11,1,46.75,-0.56
+NETSOL,Random Forest,Target_Close,2.72,2.12,1,52.44,-0.84
+NETSOL,LSTM,Target_Close,2.85,2.16,1,48.61,-0.87
+NETSOL,XGBoost,Target_Close,2.75,2.14,1,51.22,-2.1
+NETSOL,GRU,Target_Close,3.0,2.27,1,42.59,-6.35
+NETSOL,Random Forest,Target_Open,0.89,0.7,1,76.83,18.05
+NETSOL,XGBoost,Target_Open,0.9,0.71,1,75.2,16.43
+NETSOL,Linear Regression,Target_Open,0.94,0.74,1,65.45,13.16
+NETSOL,LSTM,Target_Open,0.97,0.75,1,78.7,13.12
+NETSOL,GRU,Target_Open,1.18,0.9,1,59.72,-5.15
+OGDC,Random Forest,Target_Close,2.85,1.89,1,51.63,-0.26
+OGDC,LSTM,Target_Close,2.66,1.74,1,50.93,-0.39
+OGDC,Linear Regression,Target_Close,2.87,1.91,1,50.81,-1.22
+OGDC,XGBoost,Target_Close,2.94,1.95,1,48.37,-3.42
+OGDC,GRU,Target_Close,2.77,1.8,1,43.98,-4.53
+OGDC,Linear Regression,Target_Open,0.81,0.55,1,66.67,10.21
+OGDC,Random Forest,Target_Open,0.82,0.55,1,67.89,9.12
+OGDC,XGBoost,Target_Open,0.83,0.56,1,69.92,8.15
+OGDC,LSTM,Target_Open,0.77,0.51,1,69.91,5.01
+OGDC,GRU,Target_Open,0.82,0.54,1,65.74,-0.78
+PAKT,LSTM,Target_Close,19.35,1.82,1,49.74,-1.02
+PAKT,Linear Regression,Target_Close,21.54,2.02,1,46.61,-2.79
+PAKT,Random Forest,Target_Close,21.59,2.03,1,54.3,-2.99
+PAKT,XGBoost,Target_Close,21.84,2.06,1,47.51,-4.19
+PAKT,GRU,Target_Close,20.18,1.89,1,49.21,-5.38
+PAKT,LSTM,Target_Open,20.67,2.01,1,56.54,-0.24
+PAKT,XGBoost,Target_Open,23.1,2.24,1,51.58,-0.56
+PAKT,Linear Regression,Target_Open,23.18,2.25,1,49.32,-0.92
+PAKT,GRU,Target_Open,21.64,2.1,1,48.69,-4.97
+PAKT,Random Forest,Target_Open,24.18,2.35,1,42.08,-5.29
+PPL,Linear Regression,Target_Close,2.31,1.76,1,49.59,-0.55
+PPL,LSTM,Target_Close,2.19,1.63,1,50.46,-0.7
+PPL,Random Forest,Target_Close,2.32,1.76,1,52.44,-1.22
+PPL,GRU,Target_Close,2.26,1.67,1,48.61,-4.18
+PPL,XGBoost,Target_Close,2.4,1.82,1,56.1,-4.41
+PPL,LSTM,Target_Open,0.73,0.55,1,76.85,11.19
+PPL,Random Forest,Target_Open,0.79,0.62,1,73.17,10.77
+PPL,XGBoost,Target_Open,0.81,0.63,1,72.76,8.93
+PPL,Linear Regression,Target_Open,0.81,0.64,1,76.83,8.35
+PPL,GRU,Target_Open,0.8,0.61,1,69.91,2.28
+PSO,XGBoost,Target_Close,3.76,1.73,1,53.66,1.94
+PSO,Linear Regression,Target_Close,3.77,1.73,1,54.88,1.75
+PSO,Random Forest,Target_Close,3.78,1.73,1,56.1,1.53
+PSO,LSTM,Target_Close,3.89,1.74,1,54.63,1.2
+PSO,GRU,Target_Close,3.94,1.76,1,50.0,-0.02
+PSO,LSTM,Target_Open,1.1,0.52,1,75.93,16.25
+PSO,Linear Regression,Target_Open,1.14,0.56,1,69.51,14.5
+PSO,Random Forest,Target_Open,1.17,0.56,1,73.98,12.67
+PSO,XGBoost,Target_Open,1.2,0.58,1,72.36,10.51
+PSO,GRU,Target_Open,1.33,0.61,1,62.96,-0.99
+SYS,Linear Regression,Target_Close,6.14,1.31,1,57.32,1.34
+SYS,Random Forest,Target_Close,6.25,1.32,1,54.47,-0.42
+SYS,XGBoost,Target_Close,6.31,1.34,1,54.47,-1.43
+SYS,LSTM,Target_Close,6.8,1.44,1,49.07,-2.42
+SYS,GRU,Target_Close,7.12,1.5,1,50.93,-7.16
+SYS,Linear Regression,Target_Open,2.02,0.44,1,65.85,10.72
+SYS,LSTM,Target_Open,2.16,0.47,1,73.61,8.71
+SYS,Random Forest,Target_Open,2.14,0.46,1,70.73,5.36
+SYS,XGBoost,Target_Open,2.18,0.47,1,67.48,3.58
+SYS,GRU,Target_Open,2.39,0.51,1,69.44,-0.82
+TRG,XGBoost,Target_Close,1.31,2.1,1,57.32,0.71
+TRG,Random Forest,Target_Close,1.32,2.11,1,54.07,0.08
+TRG,Linear Regression,Target_Close,1.32,2.12,1,51.22,-0.1
+TRG,LSTM,Target_Close,1.34,2.2,1,42.59,-2.09
+TRG,GRU,Target_Close,1.39,2.29,1,47.22,-6.19
+TRG,LSTM,Target_Open,0.45,0.73,1,75.46,12.98
+TRG,GRU,Target_Open,0.46,0.75,1,73.15,10.13
+TRG,Linear Regression,Target_Open,0.46,0.73,1,66.26,9.25
+TRG,Random Forest,Target_Open,0.46,0.73,1,76.02,9.18
+TRG,XGBoost,Target_Open,0.46,0.74,1,75.61,8.86
+UBL,Random Forest,Target_Close,3.18,1.21,1,53.25,-0.17
+UBL,Linear Regression,Target_Close,3.18,1.21,1,51.22,-0.33
+UBL,LSTM,Target_Close,3.45,1.29,1,54.17,-0.44
+UBL,XGBoost,Target_Close,3.19,1.22,1,53.66,-0.53
+UBL,GRU,Target_Close,3.54,1.32,1,48.15,-3.0
+UBL,Random Forest,Target_Open,1.18,0.47,1,69.51,6.72
+UBL,XGBoost,Target_Open,1.2,0.48,1,69.51,5.09
+UBL,Linear Regression,Target_Open,1.25,0.5,1,63.41,1.57
+UBL,LSTM,Target_Open,1.29,0.5,1,68.06,0.72
+UBL,GRU,Target_Open,1.46,0.56,1,47.22,-12.24
+UNITY,Linear Regression,Target_Close,0.44,1.64,1,57.32,0.29
+UNITY,LSTM,Target_Close,0.46,1.65,1,46.3,-3.45
+UNITY,Random Forest,Target_Close,0.46,1.7,1,49.19,-3.52
+UNITY,XGBoost,Target_Close,0.46,1.71,1,48.78,-4.12
+UNITY,GRU,Target_Close,0.49,1.75,1,48.61,-10.34
+UNITY,Linear Regression,Target_Open,0.16,0.61,1,65.85,5.89
+UNITY,LSTM,Target_Open,0.17,0.61,1,68.52,4.69
+UNITY,Random Forest,Target_Open,0.17,0.62,1,67.89,4.57
+UNITY,XGBoost,Target_Open,0.17,0.64,1,64.63,1.42
+UNITY,GRU,Target_Open,0.18,0.66,1,58.33,-2.83
+BAHL,Linear Regression,Target_Close,3.8,3.6,5,49.19,-1.63
+BAHL,XGBoost,Target_Close,3.85,3.63,5,52.85,-2.92
+BAHL,Random Forest,Target_Close,3.9,3.69,5,55.69,-4.22
+BAHL,LSTM,Target_Close,4.19,3.88,5,42.13,-5.55
+BAHL,GRU,Target_Close,4.44,4.1,5,52.78,-11.97
+BAHL,Random Forest,Target_Open,3.14,3.01,5,59.35,-0.51
+BAHL,Linear Regression,Target_Open,3.16,3.0,5,50.41,-0.97
+BAHL,XGBoost,Target_Open,3.16,3.0,5,52.85,-1.14
+BAHL,LSTM,Target_Open,3.4,3.18,5,53.24,-2.53
+BAHL,GRU,Target_Open,3.93,3.63,5,56.02,-18.35
+COLG,Linear Regression,Target_Close,25.08,1.89,5,64.63,1.96
+COLG,LSTM,Target_Close,24.61,1.88,5,62.04,-3.86
+COLG,XGBoost,Target_Close,27.01,2.02,5,53.25,-5.57
+COLG,Random Forest,Target_Close,27.08,2.02,5,60.98,-5.82
+COLG,GRU,Target_Close,27.07,2.08,5,53.24,-14.23
+COLG,Linear Regression,Target_Open,22.93,1.72,5,60.57,-1.11
+COLG,Random Forest,Target_Open,24.4,1.83,5,50.0,-7.58
+COLG,XGBoost,Target_Open,25.79,1.93,5,54.07,-13.73
+COLG,LSTM,Target_Open,25.03,1.92,5,48.61,-14.94
+COLG,GRU,Target_Open,25.75,1.97,5,55.09,-18.27
+DGKC,XGBoost,Target_Close,3.7,4.47,5,52.85,1.32
+DGKC,Linear Regression,Target_Close,3.77,4.53,5,50.81,-0.38
+DGKC,Random Forest,Target_Close,3.83,4.6,5,55.28,-2.15
+DGKC,LSTM,Target_Close,3.89,4.58,5,51.85,-4.05
+DGKC,GRU,Target_Close,4.01,4.78,5,48.15,-7.11
+DGKC,Linear Regression,Target_Open,3.35,4.01,5,53.25,-0.68
+DGKC,XGBoost,Target_Open,3.38,4.06,5,51.22,-1.63
+DGKC,Random Forest,Target_Open,3.42,4.1,5,49.59,-2.9
+DGKC,LSTM,Target_Open,3.47,4.09,5,48.15,-4.31
+DGKC,GRU,Target_Open,3.73,4.44,5,45.37,-12.23
+EFERT,Linear Regression,Target_Close,5.04,2.99,5,54.47,-0.79
+EFERT,LSTM,Target_Close,5.25,3.0,5,49.07,-2.94
+EFERT,GRU,Target_Close,5.4,3.08,5,55.56,-5.8
+EFERT,XGBoost,Target_Close,5.47,3.27,5,49.19,-9.37
+EFERT,Random Forest,Target_Close,5.55,3.35,5,50.41,-10.84
+EFERT,Linear Regression,Target_Open,4.6,2.75,5,59.35,0.64
+EFERT,LSTM,Target_Open,4.66,2.67,5,59.72,0.19
+EFERT,XGBoost,Target_Open,4.82,2.88,5,55.28,-4.24
+EFERT,Random Forest,Target_Open,4.99,3.02,5,59.76,-7.8
+EFERT,GRU,Target_Open,5.29,3.04,5,62.96,-13.29
+ENGROH,GRU,Target_Close,7.1,4.26,5,57.87,2.31
+ENGROH,LSTM,Target_Close,7.16,4.34,5,59.26,1.47
+ENGROH,Linear Regression,Target_Close,6.54,3.98,5,54.07,0.94
+ENGROH,XGBoost,Target_Close,6.89,4.16,5,60.57,-4.29
+ENGROH,Random Forest,Target_Close,7.24,4.39,5,57.72,-9.57
+ENGROH,LSTM,Target_Open,6.9,4.07,5,51.85,1.6
+ENGROH,Linear Regression,Target_Open,6.34,3.81,5,52.85,0.67
+ENGROH,GRU,Target_Open,6.99,4.17,5,55.56,0.29
+ENGROH,XGBoost,Target_Open,6.71,4.04,5,54.88,-5.14
+ENGROH,Random Forest,Target_Open,6.78,4.1,5,53.66,-6.24
+FFC,GRU,Target_Close,9.3,4.31,5,61.57,6.52
+FFC,LSTM,Target_Close,9.54,4.4,5,54.17,4.06
+FFC,Linear Regression,Target_Close,8.78,4.12,5,59.76,2.18
+FFC,XGBoost,Target_Close,9.41,4.4,5,44.31,-4.84
+FFC,Random Forest,Target_Close,9.51,4.4,5,49.19,-5.95
+FFC,LSTM,Target_Open,8.66,3.95,5,60.65,6.29
+FFC,Linear Regression,Target_Open,8.06,3.75,5,59.35,3.33
+FFC,GRU,Target_Open,9.11,4.15,5,63.43,1.41
+FFC,XGBoost,Target_Open,8.43,3.87,5,54.88,-1.11
+FFC,Random Forest,Target_Open,8.47,3.89,5,55.69,-1.54
+HBL,XGBoost,Target_Close,5.48,4.06,5,56.5,1.52
+HBL,Random Forest,Target_Close,5.57,4.12,5,47.56,0.03
+HBL,Linear Regression,Target_Close,5.64,4.16,5,51.22,-1.35
+HBL,LSTM,Target_Close,6.32,4.62,5,46.76,-3.78
+HBL,GRU,Target_Close,6.87,5.01,5,49.07,-12.75
+HBL,XGBoost,Target_Open,4.73,3.52,5,59.76,4.2
+HBL,Random Forest,Target_Open,4.89,3.63,5,51.22,1.07
+HBL,Linear Regression,Target_Open,5.0,3.69,5,52.85,-1.23
+HBL,LSTM,Target_Open,5.6,4.12,5,41.67,-4.2
+HBL,GRU,Target_Open,6.45,4.7,5,46.3,-19.99
+HUBC,Linear Regression,Target_Close,4.55,3.56,5,52.85,-0.9
+HUBC,LSTM,Target_Close,4.95,3.83,5,40.28,-2.36
+HUBC,XGBoost,Target_Close,5.05,3.91,5,47.97,-11.92
+HUBC,Random Forest,Target_Close,5.09,3.99,5,47.97,-12.96
+HUBC,GRU,Target_Close,5.5,4.28,5,56.48,-13.67
+HUBC,Linear Regression,Target_Open,4.22,3.28,5,55.69,-2.58
+HUBC,LSTM,Target_Open,4.63,3.57,5,48.15,-5.01
+HUBC,Random Forest,Target_Open,4.33,3.36,5,47.15,-5.14
+HUBC,XGBoost,Target_Open,4.39,3.43,5,47.15,-6.56
+HUBC,GRU,Target_Open,5.18,3.97,5,60.65,-17.38
+ILP,Linear Regression,Target_Close,2.33,3.24,5,54.07,-1.46
+ILP,XGBoost,Target_Close,2.48,3.45,5,47.15,-7.89
+ILP,Random Forest,Target_Close,2.48,3.45,5,49.19,-8.07
+ILP,GRU,Target_Close,2.86,3.97,5,43.52,-17.9
+ILP,LSTM,Target_Close,2.98,4.13,5,43.06,-22.83
+ILP,Linear Regression,Target_Open,2.14,2.97,5,48.37,-3.03
+ILP,XGBoost,Target_Open,2.22,3.08,5,48.37,-6.85
+ILP,Random Forest,Target_Open,2.23,3.09,5,51.63,-7.38
+ILP,LSTM,Target_Open,2.38,3.28,5,45.83,-8.57
+ILP,GRU,Target_Open,2.66,3.67,5,49.54,-21.17
+INDU,LSTM,Target_Close,30.93,1.71,5,56.48,0.61
+INDU,Linear Regression,Target_Close,34.9,2.01,5,44.31,-7.93
+INDU,Random Forest,Target_Close,38.97,2.26,5,53.25,-20.51
+INDU,XGBoost,Target_Close,40.77,2.37,5,47.56,-26.06
+INDU,GRU,Target_Close,40.3,2.25,5,50.0,-29.48
+INDU,LSTM,Target_Open,33.09,1.84,5,65.28,2.93
+INDU,Linear Regression,Target_Open,37.1,2.16,5,41.87,-6.21
+INDU,Random Forest,Target_Open,38.94,2.27,5,50.81,-11.48
+INDU,XGBoost,Target_Open,39.12,2.28,5,50.81,-12.0
+INDU,GRU,Target_Open,40.98,2.32,5,52.78,-20.24
+LUCK,Linear Regression,Target_Close,29.0,3.1,5,56.5,1.36
+LUCK,XGBoost,Target_Close,29.09,3.15,5,56.5,1.07
+LUCK,LSTM,Target_Close,31.0,3.27,5,49.07,0.27
+LUCK,Random Forest,Target_Close,29.71,3.21,5,53.66,-1.06
+LUCK,GRU,Target_Close,31.45,3.35,5,51.85,-1.2
+LUCK,Linear Regression,Target_Open,26.57,2.84,5,52.44,1.27
+LUCK,XGBoost,Target_Open,26.77,2.88,5,58.54,0.54
+LUCK,Random Forest,Target_Open,26.81,2.88,5,53.66,0.41
+LUCK,LSTM,Target_Open,29.05,3.07,5,56.02,-1.05
+LUCK,GRU,Target_Open,29.27,3.11,5,57.41,-1.83
+MARI,LSTM,Target_Close,154.95,21.46,5,42.59,-2.04
+MARI,XGBoost,Target_Close,154.07,19.81,5,50.0,-4.33
+MARI,GRU,Target_Close,166.61,23.17,5,48.15,-9.72
+MARI,Random Forest,Target_Close,165.7,20.7,5,47.15,-12.21
+MARI,Linear Regression,Target_Close,185.75,27.87,5,50.81,-25.79
+MARI,LSTM,Target_Open,148.3,21.13,5,50.0,-2.12
+MARI,XGBoost,Target_Open,150.83,19.12,5,52.03,-8.03
+MARI,Random Forest,Target_Open,155.69,19.81,5,47.97,-11.51
+MARI,GRU,Target_Open,163.29,22.33,5,48.61,-12.45
+MARI,Linear Regression,Target_Open,170.41,25.11,5,48.78,-22.05
+MCB,Random Forest,Target_Close,7.62,3.31,5,53.25,-0.15
+MCB,XGBoost,Target_Close,7.77,3.38,5,47.56,-2.14
+MCB,Linear Regression,Target_Close,7.82,3.39,5,46.75,-2.83
+MCB,LSTM,Target_Close,8.58,3.69,5,49.54,-2.91
+MCB,GRU,Target_Close,8.71,3.75,5,54.17,-4.36
+MCB,LSTM,Target_Open,7.29,3.13,5,50.93,0.39
+MCB,XGBoost,Target_Open,6.69,2.91,5,54.07,0.27
+MCB,Random Forest,Target_Open,6.71,2.91,5,53.66,-0.06
+MCB,Linear Regression,Target_Open,6.81,2.95,5,46.75,-1.58
+MCB,GRU,Target_Open,7.92,3.42,5,55.56,-8.09
+MEBL,Linear Regression,Target_Close,7.98,3.62,5,50.81,-1.77
+MEBL,LSTM,Target_Close,8.73,3.86,5,47.69,-4.44
+MEBL,XGBoost,Target_Close,8.5,3.85,5,44.31,-8.4
+MEBL,GRU,Target_Close,9.15,4.05,5,47.69,-9.5
+MEBL,Random Forest,Target_Close,8.91,4.07,5,46.75,-13.6
+MEBL,Linear Regression,Target_Open,6.97,3.17,5,52.03,-1.26
+MEBL,LSTM,Target_Open,7.63,3.38,5,52.31,-4.06
+MEBL,XGBoost,Target_Open,7.31,3.31,5,45.93,-6.2
+MEBL,Random Forest,Target_Open,7.6,3.46,5,50.41,-10.39
+MEBL,GRU,Target_Open,8.5,3.76,5,51.39,-15.96
+MLCF,Linear Regression,Target_Close,1.44,3.68,5,51.63,0.71
+MLCF,GRU,Target_Close,1.52,3.9,5,47.22,-0.05
+MLCF,LSTM,Target_Close,1.55,3.94,5,51.85,-1.83
+MLCF,XGBoost,Target_Close,1.52,3.88,5,50.0,-4.65
+MLCF,Random Forest,Target_Close,1.6,4.06,5,42.68,-10.25
+MLCF,Linear Regression,Target_Open,1.26,3.2,5,54.47,-0.01
+MLCF,LSTM,Target_Open,1.36,3.43,5,56.48,-2.55
+MLCF,XGBoost,Target_Open,1.3,3.31,5,52.85,-3.53
+MLCF,Random Forest,Target_Open,1.34,3.39,5,43.9,-6.61
+MLCF,GRU,Target_Open,1.43,3.64,5,46.3,-7.82
+NESTLE,Linear Regression,Target_Close,139.11,1.93,5,48.11,-3.68
+NESTLE,LSTM,Target_Close,132.23,1.86,5,43.41,-14.0
+NESTLE,Random Forest,Target_Close,164.19,2.24,5,57.08,-22.37
+NESTLE,XGBoost,Target_Close,185.55,2.54,5,57.55,-38.29
+NESTLE,GRU,Target_Close,266.16,3.76,5,46.15,-129.47
+NESTLE,LSTM,Target_Open,133.18,1.88,5,51.65,-2.89
+NESTLE,Linear Regression,Target_Open,152.53,2.11,5,47.17,-3.47
+NESTLE,XGBoost,Target_Open,194.27,2.65,5,55.66,-31.78
+NESTLE,Random Forest,Target_Open,264.42,3.6,5,53.77,-79.36
+NESTLE,GRU,Target_Open,238.17,3.36,5,50.0,-83.99
+NETSOL,GRU,Target_Close,6.45,4.88,5,58.8,1.16
+NETSOL,Linear Regression,Target_Close,6.3,4.88,5,47.15,-1.51
+NETSOL,XGBoost,Target_Close,6.39,4.93,5,54.07,-2.93
+NETSOL,Random Forest,Target_Close,6.41,4.98,5,58.54,-3.36
+NETSOL,LSTM,Target_Close,6.84,5.15,5,52.78,-4.76
+NETSOL,GRU,Target_Open,6.14,4.64,5,57.41,0.46
+NETSOL,Linear Regression,Target_Open,5.88,4.51,5,50.0,-1.24
+NETSOL,Random Forest,Target_Open,5.89,4.53,5,56.5,-1.49
+NETSOL,LSTM,Target_Open,6.27,4.69,5,50.0,-1.69
+NETSOL,XGBoost,Target_Open,5.98,4.59,5,56.1,-2.97
+OGDC,LSTM,Target_Close,5.24,3.38,5,53.7,2.69
+OGDC,Linear Regression,Target_Close,6.12,4.14,5,54.07,-0.05
+OGDC,XGBoost,Target_Close,6.55,4.42,5,50.0,-7.2
+OGDC,GRU,Target_Close,5.78,3.73,5,51.85,-7.25
+OGDC,Random Forest,Target_Close,6.77,4.61,5,50.41,-10.79
+OGDC,Linear Regression,Target_Open,5.65,3.79,5,52.85,0.37
+OGDC,LSTM,Target_Open,5.03,3.23,5,50.46,-0.09
+OGDC,XGBoost,Target_Open,5.79,3.85,5,49.19,-2.15
+OGDC,Random Forest,Target_Open,6.0,4.04,5,55.28,-5.69
+OGDC,GRU,Target_Open,5.54,3.55,5,56.94,-10.26
+PAKT,Linear Regression,Target_Close,44.58,4.22,5,53.85,1.33
+PAKT,XGBoost,Target_Close,45.39,4.3,5,60.18,-0.47
+PAKT,LSTM,Target_Close,46.68,4.4,5,49.21,-1.28
+PAKT,Random Forest,Target_Close,48.17,4.58,5,55.66,-6.62
+PAKT,GRU,Target_Close,51.16,4.79,5,50.79,-11.0
+PAKT,Linear Regression,Target_Open,42.45,4.03,5,54.3,1.28
+PAKT,LSTM,Target_Open,42.82,4.02,5,58.12,-1.24
+PAKT,Random Forest,Target_Open,44.17,4.2,5,58.82,-2.71
+PAKT,XGBoost,Target_Open,45.21,4.29,5,53.39,-5.15
+PAKT,GRU,Target_Open,50.38,4.72,5,50.79,-19.12
+PPL,LSTM,Target_Close,4.83,3.53,5,53.7,3.68
+PPL,Linear Regression,Target_Close,5.16,3.91,5,51.63,1.53
+PPL,GRU,Target_Close,5.01,3.7,5,48.15,0.09
+PPL,Random Forest,Target_Close,5.47,4.15,5,52.44,-4.56
+PPL,XGBoost,Target_Close,5.54,4.15,5,46.34,-5.75
+PPL,Linear Regression,Target_Open,4.74,3.57,5,54.88,2.86
+PPL,LSTM,Target_Open,4.53,3.32,5,53.7,0.35
+PPL,GRU,Target_Open,4.65,3.42,5,48.15,-2.1
+PPL,Random Forest,Target_Open,4.98,3.73,5,54.88,-2.17
+PPL,XGBoost,Target_Open,5.12,3.81,5,44.31,-5.01
+PSO,LSTM,Target_Close,8.64,3.71,5,58.33,13.7
+PSO,Linear Regression,Target_Close,9.04,4.04,5,60.98,7.57
+PSO,GRU,Target_Close,9.58,4.22,5,46.3,4.26
+PSO,Random Forest,Target_Close,10.1,4.46,5,54.07,-3.28
+PSO,XGBoost,Target_Close,10.39,4.54,5,49.19,-6.22
+PSO,GRU,Target_Open,8.14,3.7,5,53.7,9.21
+PSO,Linear Regression,Target_Open,8.05,3.61,5,58.94,8.47
+PSO,LSTM,Target_Open,8.57,3.68,5,56.48,4.43
+PSO,Random Forest,Target_Open,8.9,3.98,5,51.22,-1.25
+PSO,XGBoost,Target_Open,9.13,4.0,5,47.15,-3.82
+SYS,Linear Regression,Target_Close,13.98,3.01,5,60.98,3.3
+SYS,Random Forest,Target_Close,14.04,3.05,5,55.69,2.84
+SYS,LSTM,Target_Close,14.71,3.15,5,49.07,2.32
+SYS,XGBoost,Target_Close,14.32,3.11,5,50.41,0.92
+SYS,GRU,Target_Close,15.96,3.43,5,51.85,-5.94
+SYS,Linear Regression,Target_Open,13.22,2.8,5,58.54,2.76
+SYS,XGBoost,Target_Open,13.4,2.84,5,54.47,1.45
+SYS,LSTM,Target_Open,14.2,3.0,5,56.94,1.09
+SYS,Random Forest,Target_Open,13.48,2.87,5,56.1,0.84
+SYS,GRU,Target_Open,15.85,3.38,5,46.76,-10.4
+TRG,Linear Regression,Target_Close,3.13,5.04,5,59.35,0.03
+TRG,GRU,Target_Close,3.11,5.16,5,53.7,-0.85
+TRG,LSTM,Target_Close,3.14,5.2,5,56.94,-1.78
+TRG,XGBoost,Target_Close,3.19,5.13,5,52.03,-2.1
+TRG,Random Forest,Target_Close,3.19,5.12,5,45.53,-2.19
+TRG,LSTM,Target_Open,2.78,4.57,5,57.41,0.56
+TRG,Random Forest,Target_Open,2.83,4.53,5,50.0,-0.36
+TRG,Linear Regression,Target_Open,2.83,4.55,5,56.1,-0.38
+TRG,XGBoost,Target_Open,2.9,4.67,5,53.66,-3.07
+TRG,GRU,Target_Open,2.93,4.85,5,52.78,-4.79
+UBL,Random Forest,Target_Close,7.74,2.99,5,61.38,2.55
+UBL,Linear Regression,Target_Close,7.93,3.07,5,56.1,0.15
+UBL,GRU,Target_Close,8.73,3.35,5,57.41,-1.04
+UBL,XGBoost,Target_Close,8.09,3.14,5,54.47,-1.84
+UBL,LSTM,Target_Close,8.81,3.35,5,56.94,-1.93
+UBL,LSTM,Target_Open,7.65,2.89,5,60.19,3.18
+UBL,Random Forest,Target_Open,7.0,2.68,5,63.41,2.98
+UBL,XGBoost,Target_Open,7.05,2.72,5,60.16,2.21
+UBL,Linear Regression,Target_Open,7.06,2.71,5,57.32,2.1
+UBL,GRU,Target_Open,8.7,3.31,5,57.41,-10.14
+UNITY,Linear Regression,Target_Close,1.19,4.29,5,55.69,-0.16
+UNITY,LSTM,Target_Close,1.28,4.4,5,49.07,-7.98
+UNITY,XGBoost,Target_Close,1.37,4.92,5,45.53,-15.08
+UNITY,GRU,Target_Close,1.39,4.82,5,44.91,-17.34
+UNITY,Random Forest,Target_Close,1.47,5.32,5,42.68,-23.71
+UNITY,Linear Regression,Target_Open,1.1,3.96,5,55.69,-0.19
+UNITY,LSTM,Target_Open,1.13,3.91,5,56.48,-3.19
+UNITY,XGBoost,Target_Open,1.18,4.28,5,46.75,-8.15
+UNITY,Random Forest,Target_Open,1.27,4.6,5,47.97,-15.75
+UNITY,GRU,Target_Open,1.3,4.51,5,49.07,-19.54
+BAHL,Linear Regression,Target_Close,6.07,5.66,10,43.9,-2.47
+BAHL,GRU,Target_Close,6.53,5.98,10,50.46,-3.95
+BAHL,XGBoost,Target_Close,6.28,5.88,10,45.53,-5.97
+BAHL,Random Forest,Target_Close,6.68,6.3,10,54.47,-12.77
+BAHL,LSTM,Target_Close,7.29,6.84,10,47.22,-16.18
+BAHL,Linear Regression,Target_Open,5.57,5.19,10,47.15,-2.33
+BAHL,XGBoost,Target_Open,5.62,5.26,10,50.0,-3.29
+BAHL,GRU,Target_Open,5.97,5.46,10,53.7,-3.41
+BAHL,LSTM,Target_Open,6.42,6.02,10,38.43,-11.08
+BAHL,Random Forest,Target_Open,6.14,5.78,10,52.03,-12.72
+COLG,Linear Regression,Target_Close,37.85,2.85,10,75.2,9.37
+COLG,XGBoost,Target_Close,40.08,2.99,10,66.67,4.03
+COLG,LSTM,Target_Close,35.42,2.69,10,64.81,3.7
+COLG,Random Forest,Target_Close,41.02,3.06,10,69.11,1.77
+COLG,GRU,Target_Close,42.76,3.22,10,57.87,-16.24
+COLG,Linear Regression,Target_Open,35.16,2.65,10,73.58,7.54
+COLG,LSTM,Target_Open,33.23,2.53,10,64.81,3.77
+COLG,XGBoost,Target_Open,37.02,2.75,10,63.41,2.65
+COLG,Random Forest,Target_Open,38.31,2.86,10,67.48,-0.76
+COLG,GRU,Target_Open,39.83,3.01,10,51.85,-15.35
+DGKC,Linear Regression,Target_Close,5.09,6.13,10,56.5,-2.06
+DGKC,XGBoost,Target_Close,5.27,6.35,10,51.22,-5.68
+DGKC,LSTM,Target_Close,5.35,6.33,10,55.56,-6.4
+DGKC,Random Forest,Target_Close,5.39,6.43,10,54.88,-8.02
+DGKC,GRU,Target_Close,5.49,6.45,10,49.07,-9.15
+DGKC,Linear Regression,Target_Open,4.93,5.87,10,55.69,-1.55
+DGKC,LSTM,Target_Open,5.3,6.27,10,49.07,-7.04
+DGKC,GRU,Target_Open,5.32,6.22,10,48.61,-7.64
+DGKC,Random Forest,Target_Open,5.36,6.34,10,51.63,-10.38
+DGKC,XGBoost,Target_Open,5.38,6.45,10,46.75,-10.75
+EFERT,Linear Regression,Target_Close,6.85,4.03,10,59.35,2.1
+EFERT,LSTM,Target_Close,7.42,4.25,10,59.26,-2.48
+EFERT,Random Forest,Target_Close,7.27,4.34,10,58.94,-3.86
+EFERT,GRU,Target_Close,7.84,4.44,10,48.15,-8.28
+EFERT,XGBoost,Target_Close,8.3,4.93,10,41.06,-18.57
+EFERT,Linear Regression,Target_Open,6.65,3.92,10,58.54,1.84
+EFERT,LSTM,Target_Open,7.01,3.99,10,54.17,-0.03
+EFERT,Random Forest,Target_Open,6.89,4.09,10,60.57,-1.63
+EFERT,GRU,Target_Open,7.13,4.04,10,56.94,-1.74
+EFERT,XGBoost,Target_Open,7.88,4.66,10,42.68,-16.27
+ENGROH,Linear Regression,Target_Close,9.35,5.5,10,50.81,4.17
+ENGROH,LSTM,Target_Close,10.72,6.2,10,51.39,1.46
+ENGROH,XGBoost,Target_Close,10.46,6.24,10,57.72,-7.29
+ENGROH,GRU,Target_Close,11.71,6.68,10,48.15,-7.61
+ENGROH,Random Forest,Target_Close,11.32,6.72,10,49.59,-16.08
+ENGROH,Linear Regression,Target_Open,9.0,5.27,10,49.59,3.8
+ENGROH,LSTM,Target_Open,10.09,5.78,10,50.46,3.01
+ENGROH,GRU,Target_Open,10.81,6.14,10,51.85,-3.87
+ENGROH,XGBoost,Target_Open,10.15,5.97,10,55.69,-8.45
+ENGROH,Random Forest,Target_Open,10.52,6.22,10,47.97,-12.42
+FFC,LSTM,Target_Close,14.69,6.62,10,61.57,7.96
+FFC,Linear Regression,Target_Close,13.33,6.12,10,62.2,7.19
+FFC,Random Forest,Target_Close,14.51,6.57,10,44.72,-1.08
+FFC,GRU,Target_Close,16.54,7.44,10,49.07,-3.61
+FFC,XGBoost,Target_Close,15.11,6.98,10,36.18,-5.27
+FFC,LSTM,Target_Open,14.24,6.39,10,56.48,7.48
+FFC,Linear Regression,Target_Open,12.87,5.88,10,62.2,7.06
+FFC,GRU,Target_Open,15.33,6.81,10,57.41,0.37
+FFC,Random Forest,Target_Open,13.92,6.26,10,51.22,-0.5
+FFC,XGBoost,Target_Open,14.35,6.59,10,39.43,-3.57
+HBL,XGBoost,Target_Close,8.51,6.26,10,54.07,1.79
+HBL,GRU,Target_Close,9.44,6.9,10,57.87,0.52
+HBL,Random Forest,Target_Close,8.63,6.38,10,51.63,0.45
+HBL,Linear Regression,Target_Close,8.76,6.42,10,55.28,-1.12
+HBL,LSTM,Target_Close,9.77,7.17,10,52.78,-2.92
+HBL,GRU,Target_Open,9.04,6.6,10,54.63,0.91
+HBL,XGBoost,Target_Open,8.36,6.15,10,55.28,-0.36
+HBL,Random Forest,Target_Open,8.41,6.2,10,49.19,-0.89
+HBL,Linear Regression,Target_Open,8.44,6.17,10,55.69,-1.27
+HBL,LSTM,Target_Open,9.38,6.88,10,37.04,-2.74
+HUBC,Linear Regression,Target_Close,7.32,5.68,10,54.07,-3.08
+HUBC,LSTM,Target_Close,8.52,6.63,10,45.83,-10.74
+HUBC,XGBoost,Target_Close,8.22,6.34,10,40.65,-15.87
+HUBC,GRU,Target_Close,9.76,7.61,10,36.11,-26.85
+HUBC,Random Forest,Target_Close,9.84,7.74,10,39.43,-38.67
+HUBC,Linear Regression,Target_Open,6.82,5.29,10,58.94,-0.69
+HUBC,LSTM,Target_Open,7.47,5.75,10,45.83,-2.16
+HUBC,XGBoost,Target_Open,7.77,6.02,10,40.24,-14.62
+HUBC,GRU,Target_Open,9.1,7.1,10,46.3,-24.46
+HUBC,Random Forest,Target_Open,8.99,7.05,10,48.37,-32.7
+ILP,Linear Regression,Target_Close,3.66,5.08,10,47.97,-5.64
+ILP,GRU,Target_Close,4.12,5.71,10,45.83,-12.53
+ILP,XGBoost,Target_Close,4.01,5.59,10,41.06,-15.91
+ILP,Random Forest,Target_Close,4.06,5.66,10,41.06,-17.22
+ILP,LSTM,Target_Close,4.71,6.55,10,39.81,-28.57
+ILP,Linear Regression,Target_Open,3.44,4.75,10,44.72,-6.67
+ILP,GRU,Target_Open,3.88,5.36,10,46.3,-13.62
+ILP,XGBoost,Target_Open,3.8,5.26,10,40.24,-17.85
+ILP,Random Forest,Target_Open,3.87,5.36,10,45.93,-20.1
+ILP,LSTM,Target_Open,4.64,6.41,10,33.33,-35.62
+INDU,Linear Regression,Target_Close,51.18,2.94,10,43.5,-9.58
+INDU,LSTM,Target_Close,51.81,2.85,10,33.33,-16.7
+INDU,GRU,Target_Close,57.88,3.15,10,53.7,-30.37
+INDU,Random Forest,Target_Close,61.01,3.49,10,45.53,-30.63
+INDU,XGBoost,Target_Close,61.72,3.58,10,54.07,-32.17
+INDU,LSTM,Target_Open,44.09,2.42,10,64.81,11.17
+INDU,Linear Regression,Target_Open,54.0,3.12,10,43.9,-5.27
+INDU,XGBoost,Target_Open,60.18,3.47,10,62.2,-17.33
+INDU,GRU,Target_Open,59.13,3.23,10,56.94,-19.13
+INDU,Random Forest,Target_Open,65.27,3.75,10,40.24,-27.25
+LUCK,XGBoost,Target_Close,39.82,4.36,10,60.98,1.92
+LUCK,Random Forest,Target_Close,39.85,4.38,10,60.98,1.84
+LUCK,Linear Regression,Target_Close,40.2,4.32,10,51.22,0.97
+LUCK,LSTM,Target_Close,46.78,4.99,10,43.06,-9.97
+LUCK,GRU,Target_Close,47.42,5.04,10,41.67,-11.48
+LUCK,Random Forest,Target_Open,39.17,4.25,10,54.47,1.02
+LUCK,Linear Regression,Target_Open,39.27,4.18,10,50.81,0.76
+LUCK,XGBoost,Target_Open,40.01,4.3,10,54.88,-1.1
+LUCK,LSTM,Target_Open,42.51,4.45,10,39.81,-1.28
+LUCK,GRU,Target_Open,45.0,4.76,10,42.59,-7.23
+MARI,LSTM,Target_Close,259.01,40.96,10,47.22,-1.2
+MARI,Random Forest,Target_Close,260.27,36.61,10,42.68,-6.76
+MARI,XGBoost,Target_Close,264.73,36.84,10,43.09,-8.59
+MARI,GRU,Target_Close,299.26,43.69,10,35.19,-16.93
+MARI,Linear Regression,Target_Close,309.86,50.37,10,41.06,-27.1
+MARI,LSTM,Target_Open,255.82,39.48,10,48.61,-0.38
+MARI,Random Forest,Target_Open,258.3,36.48,10,47.15,-6.29
+MARI,XGBoost,Target_Open,261.92,36.21,10,52.44,-7.78
+MARI,GRU,Target_Open,295.54,42.79,10,39.35,-15.97
+MARI,Linear Regression,Target_Open,308.88,49.51,10,44.72,-27.11
+MCB,GRU,Target_Close,10.91,4.67,10,56.94,1.65
+MCB,LSTM,Target_Close,11.19,4.78,10,54.17,-0.87
+MCB,Linear Regression,Target_Close,10.73,4.67,10,46.34,-4.3
+MCB,Random Forest,Target_Close,10.94,4.76,10,46.75,-6.38
+MCB,XGBoost,Target_Close,11.17,4.83,10,47.56,-8.63
+MCB,GRU,Target_Open,10.62,4.53,10,57.87,0.79
+MCB,LSTM,Target_Open,10.66,4.57,10,50.46,0.39
+MCB,Linear Regression,Target_Open,10.23,4.44,10,46.34,-3.34
+MCB,XGBoost,Target_Open,10.3,4.44,10,52.44,-3.98
+MCB,Random Forest,Target_Open,10.57,4.6,10,45.93,-6.71
+MEBL,Linear Regression,Target_Close,10.56,4.79,10,41.87,-3.73
+MEBL,LSTM,Target_Close,11.4,5.08,10,49.07,-4.97
+MEBL,GRU,Target_Close,11.51,5.11,10,50.0,-6.01
+MEBL,XGBoost,Target_Close,11.94,5.43,10,38.21,-17.3
+MEBL,Random Forest,Target_Close,12.01,5.46,10,43.5,-18.03
+MEBL,Linear Regression,Target_Open,10.12,4.59,10,50.41,-2.82
+MEBL,GRU,Target_Open,10.87,4.82,10,50.93,-3.88
+MEBL,LSTM,Target_Open,11.03,4.89,10,47.22,-5.43
+MEBL,XGBoost,Target_Open,11.16,5.07,10,46.75,-13.3
+MEBL,Random Forest,Target_Open,11.22,5.09,10,44.31,-13.96
+MLCF,Linear Regression,Target_Close,2.02,5.12,10,54.47,-1.18
+MLCF,GRU,Target_Close,2.13,5.41,10,56.02,-1.98
+MLCF,LSTM,Target_Close,2.24,5.68,10,43.52,-7.13
+MLCF,XGBoost,Target_Close,2.31,5.81,10,45.53,-15.76
+MLCF,Random Forest,Target_Close,2.81,6.96,10,41.46,-40.97
+MLCF,Linear Regression,Target_Open,1.93,4.87,10,56.5,-0.09
+MLCF,GRU,Target_Open,2.06,5.18,10,58.33,-0.92
+MLCF,LSTM,Target_Open,2.08,5.23,10,54.17,-1.78
+MLCF,XGBoost,Target_Open,2.19,5.49,10,48.78,-13.41
+MLCF,Random Forest,Target_Open,2.69,6.65,10,41.46,-39.26
+NESTLE,Linear Regression,Target_Close,184.15,2.58,10,48.11,-11.99
+NESTLE,Random Forest,Target_Close,272.05,3.8,10,45.28,-65.45
+NESTLE,LSTM,Target_Close,251.68,3.57,10,38.46,-73.02
+NESTLE,XGBoost,Target_Close,316.05,4.35,10,64.15,-92.21
+NESTLE,GRU,Target_Close,363.12,5.12,10,37.36,-149.63
+NESTLE,LSTM,Target_Open,161.35,2.25,10,63.19,-4.34
+NESTLE,Linear Regression,Target_Open,193.45,2.7,10,51.42,-8.46
+NESTLE,Random Forest,Target_Open,300.41,4.17,10,55.19,-68.43
+NESTLE,XGBoost,Target_Open,334.29,4.65,10,58.02,-87.42
+NESTLE,GRU,Target_Open,343.49,4.84,10,39.56,-122.12
+NETSOL,Linear Regression,Target_Close,8.47,6.51,10,52.85,-1.98
+NETSOL,GRU,Target_Close,8.5,6.29,10,50.93,-4.29
+NETSOL,XGBoost,Target_Close,8.89,6.83,10,47.97,-7.09
+NETSOL,LSTM,Target_Close,8.86,6.59,10,50.0,-8.77
+NETSOL,Random Forest,Target_Close,9.07,6.99,10,60.57,-9.25
+NETSOL,Linear Regression,Target_Open,8.34,6.36,10,53.66,-1.52
+NETSOL,LSTM,Target_Open,8.45,6.2,10,43.06,-3.14
+NETSOL,GRU,Target_Open,8.5,6.26,10,51.39,-3.82
+NETSOL,XGBoost,Target_Open,8.78,6.72,10,48.78,-6.8
+NETSOL,Random Forest,Target_Open,9.23,7.07,10,56.1,-12.3
+OGDC,Linear Regression,Target_Close,8.48,5.62,10,57.72,3.18
+OGDC,LSTM,Target_Close,7.84,4.97,10,61.11,1.2
+OGDC,GRU,Target_Close,8.2,5.13,10,51.39,-3.3
+OGDC,XGBoost,Target_Close,9.38,6.11,10,44.72,-7.11
+OGDC,Random Forest,Target_Close,10.06,6.58,10,40.65,-14.92
+OGDC,LSTM,Target_Open,7.11,4.47,10,62.04,7.04
+OGDC,Linear Regression,Target_Open,8.12,5.39,10,58.54,3.49
+OGDC,GRU,Target_Open,8.0,4.99,10,53.7,-4.51
+OGDC,XGBoost,Target_Open,9.23,6.0,10,44.31,-9.71
+OGDC,Random Forest,Target_Open,9.72,6.37,10,41.87,-15.51
+PAKT,Linear Regression,Target_Close,70.7,6.65,10,55.66,1.72
+PAKT,LSTM,Target_Close,79.91,7.37,10,42.93,-7.11
+PAKT,GRU,Target_Close,82.03,7.66,10,50.79,-9.94
+PAKT,XGBoost,Target_Close,79.5,7.48,10,50.68,-10.52
+PAKT,Random Forest,Target_Close,80.32,7.57,10,55.66,-11.67
+PAKT,Linear Regression,Target_Open,65.78,6.2,10,59.28,2.92
+PAKT,LSTM,Target_Open,71.3,6.66,10,52.36,-3.95
+PAKT,XGBoost,Target_Open,72.33,6.83,10,58.37,-6.75
+PAKT,Random Forest,Target_Open,72.82,6.88,10,57.01,-7.46
+PAKT,GRU,Target_Open,76.99,7.15,10,53.93,-12.24
+PPL,LSTM,Target_Close,7.3,5.24,10,56.02,4.58
+PPL,Linear Regression,Target_Close,7.68,5.73,10,47.56,2.02
+PPL,Random Forest,Target_Close,7.69,5.67,10,55.69,1.85
+PPL,XGBoost,Target_Close,7.88,5.91,10,53.66,-0.61
+PPL,GRU,Target_Close,8.11,5.83,10,49.54,-6.02
+PPL,LSTM,Target_Open,6.99,5.05,10,50.0,4.88
+PPL,Linear Regression,Target_Open,7.34,5.5,10,47.97,2.91
+PPL,Random Forest,Target_Open,7.43,5.51,10,52.03,1.74
+PPL,XGBoost,Target_Open,7.67,5.69,10,56.1,-1.38
+PPL,GRU,Target_Open,7.69,5.52,10,47.22,-4.74
+PSO,Linear Regression,Target_Close,15.28,6.24,10,63.01,8.35
+PSO,LSTM,Target_Close,16.15,6.44,10,51.39,7.0
+PSO,GRU,Target_Close,17.45,6.91,10,45.37,-0.52
+PSO,Random Forest,Target_Close,17.68,7.51,10,46.75,-6.07
+PSO,XGBoost,Target_Close,18.14,7.51,10,51.22,-8.82
+PSO,Linear Regression,Target_Open,14.51,5.93,10,63.82,9.26
+PSO,LSTM,Target_Open,15.88,6.34,10,49.07,4.64
+PSO,GRU,Target_Open,16.18,6.46,10,48.15,2.82
+PSO,Random Forest,Target_Open,17.07,7.26,10,44.31,-6.72
+PSO,XGBoost,Target_Open,17.52,7.33,10,46.34,-9.54
+SYS,LSTM,Target_Close,20.98,4.45,10,45.37,2.8
+SYS,XGBoost,Target_Close,20.79,4.52,10,54.88,2.54
+SYS,Linear Regression,Target_Close,20.83,4.44,10,57.72,2.39
+SYS,Random Forest,Target_Close,21.08,4.51,10,63.01,1.21
+SYS,GRU,Target_Close,22.25,4.67,10,49.07,-3.1
+SYS,Linear Regression,Target_Open,19.88,4.22,10,55.69,2.85
+SYS,LSTM,Target_Open,20.47,4.29,10,51.85,1.83
+SYS,Random Forest,Target_Open,20.14,4.31,10,61.38,1.6
+SYS,XGBoost,Target_Open,20.15,4.37,10,55.28,1.53
+SYS,GRU,Target_Open,22.12,4.62,10,48.15,-6.07
+TRG,Linear Regression,Target_Close,3.87,6.41,10,63.41,4.39
+TRG,LSTM,Target_Close,3.68,6.33,10,54.17,3.55
+TRG,GRU,Target_Close,3.8,6.51,10,60.65,0.46
+TRG,XGBoost,Target_Close,4.44,7.31,10,43.09,-9.54
+TRG,Random Forest,Target_Close,4.62,7.49,10,39.84,-14.07
+TRG,Linear Regression,Target_Open,3.79,6.23,10,63.82,2.72
+TRG,LSTM,Target_Open,3.71,6.27,10,59.26,0.07
+TRG,GRU,Target_Open,3.83,6.51,10,56.94,-3.28
+TRG,XGBoost,Target_Open,4.3,7.07,10,44.31,-10.58
+TRG,Random Forest,Target_Open,4.44,7.19,10,41.46,-14.22
+UBL,XGBoost,Target_Close,10.26,4.04,10,62.6,12.72
+UBL,LSTM,Target_Close,11.71,4.48,10,65.28,10.05
+UBL,Random Forest,Target_Close,11.2,4.32,10,63.01,4.76
+UBL,GRU,Target_Close,12.62,4.78,10,61.57,3.05
+UBL,Linear Regression,Target_Close,11.64,4.48,10,57.32,1.03
+UBL,XGBoost,Target_Open,9.96,3.92,10,61.38,11.62
+UBL,LSTM,Target_Open,11.23,4.28,10,61.11,9.62
+UBL,Random Forest,Target_Open,10.21,3.98,10,63.01,9.43
+UBL,GRU,Target_Open,12.06,4.55,10,59.26,2.99
+UBL,Linear Regression,Target_Open,11.1,4.25,10,58.94,1.55
+UNITY,Linear Regression,Target_Close,1.8,6.35,10,56.5,-3.28
+UNITY,LSTM,Target_Close,1.94,6.61,10,50.46,-11.92
+UNITY,GRU,Target_Close,1.98,6.76,10,41.2,-14.31
+UNITY,XGBoost,Target_Close,2.59,9.29,10,40.24,-48.66
+UNITY,Random Forest,Target_Close,2.87,10.33,10,31.3,-64.62
+UNITY,Linear Regression,Target_Open,1.73,6.09,10,59.35,-2.83
+UNITY,LSTM,Target_Open,1.78,6.04,10,54.63,-5.5
+UNITY,GRU,Target_Open,1.93,6.57,10,43.98,-14.61
+UNITY,XGBoost,Target_Open,2.25,8.05,10,36.18,-33.54
+UNITY,Random Forest,Target_Open,2.66,9.58,10,34.15,-58.04
+BAHL,Linear Regression,Target_Close,8.5,7.92,20,47.97,-4.07
+BAHL,GRU,Target_Close,9.49,8.71,20,49.07,-7.55
+BAHL,XGBoost,Target_Close,9.65,9.16,20,38.62,-18.03
+BAHL,LSTM,Target_Close,10.69,10.09,20,52.31,-21.22
+BAHL,Random Forest,Target_Close,10.44,10.03,20,39.43,-27.69
+BAHL,Linear Regression,Target_Open,8.35,7.74,20,48.78,-4.14
+BAHL,GRU,Target_Open,9.4,8.62,20,46.3,-8.69
+BAHL,XGBoost,Target_Open,9.24,8.74,20,42.28,-15.12
+BAHL,LSTM,Target_Open,10.44,9.77,20,50.93,-20.71
+BAHL,Random Forest,Target_Open,10.34,9.97,20,45.12,-28.86
+COLG,Linear Regression,Target_Close,62.61,4.66,20,81.71,14.79
+COLG,XGBoost,Target_Close,69.76,5.19,20,72.36,5.05
+COLG,Random Forest,Target_Close,75.05,5.62,20,66.67,-2.15
+COLG,GRU,Target_Close,64.26,4.82,20,51.39,-3.6
+COLG,LSTM,Target_Close,67.64,5.08,20,63.43,-9.05
+COLG,Linear Regression,Target_Open,59.43,4.42,20,82.11,15.21
+COLG,LSTM,Target_Open,59.75,4.46,20,63.89,0.99
+COLG,GRU,Target_Open,62.88,4.71,20,54.17,-4.21
+COLG,Random Forest,Target_Open,73.34,5.48,20,67.48,-4.64
+COLG,XGBoost,Target_Open,74.26,5.54,20,63.82,-5.95
+DGKC,Linear Regression,Target_Close,6.91,8.18,20,57.72,3.17
+DGKC,GRU,Target_Close,7.21,8.27,20,57.41,0.94
+DGKC,Random Forest,Target_Close,8.02,9.6,20,52.85,-12.47
+DGKC,XGBoost,Target_Close,8.06,9.69,20,53.66,-13.03
+DGKC,LSTM,Target_Close,8.38,9.88,20,50.93,-15.09
+DGKC,Linear Regression,Target_Open,6.83,8.08,20,55.69,3.49
+DGKC,GRU,Target_Open,7.13,8.18,20,58.33,1.35
+DGKC,XGBoost,Target_Open,7.84,9.39,20,56.91,-10.75
+DGKC,LSTM,Target_Open,8.17,9.74,20,60.19,-13.16
+DGKC,Random Forest,Target_Open,8.27,9.91,20,53.66,-16.91
+EFERT,Linear Regression,Target_Close,10.17,5.95,20,48.37,2.78
+EFERT,LSTM,Target_Close,10.42,5.87,20,53.7,-1.34
+EFERT,Random Forest,Target_Close,11.03,6.54,20,54.88,-5.4
+EFERT,GRU,Target_Close,10.92,6.15,20,50.93,-6.22
+EFERT,XGBoost,Target_Close,13.78,8.16,20,34.55,-31.73
+EFERT,LSTM,Target_Open,9.74,5.45,20,61.57,4.15
+EFERT,Linear Regression,Target_Open,10.02,5.86,20,49.59,3.0
+EFERT,Random Forest,Target_Open,10.9,6.44,20,51.63,-5.52
+EFERT,GRU,Target_Open,10.73,6.05,20,52.31,-5.56
+EFERT,XGBoost,Target_Open,12.91,7.65,20,39.84,-24.97
+ENGROH,Linear Regression,Target_Close,15.23,8.79,20,55.28,0.73
+ENGROH,GRU,Target_Close,16.77,9.33,20,59.26,-0.2
+ENGROH,XGBoost,Target_Close,15.62,9.02,20,49.19,-1.8
+ENGROH,LSTM,Target_Close,19.11,11.03,20,36.57,-14.23
+ENGROH,Random Forest,Target_Close,18.42,10.96,20,43.09,-20.06
+ENGROH,LSTM,Target_Open,15.7,8.82,20,65.28,4.65
+ENGROH,Linear Regression,Target_Open,14.88,8.56,20,53.66,1.28
+ENGROH,GRU,Target_Open,16.76,9.29,20,59.26,-1.76
+ENGROH,XGBoost,Target_Open,15.76,9.05,20,43.09,-4.59
+ENGROH,Random Forest,Target_Open,18.03,10.68,20,42.68,-19.62
+FFC,Linear Regression,Target_Close,21.72,9.75,20,63.01,11.74
+FFC,GRU,Target_Close,26.58,11.37,20,49.07,2.46
+FFC,Random Forest,Target_Close,24.22,11.06,20,47.15,1.56
+FFC,XGBoost,Target_Close,25.89,11.59,20,38.62,-5.22
+FFC,LSTM,Target_Close,29.43,11.84,20,40.28,-8.01
+FFC,Linear Regression,Target_Open,21.13,9.44,20,65.04,12.46
+FFC,LSTM,Target_Open,24.65,10.39,20,66.2,7.81
+FFC,GRU,Target_Open,26.06,11.14,20,46.76,2.56
+FFC,Random Forest,Target_Open,24.84,11.19,20,44.72,-2.87
+FFC,XGBoost,Target_Open,25.75,11.41,20,36.59,-6.67
+HBL,LSTM,Target_Close,11.42,8.26,20,60.19,4.59
+HBL,XGBoost,Target_Close,11.05,8.09,20,62.6,-0.01
+HBL,GRU,Target_Close,12.09,8.76,20,52.78,-1.05
+HBL,Linear Regression,Target_Close,11.3,8.3,20,50.41,-2.33
+HBL,Random Forest,Target_Close,11.81,8.73,20,54.07,-6.95
+HBL,XGBoost,Target_Open,10.96,7.97,20,65.85,0.89
+HBL,GRU,Target_Open,11.87,8.59,20,52.78,0.8
+HBL,Linear Regression,Target_Open,11.34,8.31,20,50.41,-2.6
+HBL,Random Forest,Target_Open,11.96,8.85,20,52.85,-8.23
+HBL,LSTM,Target_Open,12.96,9.28,20,55.56,-8.32
+HUBC,LSTM,Target_Close,13.14,10.27,20,49.54,1.6
+HUBC,Linear Regression,Target_Close,12.38,9.77,20,56.91,-1.11
+HUBC,GRU,Target_Close,15.56,12.24,20,35.19,-16.49
+HUBC,XGBoost,Target_Close,15.62,12.17,20,28.05,-27.59
+HUBC,Random Forest,Target_Close,18.72,14.78,20,23.58,-52.89
+HUBC,Linear Regression,Target_Open,12.07,9.48,20,58.54,0.24
+HUBC,LSTM,Target_Open,13.29,10.39,20,42.13,-0.93
+HUBC,GRU,Target_Open,15.49,12.13,20,34.26,-17.64
+HUBC,XGBoost,Target_Open,14.83,11.59,20,24.39,-22.58
+HUBC,Random Forest,Target_Open,18.77,14.76,20,21.14,-55.15
+ILP,Linear Regression,Target_Close,5.51,7.75,20,36.59,-11.87
+ILP,GRU,Target_Close,6.38,8.96,20,37.5,-20.14
+ILP,LSTM,Target_Close,6.64,9.41,20,45.83,-25.03
+ILP,XGBoost,Target_Close,6.58,9.24,20,34.55,-33.59
+ILP,Random Forest,Target_Close,6.96,9.75,20,38.62,-41.27
+ILP,Linear Regression,Target_Open,5.39,7.54,20,40.24,-11.35
+ILP,GRU,Target_Open,6.29,8.78,20,38.89,-20.65
+ILP,XGBoost,Target_Open,6.36,8.91,20,32.52,-31.48
+ILP,Random Forest,Target_Open,6.72,9.39,20,38.62,-38.89
+ILP,LSTM,Target_Open,7.26,10.15,20,41.67,-39.23
+INDU,LSTM,Target_Close,70.14,3.76,20,24.54,-7.04
+INDU,Linear Regression,Target_Close,75.65,4.32,20,50.41,-8.97
+INDU,GRU,Target_Close,74.66,4.04,20,59.26,-13.94
+INDU,XGBoost,Target_Close,94.03,5.52,20,57.32,-35.45
+INDU,Random Forest,Target_Close,97.63,5.65,20,39.02,-40.64
+INDU,LSTM,Target_Open,74.97,4.13,20,50.93,-4.68
+INDU,Linear Regression,Target_Open,80.21,4.61,20,46.75,-6.48
+INDU,GRU,Target_Open,77.92,4.25,20,58.33,-8.8
+INDU,XGBoost,Target_Open,92.69,5.39,20,57.32,-23.04
+INDU,Random Forest,Target_Open,99.98,5.78,20,35.37,-32.72
+LUCK,Linear Regression,Target_Close,56.41,6.05,20,51.63,-0.72
+LUCK,GRU,Target_Close,62.16,6.57,20,39.35,-6.0
+LUCK,Random Forest,Target_Close,61.2,6.8,20,66.67,-9.28
+LUCK,XGBoost,Target_Close,61.93,6.89,20,51.63,-10.57
+LUCK,LSTM,Target_Close,73.23,7.91,20,29.63,-24.88
+LUCK,Linear Regression,Target_Open,54.72,5.86,20,52.03,0.62
+LUCK,GRU,Target_Open,61.05,6.45,20,42.13,-5.82
+LUCK,XGBoost,Target_Open,58.43,6.53,20,57.72,-6.12
+LUCK,Random Forest,Target_Open,58.78,6.52,20,64.63,-6.76
+LUCK,LSTM,Target_Open,70.87,7.74,20,32.87,-22.85
+MARI,LSTM,Target_Close,447.73,75.51,20,48.61,-0.75
+MARI,Random Forest,Target_Close,432.12,67.51,20,51.22,-5.38
+MARI,XGBoost,Target_Close,433.62,67.77,20,54.07,-5.75
+MARI,GRU,Target_Close,475.28,78.09,20,47.22,-6.95
+MARI,Linear Regression,Target_Close,502.46,87.22,20,49.59,-22.54
+MARI,LSTM,Target_Open,447.03,76.11,20,61.57,-1.43
+MARI,XGBoost,Target_Open,425.94,66.24,20,53.66,-4.5
+MARI,GRU,Target_Open,467.53,76.79,20,52.31,-6.08
+MARI,Random Forest,Target_Open,435.83,67.13,20,49.19,-6.92
+MARI,Linear Regression,Target_Open,501.66,86.05,20,47.15,-23.08
+MCB,LSTM,Target_Close,13.46,5.8,20,59.26,-0.31
+MCB,Linear Regression,Target_Close,13.79,6.01,20,41.87,-4.31
+MCB,GRU,Target_Close,14.13,5.99,20,49.07,-5.27
+MCB,XGBoost,Target_Close,15.65,6.79,20,45.93,-18.34
+MCB,Random Forest,Target_Close,15.9,7.0,20,45.93,-20.28
+MCB,Linear Regression,Target_Open,13.57,5.88,20,42.28,-4.21
+MCB,GRU,Target_Open,13.99,5.91,20,46.3,-5.46
+MCB,LSTM,Target_Open,15.8,6.71,20,44.91,-19.05
+MCB,Random Forest,Target_Open,15.54,6.81,20,46.34,-19.36
+MCB,XGBoost,Target_Open,15.82,6.85,20,45.12,-21.53
+MEBL,Linear Regression,Target_Close,14.34,6.52,20,31.3,-9.51
+MEBL,GRU,Target_Close,14.53,6.4,20,43.06,-9.98
+MEBL,XGBoost,Target_Close,16.78,7.66,20,37.8,-28.2
+MEBL,LSTM,Target_Close,17.88,7.89,20,41.2,-35.27
+MEBL,Random Forest,Target_Close,18.18,8.26,20,39.02,-38.9
+MEBL,Linear Regression,Target_Open,13.94,6.33,20,31.71,-9.75
+MEBL,GRU,Target_Open,14.2,6.27,20,43.98,-10.47
+MEBL,LSTM,Target_Open,16.17,7.16,20,47.22,-25.78
+MEBL,XGBoost,Target_Open,17.13,7.82,20,36.99,-34.9
+MEBL,Random Forest,Target_Open,18.13,8.22,20,35.77,-42.74
+MLCF,Linear Regression,Target_Close,2.39,6.16,20,56.91,4.82
+MLCF,GRU,Target_Close,2.61,6.71,20,55.56,2.68
+MLCF,LSTM,Target_Close,2.76,7.07,20,61.11,-2.91
+MLCF,XGBoost,Target_Close,3.68,9.27,20,50.41,-46.23
+MLCF,Random Forest,Target_Close,4.03,10.06,20,42.28,-60.22
+MLCF,Linear Regression,Target_Open,2.35,6.01,20,56.1,1.86
+MLCF,GRU,Target_Open,2.55,6.5,20,56.02,0.29
+MLCF,LSTM,Target_Open,2.86,7.34,20,56.48,-11.94
+MLCF,XGBoost,Target_Open,3.37,8.48,20,45.93,-40.79
+MLCF,Random Forest,Target_Open,3.98,9.89,20,41.06,-66.2
+NESTLE,Linear Regression,Target_Close,269.94,3.82,20,53.3,-4.88
+NESTLE,LSTM,Target_Close,258.96,3.65,20,58.79,-13.78
+NESTLE,Random Forest,Target_Close,295.94,4.08,20,50.0,-14.98
+NESTLE,XGBoost,Target_Close,371.91,5.16,20,68.87,-44.5
+NESTLE,GRU,Target_Close,459.62,6.5,20,40.11,-101.94
+NESTLE,Linear Regression,Target_Open,253.27,3.57,20,59.43,7.12
+NESTLE,Random Forest,Target_Open,319.07,4.39,20,71.23,-17.01
+NESTLE,XGBoost,Target_Open,397.61,5.53,20,69.81,-45.81
+NESTLE,LSTM,Target_Open,355.37,5.06,20,43.96,-50.76
+NESTLE,GRU,Target_Open,509.61,7.25,20,42.31,-116.19
+NETSOL,GRU,Target_Close,10.31,7.53,20,57.87,-1.41
+NETSOL,Linear Regression,Target_Close,11.86,8.95,20,49.19,-3.53
+NETSOL,Random Forest,Target_Close,12.44,9.29,20,48.78,-8.6
+NETSOL,LSTM,Target_Close,11.69,8.57,20,60.65,-15.01
+NETSOL,XGBoost,Target_Close,13.49,9.94,20,47.97,-17.71
+NETSOL,GRU,Target_Open,10.24,7.46,20,55.09,-0.93
+NETSOL,Linear Regression,Target_Open,11.7,8.81,20,49.19,-2.96
+NETSOL,Random Forest,Target_Open,12.26,9.11,20,54.88,-7.89
+NETSOL,LSTM,Target_Open,11.14,8.1,20,64.81,-9.74
+NETSOL,XGBoost,Target_Open,12.92,9.53,20,46.34,-13.77
+OGDC,Linear Regression,Target_Close,11.35,7.24,20,54.07,8.77
+OGDC,GRU,Target_Close,11.33,6.91,20,62.96,6.15
+OGDC,LSTM,Target_Close,12.4,7.53,20,49.54,-2.66
+OGDC,Random Forest,Target_Close,12.91,8.22,20,53.25,-3.77
+OGDC,XGBoost,Target_Close,14.03,8.84,20,50.41,-12.78
+OGDC,Linear Regression,Target_Open,11.12,7.08,20,61.38,9.19
+OGDC,GRU,Target_Open,10.8,6.57,20,65.74,8.71
+OGDC,Random Forest,Target_Open,12.4,7.88,20,47.56,-1.22
+OGDC,LSTM,Target_Open,12.54,7.73,20,66.2,-6.02
+OGDC,XGBoost,Target_Open,13.71,8.58,20,46.75,-11.92
+PAKT,XGBoost,Target_Close,97.43,9.11,20,60.18,1.28
+PAKT,Linear Regression,Target_Close,99.36,9.21,20,58.82,-0.67
+PAKT,Random Forest,Target_Close,105.26,9.84,20,56.11,-6.65
+PAKT,LSTM,Target_Close,115.0,10.8,20,57.07,-7.96
+PAKT,GRU,Target_Close,116.04,10.68,20,46.6,-8.94
+PAKT,Linear Regression,Target_Open,96.71,8.96,20,62.9,1.58
+PAKT,LSTM,Target_Open,104.18,9.6,20,52.88,0.2
+PAKT,XGBoost,Target_Open,101.22,9.49,20,60.18,-3.01
+PAKT,GRU,Target_Open,114.88,10.52,20,49.74,-10.05
+PAKT,Random Forest,Target_Open,114.03,10.69,20,53.39,-16.04
+PPL,LSTM,Target_Close,11.19,7.86,20,59.26,8.22
+PPL,GRU,Target_Close,11.63,8.04,20,46.3,4.59
+PPL,Random Forest,Target_Close,11.89,9.0,20,49.59,2.95
+PPL,Linear Regression,Target_Close,11.96,8.63,20,47.56,2.4
+PPL,XGBoost,Target_Close,12.93,9.55,20,47.15,-5.56
+PPL,GRU,Target_Open,11.36,7.84,20,46.3,5.19
+PPL,Linear Regression,Target_Open,11.76,8.48,20,45.12,2.84
+PPL,Random Forest,Target_Open,12.21,9.31,20,52.44,-0.87
+PPL,LSTM,Target_Open,12.92,9.16,20,47.69,-7.83
+PPL,XGBoost,Target_Open,13.08,9.59,20,45.53,-8.1
+PSO,Linear Regression,Target_Close,26.37,10.21,20,65.04,6.54
+PSO,GRU,Target_Close,28.33,10.49,20,60.19,4.57
+PSO,LSTM,Target_Close,33.15,12.72,20,50.93,-11.67
+PSO,Random Forest,Target_Close,32.51,12.98,20,40.24,-15.22
+PSO,XGBoost,Target_Close,32.58,13.2,20,44.72,-15.45
+PSO,Linear Regression,Target_Open,25.58,9.85,20,66.26,6.68
+PSO,GRU,Target_Open,27.46,10.15,20,61.11,4.73
+PSO,LSTM,Target_Open,29.68,11.63,20,52.31,-2.99
+PSO,XGBoost,Target_Open,31.08,12.58,20,45.12,-13.38
+PSO,Random Forest,Target_Open,31.16,12.49,20,40.65,-13.67
+SYS,XGBoost,Target_Close,29.64,6.34,20,53.66,2.74
+SYS,GRU,Target_Close,30.37,6.23,20,53.7,1.83
+SYS,Random Forest,Target_Close,30.41,6.44,20,55.28,0.24
+SYS,Linear Regression,Target_Close,30.62,6.38,20,55.28,-0.47
+SYS,LSTM,Target_Close,34.17,7.08,20,47.22,-10.47
+SYS,Random Forest,Target_Open,28.97,6.11,20,57.32,3.45
+SYS,GRU,Target_Open,29.8,6.12,20,50.0,1.72
+SYS,XGBoost,Target_Open,29.6,6.29,20,52.85,1.35
+SYS,Linear Regression,Target_Open,29.89,6.22,20,54.88,0.4
+SYS,LSTM,Target_Open,32.68,6.85,20,42.59,-7.77
+TRG,Linear Regression,Target_Close,5.22,8.79,20,61.79,7.13
+TRG,GRU,Target_Close,5.24,9.1,20,54.17,2.56
+TRG,LSTM,Target_Close,5.8,9.9,20,57.41,-7.89
+TRG,XGBoost,Target_Close,7.02,11.79,20,37.4,-25.0
+TRG,Random Forest,Target_Close,7.03,11.71,20,38.62,-25.17
+TRG,Linear Regression,Target_Open,5.1,8.56,20,58.54,5.87
+TRG,GRU,Target_Open,4.97,8.61,20,51.85,3.59
+TRG,LSTM,Target_Open,5.74,10.02,20,52.78,-11.25
+TRG,XGBoost,Target_Open,6.53,10.88,20,39.84,-20.49
+TRG,Random Forest,Target_Open,7.17,11.83,20,36.99,-32.21
+UBL,LSTM,Target_Close,18.15,6.76,20,67.59,15.64
+UBL,GRU,Target_Close,18.6,6.93,20,71.3,13.54
+UBL,Linear Regression,Target_Close,18.37,7.02,20,55.28,5.68
+UBL,Random Forest,Target_Close,18.57,7.12,20,58.13,4.62
+UBL,XGBoost,Target_Close,19.04,7.57,20,61.38,2.2
+UBL,LSTM,Target_Open,15.53,5.88,20,74.54,25.39
+UBL,GRU,Target_Open,17.69,6.61,20,70.83,14.97
+UBL,Linear Regression,Target_Open,17.53,6.7,20,60.98,6.68
+UBL,Random Forest,Target_Open,17.64,6.67,20,62.6,6.1
+UBL,XGBoost,Target_Open,17.83,7.07,20,62.6,5.09
+UNITY,Linear Regression,Target_Close,2.9,10.26,20,57.72,-4.03
+UNITY,GRU,Target_Close,3.03,10.2,20,47.22,-11.38
+UNITY,LSTM,Target_Close,3.2,11.15,20,45.37,-17.87
+UNITY,XGBoost,Target_Close,3.71,13.24,20,31.71,-33.09
+UNITY,Random Forest,Target_Close,4.47,15.93,20,32.52,-60.42
+UNITY,Linear Regression,Target_Open,2.83,9.97,20,56.5,-4.07
+UNITY,GRU,Target_Open,2.97,9.99,20,45.83,-12.44
+UNITY,LSTM,Target_Open,3.21,10.91,20,43.98,-21.18
+UNITY,XGBoost,Target_Open,3.75,13.32,20,29.67,-37.97
+UNITY,Random Forest,Target_Open,4.52,15.97,20,30.89,-66.33
+BAHL,GRU,Target_Close,14.69,12.51,60,68.52,16.48
+BAHL,LSTM,Target_Close,15.82,14.05,60,58.8,10.02
+BAHL,Linear Regression,Target_Close,15.4,13.31,60,57.72,5.77
+BAHL,XGBoost,Target_Close,16.5,14.7,60,51.22,-0.98
+BAHL,Random Forest,Target_Close,18.01,16.14,60,50.41,-10.24
+BAHL,GRU,Target_Open,14.77,12.58,60,68.52,16.45
+BAHL,Linear Regression,Target_Open,15.35,13.28,60,56.91,6.16
+BAHL,XGBoost,Target_Open,17.45,15.53,60,49.59,-6.64
+BAHL,Random Forest,Target_Open,18.45,16.55,60,51.22,-12.76
+BAHL,LSTM,Target_Open,19.99,17.48,60,58.8,-13.13
+COLG,Linear Regression,Target_Close,114.35,8.29,60,84.55,23.48
+COLG,Random Forest,Target_Close,122.68,9.07,60,81.3,17.9
+COLG,XGBoost,Target_Close,132.82,9.53,60,74.8,11.12
+COLG,LSTM,Target_Close,124.94,9.79,60,51.39,10.8
+COLG,GRU,Target_Close,136.02,10.04,60,53.24,2.89
+COLG,Linear Regression,Target_Open,111.72,8.08,60,84.15,24.06
+COLG,Random Forest,Target_Open,119.71,8.8,60,81.3,18.63
+COLG,XGBoost,Target_Open,139.65,10.08,60,71.14,5.08
+COLG,LSTM,Target_Open,132.99,9.78,60,62.5,3.58
+COLG,GRU,Target_Open,134.71,9.92,60,54.17,2.33
+DGKC,GRU,Target_Close,14.08,14.61,60,71.76,17.17
+DGKC,Linear Regression,Target_Close,13.87,15.21,60,60.16,13.55
+DGKC,XGBoost,Target_Close,15.79,17.08,60,62.6,1.56
+DGKC,LSTM,Target_Close,18.6,19.53,60,58.33,-9.46
+DGKC,Random Forest,Target_Close,17.78,19.7,60,51.22,-10.84
+DGKC,GRU,Target_Open,14.33,14.84,60,70.37,15.99
+DGKC,Linear Regression,Target_Open,13.88,15.17,60,60.98,13.6
+DGKC,XGBoost,Target_Open,15.51,16.78,60,67.07,3.45
+DGKC,Random Forest,Target_Open,17.93,19.74,60,41.06,-11.65
+DGKC,LSTM,Target_Open,19.64,20.67,60,55.56,-15.14
+EFERT,LSTM,Target_Close,16.13,8.72,60,82.41,20.92
+EFERT,Linear Regression,Target_Close,18.9,10.57,60,67.07,13.02
+EFERT,GRU,Target_Close,18.15,9.87,60,62.96,11.02
+EFERT,Random Forest,Target_Close,23.25,13.02,60,46.75,-6.98
+EFERT,XGBoost,Target_Close,29.49,16.32,60,19.11,-35.7
+EFERT,LSTM,Target_Open,16.11,8.8,60,75.0,20.94
+EFERT,Linear Regression,Target_Open,18.74,10.46,60,66.67,13.62
+EFERT,GRU,Target_Open,18.33,9.94,60,64.81,10.04
+EFERT,Random Forest,Target_Open,22.71,12.79,60,51.22,-4.72
+EFERT,XGBoost,Target_Open,28.79,15.83,60,17.48,-32.71
+ENGROH,GRU,Target_Close,31.71,17.16,60,62.5,6.63
+ENGROH,Random Forest,Target_Close,34.75,19.47,60,48.37,-0.23
+ENGROH,XGBoost,Target_Close,35.03,19.45,60,48.78,-1.03
+ENGROH,Linear Regression,Target_Close,35.51,19.53,60,53.25,-2.43
+ENGROH,LSTM,Target_Close,43.23,24.67,60,49.54,-27.3
+ENGROH,GRU,Target_Open,31.77,17.14,60,61.57,7.06
+ENGROH,XGBoost,Target_Open,33.55,18.63,60,49.59,3.98
+ENGROH,Random Forest,Target_Open,34.73,19.38,60,50.0,0.59
+ENGROH,Linear Regression,Target_Open,35.66,19.55,60,52.85,-2.05
+ENGROH,LSTM,Target_Open,41.79,23.33,60,49.54,-22.22
+FFC,LSTM,Target_Close,65.02,22.65,60,61.11,11.31
+FFC,Linear Regression,Target_Close,62.7,24.03,60,60.57,6.67
+FFC,GRU,Target_Close,73.1,26.08,60,55.56,0.29
+FFC,Random Forest,Target_Close,69.13,26.19,60,31.3,-2.9
+FFC,XGBoost,Target_Close,71.22,27.06,60,31.3,-6.02
+FFC,LSTM,Target_Open,63.64,23.5,60,70.83,12.85
+FFC,Linear Regression,Target_Open,62.28,23.84,60,61.38,6.89
+FFC,Random Forest,Target_Open,66.75,25.4,60,38.62,0.21
+FFC,GRU,Target_Open,73.2,26.07,60,54.17,-0.23
+FFC,XGBoost,Target_Open,70.88,26.81,60,28.05,-5.97
+HBL,LSTM,Target_Close,16.68,11.92,60,60.65,16.04
+HBL,XGBoost,Target_Close,16.65,11.42,60,63.82,7.43
+HBL,GRU,Target_Close,19.77,13.18,60,61.11,0.48
+HBL,Random Forest,Target_Close,18.97,13.16,60,54.07,-5.47
+HBL,Linear Regression,Target_Close,19.56,13.28,60,53.25,-8.74
+HBL,XGBoost,Target_Open,17.65,12.08,60,65.45,2.38
+HBL,GRU,Target_Open,19.87,13.24,60,62.04,0.4
+HBL,LSTM,Target_Open,20.07,13.75,60,56.94,-0.63
+HBL,Random Forest,Target_Open,18.77,12.99,60,56.5,-3.84
+HBL,Linear Regression,Target_Open,19.47,13.2,60,55.28,-7.71
+HUBC,XGBoost,Target_Close,23.92,17.76,60,32.52,1.05
+HUBC,Linear Regression,Target_Close,24.39,19.36,60,41.46,-0.87
+HUBC,GRU,Target_Close,26.33,20.61,60,43.52,-2.56
+HUBC,Random Forest,Target_Close,26.51,20.04,60,37.8,-9.64
+HUBC,LSTM,Target_Close,33.98,27.38,60,48.15,-32.36
+HUBC,Linear Regression,Target_Open,24.42,19.3,60,43.09,-0.9
+HUBC,GRU,Target_Open,26.23,20.45,60,43.06,-2.12
+HUBC,XGBoost,Target_Open,25.01,18.74,60,33.33,-3.36
+HUBC,Random Forest,Target_Open,26.34,19.95,60,38.62,-8.85
+HUBC,LSTM,Target_Open,29.87,23.87,60,37.96,-16.31
+ILP,Linear Regression,Target_Close,8.38,12.13,60,21.95,-47.19
+ILP,LSTM,Target_Close,9.96,14.22,60,49.54,-66.74
+ILP,GRU,Target_Close,10.3,15.14,60,25.46,-72.47
+ILP,XGBoost,Target_Close,10.73,15.1,60,32.11,-88.45
+ILP,Random Forest,Target_Close,12.0,16.8,60,30.08,-110.68
+ILP,Linear Regression,Target_Open,8.3,11.94,60,20.73,-48.26
+ILP,LSTM,Target_Open,10.04,14.29,60,21.3,-70.93
+ILP,GRU,Target_Open,10.12,14.8,60,23.61,-72.22
+ILP,XGBoost,Target_Open,10.23,14.38,60,34.15,-82.79
+ILP,Random Forest,Target_Open,11.84,16.47,60,29.67,-111.66
+INDU,Linear Regression,Target_Close,168.39,9.31,60,48.37,-6.73
+INDU,XGBoost,Target_Close,173.11,9.63,60,60.98,-9.72
+INDU,LSTM,Target_Close,171.51,8.98,60,58.8,-11.42
+INDU,GRU,Target_Close,192.06,10.17,60,27.31,-24.77
+INDU,Random Forest,Target_Close,222.48,12.51,60,31.3,-41.01
+INDU,LSTM,Target_Open,148.79,7.6,60,59.26,6.74
+INDU,Linear Regression,Target_Open,172.17,9.49,60,47.56,-5.39
+INDU,XGBoost,Target_Open,178.57,9.77,60,57.72,-9.3
+INDU,GRU,Target_Open,195.98,10.3,60,29.17,-22.84
+INDU,Random Forest,Target_Open,213.65,12.01,60,36.18,-30.77
+LUCK,LSTM,Target_Close,125.19,11.8,60,69.44,22.87
+LUCK,Random Forest,Target_Close,134.13,12.08,60,75.2,11.14
+LUCK,Linear Regression,Target_Close,140.58,13.3,60,60.57,6.87
+LUCK,GRU,Target_Close,153.06,13.84,60,61.57,5.7
+LUCK,XGBoost,Target_Close,144.86,13.26,60,56.1,4.03
+LUCK,Random Forest,Target_Open,135.6,12.21,60,71.54,10.45
+LUCK,XGBoost,Target_Open,136.58,12.52,60,60.57,9.8
+LUCK,Linear Regression,Target_Open,140.71,13.25,60,60.98,7.07
+LUCK,GRU,Target_Open,153.45,13.82,60,64.35,5.88
+LUCK,LSTM,Target_Open,170.39,15.5,60,51.85,-4.51
+MARI,GRU,Target_Close,876.81,160.05,60,61.11,3.78
+MARI,XGBoost,Target_Close,832.76,154.42,60,58.94,1.65
+MARI,LSTM,Target_Close,952.97,178.62,60,52.31,-4.58
+MARI,Random Forest,Target_Close,910.36,158.91,60,45.93,-7.52
+MARI,Linear Regression,Target_Close,952.8,165.01,60,47.15,-12.53
+MARI,LSTM,Target_Open,862.4,166.24,60,79.17,5.61
+MARI,GRU,Target_Open,875.64,160.0,60,61.11,4.16
+MARI,XGBoost,Target_Open,823.36,151.54,60,62.2,2.94
+MARI,Random Forest,Target_Open,898.22,157.33,60,45.53,-5.88
+MARI,Linear Regression,Target_Open,954.59,164.83,60,49.19,-12.53
+MCB,GRU,Target_Close,19.18,7.78,60,69.91,19.47
+MCB,XGBoost,Target_Close,23.74,10.01,60,67.48,2.99
+MCB,Linear Regression,Target_Close,24.25,10.14,60,50.0,0.92
+MCB,LSTM,Target_Close,29.7,12.12,60,75.0,-24.66
+MCB,Random Forest,Target_Close,47.05,19.49,60,69.92,-92.23
+MCB,GRU,Target_Open,19.2,7.79,60,69.44,19.65
+MCB,XGBoost,Target_Open,22.71,9.68,60,68.29,7.09
+MCB,Linear Regression,Target_Open,24.28,10.14,60,49.19,0.66
+MCB,LSTM,Target_Open,29.18,11.85,60,59.26,-22.1
+MCB,Random Forest,Target_Open,47.98,19.85,60,68.7,-96.29
+MEBL,Linear Regression,Target_Close,25.55,11.08,60,30.08,-18.73
+MEBL,GRU,Target_Close,23.23,9.84,60,42.59,-34.53
+MEBL,XGBoost,Target_Close,33.11,14.4,60,40.65,-53.88
+MEBL,Random Forest,Target_Close,42.23,18.36,60,40.24,-96.27
+MEBL,LSTM,Target_Close,41.43,17.66,60,43.98,-139.97
+MEBL,Linear Regression,Target_Open,25.36,11.0,60,30.08,-18.32
+MEBL,GRU,Target_Open,23.2,9.83,60,41.67,-35.29
+MEBL,XGBoost,Target_Open,32.31,14.08,60,39.84,-50.74
+MEBL,LSTM,Target_Open,32.4,13.74,60,38.89,-88.96
+MEBL,Random Forest,Target_Open,43.19,18.79,60,39.43,-101.51
+MLCF,Linear Regression,Target_Close,4.36,10.76,60,60.98,17.86
+MLCF,LSTM,Target_Close,5.12,11.94,60,71.76,10.67
+MLCF,GRU,Target_Close,5.17,12.16,60,66.67,9.82
+MLCF,XGBoost,Target_Close,6.27,15.19,60,46.34,-18.17
+MLCF,Random Forest,Target_Close,8.09,18.36,60,45.12,-52.48
+MLCF,Linear Regression,Target_Open,4.35,10.73,60,62.2,17.63
+MLCF,GRU,Target_Open,5.22,12.23,60,66.2,8.89
+MLCF,LSTM,Target_Open,6.62,15.69,60,52.31,-15.67
+MLCF,XGBoost,Target_Open,6.2,14.88,60,44.72,-17.2
+MLCF,Random Forest,Target_Open,8.07,18.23,60,44.31,-52.62
+NESTLE,Linear Regression,Target_Close,365.4,5.25,60,58.02,25.12
+NESTLE,XGBoost,Target_Close,514.13,7.13,60,66.98,-5.36
+NESTLE,Random Forest,Target_Close,529.64,7.34,60,55.19,-8.53
+NESTLE,GRU,Target_Close,632.26,8.92,60,29.67,-50.67
+NESTLE,LSTM,Target_Close,1011.39,14.59,60,31.87,-141.02
+NESTLE,Linear Regression,Target_Open,322.87,4.61,60,68.87,33.85
+NESTLE,XGBoost,Target_Open,535.19,7.43,60,58.49,-9.65
+NESTLE,Random Forest,Target_Open,600.91,8.31,60,44.81,-23.11
+NESTLE,GRU,Target_Open,635.29,8.98,60,29.67,-53.97
+NESTLE,LSTM,Target_Open,762.31,10.98,60,40.66,-84.76
+NETSOL,Random Forest,Target_Close,16.16,12.17,60,59.35,2.68
+NETSOL,GRU,Target_Close,15.96,11.53,60,57.41,-1.5
+NETSOL,XGBoost,Target_Close,17.94,13.13,60,54.88,-8.04
+NETSOL,Linear Regression,Target_Close,18.78,13.85,60,44.31,-13.1
+NETSOL,LSTM,Target_Close,22.77,16.88,60,62.96,-44.78
+NETSOL,Random Forest,Target_Open,16.21,12.17,60,60.16,3.81
+NETSOL,GRU,Target_Open,16.15,11.6,60,55.56,-1.24
+NETSOL,XGBoost,Target_Open,17.47,12.68,60,58.13,-3.65
+NETSOL,Linear Regression,Target_Open,18.99,13.93,60,45.53,-12.68
+NETSOL,LSTM,Target_Open,18.69,13.37,60,63.43,-17.18
+OGDC,Linear Regression,Target_Close,21.01,11.48,60,73.17,10.75
+OGDC,LSTM,Target_Close,26.68,14.88,60,50.93,-2.79
+OGDC,GRU,Target_Close,29.63,15.92,60,47.69,-14.16
+OGDC,Random Forest,Target_Close,35.8,20.15,60,35.77,-52.04
+OGDC,XGBoost,Target_Close,37.23,20.44,60,31.3,-58.12
+OGDC,Linear Regression,Target_Open,20.86,11.37,60,73.98,11.03
+OGDC,LSTM,Target_Open,24.88,13.31,60,73.15,3.98
+OGDC,GRU,Target_Open,29.37,15.73,60,47.22,-13.37
+OGDC,Random Forest,Target_Open,33.56,18.7,60,37.4,-43.16
+OGDC,XGBoost,Target_Open,36.01,19.62,60,27.64,-53.61
+PAKT,Random Forest,Target_Close,132.07,11.49,60,65.61,13.63
+PAKT,XGBoost,Target_Close,144.03,12.49,60,63.35,5.81
+PAKT,GRU,Target_Close,154.85,13.04,60,56.54,-0.15
+PAKT,Linear Regression,Target_Close,154.44,13.51,60,62.9,-1.0
+PAKT,LSTM,Target_Close,191.58,17.76,60,60.21,-23.91
+PAKT,XGBoost,Target_Open,146.18,12.64,60,64.25,4.67
+PAKT,Random Forest,Target_Open,150.78,13.09,60,58.82,1.67
+PAKT,Linear Regression,Target_Open,152.94,13.34,60,63.8,0.26
+PAKT,GRU,Target_Open,157.16,13.2,60,53.93,-1.4
+PAKT,LSTM,Target_Open,201.01,18.77,60,59.69,-29.69
+PPL,LSTM,Target_Close,23.15,14.38,60,56.94,5.92
+PPL,Linear Regression,Target_Close,22.61,14.55,60,60.57,2.49
+PPL,GRU,Target_Close,24.79,15.16,60,59.72,-0.75
+PPL,XGBoost,Target_Close,25.56,15.79,60,47.97,-10.25
+PPL,Random Forest,Target_Close,26.53,17.12,60,42.68,-14.41
+PPL,Linear Regression,Target_Open,22.71,14.58,60,60.16,2.22
+PPL,GRU,Target_Open,24.84,15.14,60,61.57,-0.44
+PPL,LSTM,Target_Open,25.13,15.47,60,56.94,-1.62
+PPL,Random Forest,Target_Open,25.99,16.74,60,42.68,-11.9
+PPL,XGBoost,Target_Open,26.4,16.38,60,48.37,-13.67
+PSO,Linear Regression,Target_Close,55.04,17.81,60,77.24,5.13
+PSO,GRU,Target_Close,65.94,21.08,60,62.04,-1.84
+PSO,LSTM,Target_Close,67.0,21.71,60,49.54,-3.48
+PSO,XGBoost,Target_Close,68.63,23.66,60,43.09,-18.3
+PSO,Random Forest,Target_Close,69.98,25.24,60,39.84,-20.62
+PSO,Linear Regression,Target_Open,54.85,17.72,60,74.8,5.03
+PSO,GRU,Target_Open,65.56,20.94,60,60.19,-1.76
+PSO,LSTM,Target_Open,66.36,21.68,60,61.11,-3.0
+PSO,Random Forest,Target_Open,68.63,24.57,60,40.65,-18.82
+PSO,XGBoost,Target_Open,69.82,24.0,60,42.28,-20.88
+SYS,GRU,Target_Close,63.14,12.13,60,59.72,0.86
+SYS,LSTM,Target_Close,65.98,13.68,60,54.17,-3.61
+SYS,XGBoost,Target_Close,60.94,12.12,60,55.69,-4.35
+SYS,Linear Regression,Target_Close,62.41,12.17,60,53.25,-6.87
+SYS,Random Forest,Target_Close,70.89,14.32,60,51.22,-21.38
+SYS,GRU,Target_Open,62.37,11.92,60,60.65,2.71
+SYS,XGBoost,Target_Open,59.26,11.68,60,54.88,-0.88
+SYS,LSTM,Target_Open,67.34,13.29,60,62.04,-5.06
+SYS,Linear Regression,Target_Open,62.03,12.06,60,52.03,-5.59
+SYS,Random Forest,Target_Open,71.21,14.4,60,52.03,-21.22
+TRG,GRU,Target_Close,8.95,15.48,60,59.72,5.82
+TRG,Linear Regression,Target_Close,9.5,16.26,60,58.13,0.35
+TRG,LSTM,Target_Close,11.23,20.14,60,64.81,-18.21
+TRG,XGBoost,Target_Close,11.39,20.15,60,57.32,-19.41
+TRG,Random Forest,Target_Close,18.82,33.52,60,46.34,-97.3
+TRG,GRU,Target_Open,8.82,15.17,60,59.26,5.37
+TRG,Linear Regression,Target_Open,9.27,15.8,60,56.91,0.79
+TRG,XGBoost,Target_Open,10.99,19.3,60,54.07,-17.53
+TRG,LSTM,Target_Open,11.7,21.06,60,53.7,-25.48
+TRG,Random Forest,Target_Open,18.51,32.69,60,46.34,-98.0
+UBL,LSTM,Target_Close,40.36,14.05,60,62.96,29.2
+UBL,Random Forest,Target_Close,44.35,16.57,60,75.2,13.75
+UBL,XGBoost,Target_Close,48.28,17.89,60,63.82,6.11
+UBL,Linear Regression,Target_Close,48.56,16.52,60,56.91,5.56
+UBL,GRU,Target_Close,55.35,18.13,60,54.17,2.92
+UBL,Random Forest,Target_Open,44.6,16.71,60,75.2,12.63
+UBL,XGBoost,Target_Open,45.67,17.24,60,67.07,10.54
+UBL,Linear Regression,Target_Open,47.79,16.24,60,59.76,6.39
+UBL,GRU,Target_Open,54.37,17.81,60,55.09,4.05
+UBL,LSTM,Target_Open,56.43,18.67,60,54.17,0.41
+UNITY,GRU,Target_Close,5.29,17.77,60,43.06,-6.83
+UNITY,Linear Regression,Target_Close,4.99,17.09,60,50.81,-7.52
+UNITY,XGBoost,Target_Close,7.15,24.24,60,25.2,-54.02
+UNITY,LSTM,Target_Close,8.57,28.96,60,25.93,-73.13
+UNITY,Random Forest,Target_Close,10.05,33.55,60,25.2,-116.42
+UNITY,GRU,Target_Open,5.21,17.44,60,42.13,-5.42
+UNITY,Linear Regression,Target_Open,4.96,16.91,60,52.03,-7.02
+UNITY,XGBoost,Target_Open,7.24,24.64,60,26.02,-56.22
+UNITY,LSTM,Target_Open,7.76,26.57,60,31.94,-56.9
+UNITY,Random Forest,Target_Open,9.79,32.61,60,24.39,-111.34

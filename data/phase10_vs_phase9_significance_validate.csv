@@ -1,0 +1,11 @@
+Target,Horizon,N_Tickers,Phase9_MAE,Phase10_MAE,MAE_Winner,Phase9_RMSE,Phase10_RMSE,RMSE_Winner,Phase9_DirAcc_%,Phase10_DirAcc_%,DirAcc_Winner,Phase9_Improvement_%,Phase10_Improvement_%,Bootstrap_Pct_Resamples_Phase10_Wins,Bootstrap_p_raw,Bootstrap_CI95_Diff_Low,Bootstrap_CI95_Diff_High,Wilcoxon_p_value,Winners_Agree_Across_Metrics,Bootstrap_p_holm,Significant_after_correction
+Close,1,25,7.86,7.94,phase9,27.93,28.13,phase9,51.26,51.86,phase10,-0.54,-1.53,0.1,0.001,-1.86,-0.11,0.0125,False,0.01,True
+Open,1,25,5.4,5.5,phase9,27.12,27.87,phase9,62.67,61.89,phase9,-0.85,-2.76,17.8,0.355,-3.41,0.39,0.0125,True,1.0,False
+Close,5,25,18.32,18.33,phase9,59.45,60.97,phase9,52.06,52.63,phase10,-5.06,-5.15,37.1,0.742,-0.56,0.51,0.9158,False,1.0,False
+Open,5,25,17.41,17.78,phase9,62.85,65.19,phase9,53.69,53.43,phase9,-3.66,-5.86,26.9,0.538,-5.47,1.43,0.8325,True,1.0,False
+Close,10,25,27.87,27.96,phase9,81.96,83.14,phase9,54.25,53.79,phase9,-7.7,-8.06,32.6,0.652,-1.98,1.02,0.5965,True,1.0,False
+Open,10,25,27.54,26.96,phase10,85.56,84.58,phase10,54.66,55.97,phase10,-8.57,-6.27,91.4,0.172,-0.44,4.8,0.071,True,1.0,False
+Close,20,25,42.45,41.89,phase10,115.54,113.16,phase10,57.26,56.07,phase9,-7.37,-5.95,71.3,0.574,-2.19,4.49,0.5077,False,1.0,False
+Open,20,25,41.56,41.44,phase10,115.73,114.6,phase10,56.98,56.01,phase9,-5.85,-5.54,71.6,0.568,-0.9,1.5,0.1135,False,1.0,False
+Close,60,25,72.32,71.85,phase10,171.2,166.55,phase10,57.45,57.64,phase10,1.83,2.48,56.5,0.871,-4.67,5.18,1.0,True,1.0,False
+Open,60,25,72.16,70.81,phase10,169.94,167.83,phase10,57.0,58.48,phase10,1.88,3.72,87.2,0.255,-0.95,3.99,0.5249,True,1.0,False

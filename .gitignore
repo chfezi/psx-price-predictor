@@ -5,18 +5,38 @@ __pycache__/
 # Logs
 *.log
 
-# Raw / intermediate pipeline data (regenerable via the pipeline scripts,
-# not needed to run the Streamlit app)
-psx_data_8years/
+# Intermediate pipeline data (regenerable from psx_data_8years/ via
+# clean_data.py + feature_engineering.py, not needed to run the Streamlit
+# app). psx_data_8years/ itself IS committed (small, ~2MB): the daily
+# automation workflow (.github/workflows/daily_scrape.yml) appends to it
+# incrementally on each run and needs the prior history to diff against and
+# to persist across the workflow's ephemeral runners.
 processed/
 data/train.csv
 data/test.csv
 data/validate.csv
 data/final_validation.csv
 
-# Large model files fetched at runtime by app.py (see MODEL_DOWNLOAD_URLS)
-models/rf_high.pkl
-models/rf_low.pkl
+# Large model files, too big for a normal git push (several sit right at
+# GitHub's 100MB per-file limit). phase7_rf_* predates Phase 9's Open/Close
+# retrain and is kept here since app.py still serves off it until Phase 8 is
+# redone (Phases/phase_9.md "Not in this phase"); phase9_rf_* is its
+# Open/Close successor - the 10 combos generate_predictions.py needs are
+# published as GitHub Release assets and downloaded by
+# .github/workflows/daily_scrape.yml instead. phase10_rf_* isn't used by
+# generate_predictions.py at all (it's hardcoded to phase9_ models), so it
+# stays local-only.
+models/phase7_rf_*.pkl
+models/phase9_rf_*.pkl
+models/phase10_rf_*.pkl
+
+# Never-selected Phase 9 combos, kept for reference but not needed to run
+# the app - see manage_model_storage.py / Phases/phase_9_notes.md
+models_evaluation_only/
+
+# TensorBoard training logs - local training artifact, not needed to run
+# the app or the automation.
+runs/
 
 # Streamlit run artifacts
 streamlit_run.log

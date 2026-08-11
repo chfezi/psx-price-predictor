@@ -5,3 +5,8 @@ plotly
 scikit-learn
 xgboost
 tensorflow
+shap
+torch
+tensorboard
+requests
+beautifulsoup4

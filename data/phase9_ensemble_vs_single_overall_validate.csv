@@ -1,0 +1,11 @@
+Target,Horizon,N_Rows,Naive_MAE,Ensemble_MAE,Ensemble_Improvement_over_Naive_%,Ensemble_Directional_Accuracy_%,Best_Single_Model,Best_Single_MAE,Best_Single_Improvement_over_Naive_%,Ensemble_Beats_Best_Single
+Close,1,9143,7.82,7.86,-0.54,51.26,Random Forest,7.78,0.52,False
+Open,1,9143,5.35,5.4,-0.85,62.67,LSTM,5.42,-1.36,True
+Close,5,9043,17.44,18.32,-5.06,52.06,LSTM,18.09,-3.78,False
+Open,5,9043,16.8,17.41,-3.66,53.69,LSTM,17.28,-2.91,False
+Close,10,8918,25.88,27.87,-7.7,54.25,Linear Regression,27.45,-6.07,False
+Open,10,8918,25.37,27.54,-8.57,54.66,LSTM,26.84,-5.81,False
+Close,20,8668,39.53,42.45,-7.37,57.26,Linear Regression,42.28,-6.95,False
+Open,20,8668,39.26,41.56,-5.85,56.98,Linear Regression,42.13,-7.3,True
+Close,60,7668,73.67,72.32,1.83,57.45,Linear Regression,75.88,-2.99,True
+Open,60,7668,73.54,72.16,1.88,57.0,Linear Regression,75.09,-2.11,True

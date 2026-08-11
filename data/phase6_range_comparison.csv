@@ -1,0 +1,26 @@
+Ticker,Old_High_Model,Old_Low_Model,Old_Avg_Width,Old_Coverage,New_High_Model,New_Low_Model,New_Avg_Width,New_Coverage,N_Rows_New
+BAHL,Random Forest,XGBoost,2.92,0.1992,Random Forest,LSTM,7.78,0.8333,216
+COLG,Linear Regression,Linear Regression,24.33,0.3415,Linear Regression,LSTM,70.54,0.8704,216
+DGKC,Random Forest,XGBoost,2.64,0.1667,Linear Regression,LSTM,6.48,0.7639,216
+EFERT,Linear Regression,Random Forest,4.67,0.3415,XGBoost,Random Forest,10.62,0.8171,246
+ENGROH,Random Forest,XGBoost,4.94,0.3171,Random Forest,Random Forest,12.21,0.8211,246
+FFC,Linear Regression,Linear Regression,5.83,0.2561,XGBoost,Linear Regression,17.39,0.8659,246
+HBL,XGBoost,XGBoost,3.73,0.2846,XGBoost,XGBoost,8.9,0.8374,246
+HUBC,XGBoost,XGBoost,3.82,0.248,XGBoost,Linear Regression,9.82,0.8008,246
+ILP,Random Forest,Random Forest,2.11,0.2683,Linear Regression,Random Forest,5.38,0.8293,246
+INDU,Linear Regression,Linear Regression,36.35,0.2114,Linear Regression,LSTM,119.45,0.8657,216
+LUCK,Linear Regression,Linear Regression,20.43,0.1301,Linear Regression,LSTM,58.06,0.8241,216
+MARI,Random Forest,Random Forest,45.69,0.1179,XGBoost,Random Forest,573.66,0.9959,246
+MCB,Linear Regression,Linear Regression,6.34,0.3049,Linear Regression,Random Forest,15.16,0.8374,246
+MEBL,Linear Regression,Random Forest,6.08,0.2886,Random Forest,Random Forest,14.66,0.8374,246
+MLCF,Random Forest,Random Forest,1.45,0.2886,Linear Regression,Random Forest,3.01,0.8089,246
+NESTLE,Linear Regression,Linear Regression,142.31,0.1651,LSTM,LSTM,454.19,0.8516,182
+NETSOL,XGBoost,XGBoost,4.44,0.1301,Random Forest,Linear Regression,11.85,0.7683,246
+OGDC,XGBoost,Random Forest,4.73,0.2114,LSTM,LSTM,12.32,0.838,216
+PAKT,Random Forest,Linear Regression,39.88,0.1493,LSTM,LSTM,118.08,0.7487,191
+PPL,XGBoost,Random Forest,4.33,0.2033,XGBoost,LSTM,10.49,0.8241,216
+PSO,Linear Regression,Random Forest,6.68,0.2683,Linear Regression,LSTM,17.89,0.8565,216
+SYS,Linear Regression,Linear Regression,11.73,0.3008,XGBoost,Linear Regression,32.87,0.8455,246
+TRG,Random Forest,XGBoost,2.22,0.1463,Random Forest,Linear Regression,5.94,0.7886,246
+UBL,Linear Regression,Linear Regression,7.21,0.3537,Random Forest,Random Forest,17.12,0.8618,246
+UNITY,Random Forest,Random Forest,1.08,0.3171,Linear Regression,LSTM,2.27,0.7917,216

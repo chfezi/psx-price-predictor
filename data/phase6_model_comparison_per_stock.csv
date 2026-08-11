@@ -1,0 +1,201 @@
+Ticker,Model,Target,MAE,MAPE,Accuracy_%
+BAHL,Random Forest,Target_High,1.18,1.12,98.88
+BAHL,XGBoost,Target_High,1.18,1.13,98.87
+BAHL,Linear Regression,Target_High,1.21,1.14,98.86
+BAHL,LSTM,Target_High,1.37,1.27,98.73
+BAHL,LSTM,Target_Low,1.18,1.15,98.85
+BAHL,Random Forest,Target_Low,1.2,1.19,98.81
+BAHL,Linear Regression,Target_Low,1.21,1.21,98.79
+BAHL,XGBoost,Target_Low,1.22,1.22,98.78
+COLG,Linear Regression,Target_High,10.68,0.79,99.21
+COLG,XGBoost,Target_High,10.64,0.79,99.21
+COLG,Random Forest,Target_High,10.73,0.8,99.2
+COLG,LSTM,Target_High,12.92,0.98,99.02
+COLG,LSTM,Target_Low,9.4,0.76,99.24
+COLG,Linear Regression,Target_Low,10.42,0.82,99.18
+COLG,XGBoost,Target_Low,10.74,0.84,99.16
+COLG,Random Forest,Target_Low,10.82,0.85,99.15
+DGKC,Linear Regression,Target_High,1.07,1.25,98.75
+DGKC,XGBoost,Target_High,1.07,1.25,98.75
+DGKC,Random Forest,Target_High,1.07,1.26,98.74
+DGKC,LSTM,Target_High,1.15,1.34,98.66
+DGKC,LSTM,Target_Low,1.02,1.25,98.75
+DGKC,XGBoost,Target_Low,1.03,1.28,98.72
+DGKC,Linear Regression,Target_Low,1.04,1.29,98.71
+DGKC,Random Forest,Target_Low,1.04,1.29,98.71
+EFERT,XGBoost,Target_High,1.87,1.1,98.9
+EFERT,Linear Regression,Target_High,1.88,1.11,98.89
+EFERT,Random Forest,Target_High,1.9,1.13,98.87
+EFERT,LSTM,Target_High,2.05,1.17,98.83
+EFERT,Random Forest,Target_Low,1.51,0.92,99.08
+EFERT,Linear Regression,Target_Low,1.53,0.93,99.07
+EFERT,LSTM,Target_Low,1.6,0.94,99.06
+EFERT,XGBoost,Target_Low,1.56,0.95,99.05
+ENGROH,Random Forest,Target_High,2.16,1.34,98.66
+ENGROH,Linear Regression,Target_High,2.18,1.35,98.65
+ENGROH,XGBoost,Target_High,2.18,1.35,98.65
+ENGROH,LSTM,Target_High,2.54,1.54,98.46
+ENGROH,Random Forest,Target_Low,1.67,1.09,98.91
+ENGROH,Linear Regression,Target_Low,1.67,1.1,98.9
+ENGROH,XGBoost,Target_Low,1.73,1.13,98.87
+ENGROH,LSTM,Target_Low,1.79,1.14,98.86
+FFC,XGBoost,Target_High,2.88,1.31,98.69
+FFC,Linear Regression,Target_High,2.91,1.32,98.68
+FFC,Random Forest,Target_High,2.92,1.33,98.67
+FFC,LSTM,Target_High,3.49,1.56,98.44
+FFC,Linear Regression,Target_Low,2.21,1.04,98.96
+FFC,Random Forest,Target_Low,2.22,1.05,98.95
+FFC,XGBoost,Target_Low,2.23,1.06,98.94
+FFC,LSTM,Target_Low,2.42,1.1,98.9
+HBL,XGBoost,Target_High,1.41,1.05,98.95
+HBL,Linear Regression,Target_High,1.44,1.06,98.94
+HBL,Random Forest,Target_High,1.44,1.06,98.94
+HBL,LSTM,Target_High,1.79,1.29,98.71
+HBL,XGBoost,Target_Low,1.13,0.89,99.11
+HBL,LSTM,Target_Low,1.19,0.92,99.08
+HBL,Random Forest,Target_Low,1.19,0.93,99.07
+HBL,Linear Regression,Target_Low,1.2,0.94,99.06
+HUBC,XGBoost,Target_High,1.61,1.22,98.78
+HUBC,Linear Regression,Target_High,1.63,1.23,98.77
+HUBC,Random Forest,Target_High,1.64,1.24,98.76
+HUBC,LSTM,Target_High,1.8,1.35,98.65
+HUBC,Linear Regression,Target_Low,1.57,1.26,98.74
+HUBC,Random Forest,Target_Low,1.57,1.27,98.73
+HUBC,XGBoost,Target_Low,1.58,1.27,98.73
+HUBC,LSTM,Target_Low,1.67,1.34,98.66
+ILP,Linear Regression,Target_High,0.83,1.12,98.88
+ILP,Random Forest,Target_High,0.83,1.13,98.87
+ILP,XGBoost,Target_High,0.85,1.15,98.85
+ILP,LSTM,Target_High,0.92,1.25,98.75
+ILP,Random Forest,Target_Low,0.84,1.19,98.81
+ILP,XGBoost,Target_Low,0.85,1.22,98.78
+ILP,Linear Regression,Target_Low,0.87,1.23,98.77
+ILP,LSTM,Target_Low,0.88,1.25,98.75
+INDU,Linear Regression,Target_High,17.6,1.0,99.0
+INDU,LSTM,Target_High,18.11,1.01,98.99
+INDU,Random Forest,Target_High,18.23,1.04,98.96
+INDU,XGBoost,Target_High,18.31,1.04,98.96
+INDU,LSTM,Target_Low,17.59,1.03,98.97
+INDU,Random Forest,Target_Low,17.89,1.07,98.93
+INDU,Linear Regression,Target_Low,18.03,1.08,98.92
+INDU,XGBoost,Target_Low,18.09,1.08,98.92
+LUCK,Linear Regression,Target_High,8.72,0.93,99.07
+LUCK,Random Forest,Target_High,9.08,0.97,99.03
+LUCK,XGBoost,Target_High,9.19,0.98,99.02
+LUCK,LSTM,Target_High,9.72,1.02,98.98
+LUCK,LSTM,Target_Low,8.44,0.93,99.07
+LUCK,Linear Regression,Target_Low,8.41,0.95,99.05
+LUCK,Random Forest,Target_Low,8.43,0.95,99.05
+LUCK,XGBoost,Target_Low,8.4,0.95,99.05
+MARI,XGBoost,Target_High,36.83,4.56,95.44
+MARI,Random Forest,Target_High,37.13,4.57,95.43
+MARI,LSTM,Target_High,39.7,5.1,94.9
+MARI,Linear Regression,Target_High,46.03,6.47,93.53
+MARI,Random Forest,Target_Low,36.53,4.47,95.53
+MARI,XGBoost,Target_Low,36.8,4.55,95.45
+MARI,LSTM,Target_Low,36.03,4.82,95.18
+MARI,Linear Regression,Target_Low,44.62,6.49,93.51
+MCB,Linear Regression,Target_High,2.29,0.97,99.03
+MCB,Random Forest,Target_High,2.27,0.97,99.03
+MCB,XGBoost,Target_High,2.27,0.97,99.03
+MCB,LSTM,Target_High,2.73,1.14,98.86
+MCB,Random Forest,Target_Low,2.11,0.94,99.06
+MCB,XGBoost,Target_Low,2.13,0.95,99.05
+MCB,Linear Regression,Target_Low,2.16,0.96,99.04
+MCB,LSTM,Target_Low,2.28,1.0,99.0
+MEBL,Random Forest,Target_High,2.31,1.03,98.97
+MEBL,XGBoost,Target_High,2.31,1.03,98.97
+MEBL,Linear Regression,Target_High,2.33,1.04,98.96
+MEBL,LSTM,Target_High,2.69,1.16,98.84
+MEBL,Random Forest,Target_Low,2.23,1.04,98.96
+MEBL,Linear Regression,Target_Low,2.3,1.07,98.93
+MEBL,XGBoost,Target_Low,2.29,1.07,98.93
+MEBL,LSTM,Target_Low,2.37,1.07,98.93
+MLCF,Linear Regression,Target_High,0.48,1.2,98.8
+MLCF,Random Forest,Target_High,0.48,1.2,98.8
+MLCF,XGBoost,Target_High,0.48,1.21,98.79
+MLCF,LSTM,Target_High,0.51,1.3,98.7
+MLCF,Random Forest,Target_Low,0.46,1.22,98.78
+MLCF,XGBoost,Target_Low,0.47,1.23,98.77
+MLCF,Linear Regression,Target_Low,0.47,1.24,98.76
+MLCF,LSTM,Target_Low,0.47,1.26,98.74
+NESTLE,LSTM,Target_High,82.95,1.14,98.86
+NESTLE,Linear Regression,Target_High,92.05,1.23,98.77
+NESTLE,XGBoost,Target_High,92.13,1.24,98.76
+NESTLE,Random Forest,Target_High,93.11,1.25,98.75
+NESTLE,LSTM,Target_Low,70.66,1.01,98.99
+NESTLE,XGBoost,Target_Low,83.0,1.16,98.84
+NESTLE,Linear Regression,Target_Low,85.04,1.19,98.81
+NESTLE,Random Forest,Target_Low,86.06,1.2,98.8
+NETSOL,Random Forest,Target_High,1.97,1.48,98.52
+NETSOL,Linear Regression,Target_High,2.01,1.51,98.49
+NETSOL,XGBoost,Target_High,2.0,1.51,98.49
+NETSOL,LSTM,Target_High,2.19,1.61,98.39
+NETSOL,Linear Regression,Target_Low,1.95,1.56,98.44
+NETSOL,Random Forest,Target_Low,1.98,1.58,98.42
+NETSOL,LSTM,Target_Low,2.04,1.58,98.42
+NETSOL,XGBoost,Target_Low,2.03,1.62,98.38
+OGDC,LSTM,Target_High,2.19,1.4,98.6
+OGDC,Random Forest,Target_High,2.2,1.44,98.56
+OGDC,XGBoost,Target_High,2.21,1.45,98.55
+OGDC,Linear Regression,Target_High,2.23,1.46,98.54
+OGDC,LSTM,Target_Low,1.6,1.07,98.93
+OGDC,Random Forest,Target_Low,1.76,1.2,98.8
+OGDC,Linear Regression,Target_Low,1.79,1.23,98.77
+OGDC,XGBoost,Target_Low,1.81,1.23,98.77
+PAKT,LSTM,Target_High,21.71,2.0,98.0
+PAKT,Random Forest,Target_High,22.64,2.1,97.9
+PAKT,Linear Regression,Target_High,22.79,2.11,97.89
+PAKT,XGBoost,Target_High,22.8,2.11,97.89
+PAKT,LSTM,Target_Low,21.37,2.11,97.89
+PAKT,Random Forest,Target_Low,23.17,2.28,97.72
+PAKT,XGBoost,Target_Low,23.43,2.3,97.7
+PAKT,Linear Regression,Target_Low,23.47,2.31,97.69
+PPL,XGBoost,Target_High,1.84,1.36,98.64
+PPL,LSTM,Target_High,1.86,1.37,98.63
+PPL,Random Forest,Target_High,1.89,1.4,98.6
+PPL,Linear Regression,Target_High,1.9,1.42,98.58
+PPL,LSTM,Target_Low,1.49,1.14,98.86
+PPL,Random Forest,Target_Low,1.63,1.27,98.73
+PPL,Linear Regression,Target_Low,1.64,1.29,98.71
+PPL,XGBoost,Target_Low,1.66,1.29,98.71
+PSO,Linear Regression,Target_High,2.91,1.3,98.7
+PSO,Random Forest,Target_High,2.96,1.32,98.68
+PSO,XGBoost,Target_High,2.96,1.32,98.68
+PSO,LSTM,Target_High,3.17,1.38,98.62
+PSO,LSTM,Target_Low,2.42,1.16,98.84
+PSO,Linear Regression,Target_Low,2.55,1.26,98.74
+PSO,Random Forest,Target_Low,2.61,1.27,98.73
+PSO,XGBoost,Target_Low,2.6,1.28,98.72
+SYS,XGBoost,Target_High,5.17,1.08,98.92
+SYS,Random Forest,Target_High,5.19,1.09,98.91
+SYS,Linear Regression,Target_High,5.29,1.12,98.88
+SYS,LSTM,Target_High,5.87,1.23,98.77
+SYS,Linear Regression,Target_Low,4.85,1.08,98.92
+SYS,Random Forest,Target_Low,4.82,1.08,98.92
+SYS,XGBoost,Target_Low,4.82,1.08,98.92
+SYS,LSTM,Target_Low,4.92,1.09,98.91
+TRG,Random Forest,Target_High,1.0,1.56,98.44
+TRG,XGBoost,Target_High,1.01,1.57,98.43
+TRG,Linear Regression,Target_High,1.01,1.58,98.42
+TRG,LSTM,Target_High,1.08,1.73,98.27
+TRG,Linear Regression,Target_Low,0.93,1.54,98.46
+TRG,Random Forest,Target_Low,0.93,1.54,98.46
+TRG,XGBoost,Target_Low,0.94,1.56,98.44
+TRG,LSTM,Target_Low,0.93,1.58,98.42
+UBL,Random Forest,Target_High,2.86,1.07,98.93
+UBL,Linear Regression,Target_High,2.91,1.09,98.91
+UBL,XGBoost,Target_High,2.91,1.09,98.91
+UBL,LSTM,Target_High,3.45,1.26,98.74
+UBL,Random Forest,Target_Low,2.3,0.9,99.1
+UBL,Linear Regression,Target_Low,2.4,0.93,99.07
+UBL,XGBoost,Target_Low,2.39,0.94,99.06
+UBL,LSTM,Target_Low,2.55,0.96,99.04
+UNITY,Linear Regression,Target_High,0.37,1.34,98.66
+UNITY,XGBoost,Target_High,0.38,1.35,98.65
+UNITY,Random Forest,Target_High,0.38,1.36,98.64
+UNITY,LSTM,Target_High,0.41,1.45,98.55
+UNITY,LSTM,Target_Low,0.3,1.13,98.87
+UNITY,Linear Regression,Target_Low,0.31,1.2,98.8
+UNITY,XGBoost,Target_Low,0.32,1.25,98.75
+UNITY,Random Forest,Target_Low,0.33,1.26,98.74

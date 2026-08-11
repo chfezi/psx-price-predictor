@@ -14,6 +14,8 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
+from feature_engineering import HORIZONS
+
 BASE_DIR = Path(__file__).resolve().parent
 PROCESSED_DIR = BASE_DIR / "processed"
 DATA_DIR = BASE_DIR / "data"
@@ -39,7 +41,22 @@ FEATURE_COLUMNS = [
     "DayOfWeek", "Month",
 ]
 
-TARGET_COLUMNS = ["Target_High", "Target_Low"]
+TARGET_COLUMNS = ["Target_Open", "Target_Close"]
+
+# Horizon-specific targets (Target_Open_5d, Target_Open_Return_60d, etc) are
+# only missing in each ticker's trailing N rows. A blanket dropna() across
+# every column would drop those rows from train/test/validate entirely,
+# which also destroys otherwise-valid 1d/5d/10d/20d targets on the same rows
+# - exactly what Phases/phase_7.md Step 3 says not to do ("do not drop them
+# from the master dataset itself"). Excluded from the dropna subset below;
+# train_models_phase9.py drops per-horizon NaNs itself when it builds each
+# horizon's own training set.
+HORIZON_TARGET_COLUMNS = [
+    f"Target_{side}_{suffix}{n}d"
+    for n in HORIZONS
+    for side in ["Open", "Close"]
+    for suffix in ["", "Return_"]
+]
 
 
 def merge_all_stocks(processed_dir, output_path):
@@ -104,10 +121,13 @@ def main():
     print(f"Test: {len(test_df)} rows, {test_df['Date'].min().date()} to {test_df['Date'].max().date()}")
     print(f"Validate: {len(validate_df)} rows, {validate_df['Date'].min().date()} to {validate_df['Date'].max().date()}")
 
-    # Step 4: Drop rows with missing values (guard against inf first, per troubleshooting note)
-    train_df = train_df.replace([np.inf, -np.inf], np.nan).dropna()
-    test_df = test_df.replace([np.inf, -np.inf], np.nan).dropna()
-    validate_df = validate_df.replace([np.inf, -np.inf], np.nan).dropna()
+    # Step 4: Drop rows with missing values (guard against inf first, per
+    # troubleshooting note). Excludes horizon-specific target columns - see
+    # HORIZON_TARGET_COLUMNS above.
+    dropna_subset = [c for c in master_df.columns if c not in HORIZON_TARGET_COLUMNS]
+    train_df = train_df.replace([np.inf, -np.inf], np.nan).dropna(subset=dropna_subset)
+    test_df = test_df.replace([np.inf, -np.inf], np.nan).dropna(subset=dropna_subset)
+    validate_df = validate_df.replace([np.inf, -np.inf], np.nan).dropna(subset=dropna_subset)
 
     print(f"\nTrain after dropna: {len(train_df)} rows")
     print(f"Test after dropna: {len(test_df)} rows")

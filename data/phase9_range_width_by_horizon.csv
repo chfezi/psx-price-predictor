@@ -1,0 +1,251 @@
+Ticker,Target,Model,Std_1d,Std_60d,Widens
+BAHL,Open,Linear Regression,1.23,15.2,True
+BAHL,Open,Random Forest,1.2,17.94,True
+BAHL,Open,XGBoost,1.21,16.32,True
+BAHL,Open,LSTM,1.25,21.19,True
+BAHL,Open,GRU,1.29,15.0,True
+BAHL,Close,Linear Regression,2.28,15.25,True
+BAHL,Close,Random Forest,2.25,17.45,True
+BAHL,Close,XGBoost,2.23,15.65,True
+BAHL,Close,LSTM,2.37,17.9,True
+BAHL,Close,GRU,2.47,14.98,True
+COLG,Open,Linear Regression,11.01,140.66,True
+COLG,Open,Random Forest,11.13,124.25,True
+COLG,Open,XGBoost,11.16,152.39,True
+COLG,Open,LSTM,10.43,157.85,True
+COLG,Open,GRU,11.29,159.48,True
+COLG,Close,Linear Regression,18.81,141.73,True
+COLG,Close,Random Forest,18.54,132.74,True
+COLG,Close,XGBoost,18.57,149.27,True
+COLG,Close,LSTM,18.12,105.33,True
+COLG,Close,GRU,18.8,158.67,True
+DGKC,Open,Linear Regression,0.59,14.69,True
+DGKC,Open,Random Forest,0.59,18.78,True
+DGKC,Open,XGBoost,0.58,16.55,True
+DGKC,Open,LSTM,0.61,19.46,True
+DGKC,Open,GRU,0.67,13.23,True
+DGKC,Close,Linear Regression,2.14,14.7,True
+DGKC,Close,Random Forest,2.16,18.89,True
+DGKC,Close,XGBoost,2.14,16.75,True
+DGKC,Close,LSTM,2.19,20.93,True
+DGKC,Close,GRU,2.23,13.14,True
+EFERT,Open,Linear Regression,1.17,13.84,True
+EFERT,Open,Random Forest,1.16,17.4,True
+EFERT,Open,XGBoost,1.17,14.27,True
+EFERT,Open,LSTM,1.21,14.96,True
+EFERT,Open,GRU,1.26,12.67,True
+EFERT,Close,Linear Regression,3.14,13.83,True
+EFERT,Close,Random Forest,3.11,15.59,True
+EFERT,Close,XGBoost,3.12,14.38,True
+EFERT,Close,LSTM,3.14,21.99,True
+EFERT,Close,GRU,3.2,12.73,True
+ENGROH,Open,Linear Regression,2.38,40.32,True
+ENGROH,Open,Random Forest,2.19,38.98,True
+ENGROH,Open,XGBoost,2.27,35.78,True
+ENGROH,Open,LSTM,2.79,47.84,True
+ENGROH,Open,GRU,2.87,37.98,True
+ENGROH,Close,Linear Regression,3.91,40.25,True
+ENGROH,Close,Random Forest,4.02,38.71,True
+ENGROH,Close,XGBoost,4.11,38.08,True
+ENGROH,Close,LSTM,4.2,49.68,True
+ENGROH,Close,GRU,4.26,38.0,True
+FFC,Open,Linear Regression,2.39,47.35,True
+FFC,Open,Random Forest,2.55,47.89,True
+FFC,Open,XGBoost,2.46,50.51,True
+FFC,Open,LSTM,2.47,43.69,True
+FFC,Open,GRU,2.77,46.58,True
+FFC,Close,Linear Regression,6.11,47.54,True
+FFC,Close,Random Forest,6.16,48.22,True
+FFC,Close,XGBoost,6.3,49.22,True
+FFC,Close,LSTM,6.47,48.38,True
+FFC,Close,GRU,6.67,46.49,True
+HBL,Open,Linear Regression,0.93,22.69,True
+HBL,Open,Random Forest,0.9,16.72,True
+HBL,Open,XGBoost,0.91,13.49,True
+HBL,Open,LSTM,1.0,21.67,True
+HBL,Open,GRU,1.06,21.54,True
+HBL,Close,Linear Regression,2.8,22.78,True
+HBL,Close,Random Forest,2.77,16.46,True
+HBL,Close,XGBoost,2.7,13.3,True
+HBL,Close,LSTM,3.03,20.29,True
+HBL,Close,GRU,3.08,21.62,True
+HUBC,Open,Linear Regression,1.15,30.27,True
+HUBC,Open,Random Forest,1.08,25.68,True
+HUBC,Open,XGBoost,1.11,22.4,True
+HUBC,Open,LSTM,1.21,36.41,True
+HUBC,Open,GRU,1.31,30.56,True
+HUBC,Close,Linear Regression,3.03,30.4,True
+HUBC,Close,Random Forest,3.03,25.49,True
+HUBC,Close,XGBoost,3.11,20.48,True
+HUBC,Close,LSTM,3.17,36.47,True
+HUBC,Close,GRU,3.3,30.59,True
+ILP,Open,Linear Regression,0.79,9.31,True
+ILP,Open,Random Forest,0.76,14.11,True
+ILP,Open,XGBoost,0.74,11.43,True
+ILP,Open,LSTM,0.83,11.25,True
+ILP,Open,GRU,0.87,9.98,True
+ILP,Close,Linear Regression,1.62,9.39,True
+ILP,Close,Random Forest,1.6,14.09,True
+ILP,Close,XGBoost,1.61,12.18,True
+ILP,Close,LSTM,1.64,11.28,True
+ILP,Close,GRU,1.71,9.99,True
+INDU,Open,Linear Regression,30.58,131.89,True
+INDU,Open,Random Forest,32.16,178.18,True
+INDU,Open,XGBoost,32.35,151.81,True
+INDU,Open,LSTM,32.23,128.49,True
+INDU,Open,GRU,32.84,125.26,True
+INDU,Close,Linear Regression,24.11,135.79,True
+INDU,Close,Random Forest,24.49,170.42,True
+INDU,Close,XGBoost,25.03,145.07,True
+INDU,Close,LSTM,23.89,191.97,True
+INDU,Close,GRU,25.33,124.04,True
+LUCK,Open,Linear Regression,7.38,115.71,True
+LUCK,Open,Random Forest,7.41,121.97,True
+LUCK,Open,XGBoost,7.51,140.53,True
+LUCK,Open,LSTM,7.77,156.01,True
+LUCK,Open,GRU,8.28,129.04,True
+LUCK,Close,Linear Regression,17.17,114.11,True
+LUCK,Close,Random Forest,17.49,119.24,True
+LUCK,Close,XGBoost,17.19,137.43,True
+LUCK,Close,LSTM,18.04,141.88,True
+LUCK,Close,GRU,17.95,127.62,True
+MARI,Open,Linear Regression,202.59,1265.38,True
+MARI,Open,Random Forest,199.96,1283.86,True
+MARI,Open,XGBoost,201.09,1223.57,True
+MARI,Open,LSTM,215.18,1211.6,True
+MARI,Open,GRU,215.65,1196.99,True
+MARI,Close,Linear Regression,205.7,1264.71,True
+MARI,Close,Random Forest,204.37,1292.6,True
+MARI,Close,XGBoost,203.74,1237.24,True
+MARI,Close,LSTM,217.66,1281.73,True
+MARI,Close,GRU,215.96,1198.92,True
+MCB,Open,Linear Regression,2.07,19.76,True
+MCB,Open,Random Forest,2.08,53.94,True
+MCB,Open,XGBoost,2.08,25.68,True
+MCB,Open,LSTM,2.12,28.9,True
+MCB,Open,GRU,2.23,19.04,True
+MCB,Close,Linear Regression,4.6,19.69,True
+MCB,Close,Random Forest,4.59,53.0,True
+MCB,Close,XGBoost,4.64,27.62,True
+MCB,Close,LSTM,4.88,34.87,True
+MCB,Close,GRU,4.98,18.94,True
+MEBL,Open,Linear Regression,1.82,30.53,True
+MEBL,Open,Random Forest,1.71,52.74,True
+MEBL,Open,XGBoost,1.7,39.61,True
+MEBL,Open,LSTM,1.89,39.73,True
+MEBL,Open,GRU,2.12,29.69,True
+MEBL,Close,Linear Regression,4.45,30.73,True
+MEBL,Close,Random Forest,4.37,51.2,True
+MEBL,Close,XGBoost,4.38,40.01,True
+MEBL,Close,LSTM,4.67,44.2,True
+MEBL,Close,GRU,4.78,29.73,True
+MLCF,Open,Linear Regression,0.28,5.37,True
+MLCF,Open,Random Forest,0.27,9.99,True
+MLCF,Open,XGBoost,0.27,6.43,True
+MLCF,Open,LSTM,0.28,6.96,True
+MLCF,Open,GRU,0.3,5.46,True
+MLCF,Close,Linear Regression,0.98,5.36,True
+MLCF,Close,Random Forest,0.98,9.9,True
+MLCF,Close,XGBoost,0.96,6.49,True
+MLCF,Close,LSTM,1.01,6.05,True
+MLCF,Close,GRU,1.02,5.42,True
+NESTLE,Open,Linear Regression,147.55,348.98,True
+NESTLE,Open,Random Forest,141.81,706.56,True
+NESTLE,Open,XGBoost,153.26,666.14,True
+NESTLE,Open,LSTM,124.1,725.94,True
+NESTLE,Open,GRU,132.89,716.45,True
+NESTLE,Close,Linear Regression,115.75,354.66,True
+NESTLE,Close,Random Forest,119.25,632.05,True
+NESTLE,Close,XGBoost,117.73,630.14,True
+NESTLE,Close,LSTM,100.72,904.11,True
+NESTLE,Close,GRU,110.15,727.39,True
+NETSOL,Open,Linear Regression,1.49,21.38,True
+NETSOL,Open,Random Forest,1.51,18.19,True
+NETSOL,Open,XGBoost,1.48,12.97,True
+NETSOL,Open,LSTM,1.65,21.25,True
+NETSOL,Open,GRU,1.73,18.32,True
+NETSOL,Close,Linear Regression,3.82,21.13,True
+NETSOL,Close,Random Forest,3.82,18.38,True
+NETSOL,Close,XGBoost,3.87,11.24,True
+NETSOL,Close,LSTM,3.96,29.49,True
+NETSOL,Close,GRU,4.15,18.14,True
+OGDC,Open,Linear Regression,1.53,26.18,True
+OGDC,Open,Random Forest,1.52,24.86,True
+OGDC,Open,XGBoost,1.55,26.63,True
+OGDC,Open,LSTM,1.34,26.2,True
+OGDC,Open,GRU,1.42,24.76,True
+OGDC,Close,Linear Regression,4.1,26.3,True
+OGDC,Close,Random Forest,4.12,24.3,True
+OGDC,Close,XGBoost,4.14,27.2,True
+OGDC,Close,LSTM,3.82,21.71,True
+OGDC,Close,GRU,3.99,24.97,True
+PAKT,Open,Linear Regression,31.62,188.85,True
+PAKT,Open,Random Forest,31.34,178.44,True
+PAKT,Open,XGBoost,30.27,163.6,True
+PAKT,Open,LSTM,28.36,263.5,True
+PAKT,Open,GRU,28.85,185.92,True
+PAKT,Close,Linear Regression,29.8,189.32,True
+PAKT,Close,Random Forest,30.25,167.15,True
+PAKT,Close,XGBoost,29.97,157.28,True
+PAKT,Close,LSTM,27.54,223.29,True
+PAKT,Close,GRU,28.29,185.98,True
+PPL,Open,Linear Regression,1.51,29.79,True
+PPL,Open,Random Forest,1.49,26.56,True
+PPL,Open,XGBoost,1.49,27.53,True
+PPL,Open,LSTM,1.42,29.29,True
+PPL,Open,GRU,1.54,25.19,True
+PPL,Close,Linear Regression,3.43,29.73,True
+PPL,Close,Random Forest,3.48,26.61,True
+PPL,Close,XGBoost,3.55,27.93,True
+PPL,Close,LSTM,3.27,22.39,True
+PPL,Close,GRU,3.39,25.06,True
+PSO,Open,Linear Regression,2.07,75.11,True
+PSO,Open,Random Forest,2.1,73.58,True
+PSO,Open,XGBoost,2.1,74.7,True
+PSO,Open,LSTM,2.11,74.59,True
+PSO,Open,GRU,2.44,75.95,True
+PSO,Close,Linear Regression,6.05,75.25,True
+PSO,Close,Random Forest,6.08,73.55,True
+PSO,Close,XGBoost,6.02,73.68,True
+PSO,Close,LSTM,6.35,73.02,True
+PSO,Close,GRU,6.33,75.85,True
+SYS,Open,Linear Regression,3.23,75.29,True
+SYS,Open,Random Forest,3.41,79.19,True
+SYS,Open,XGBoost,3.46,72.21,True
+SYS,Open,LSTM,3.44,74.99,True
+SYS,Open,GRU,3.63,72.77,True
+SYS,Close,Linear Regression,10.22,75.51,True
+SYS,Close,Random Forest,10.58,79.11,True
+SYS,Close,XGBoost,10.59,72.95,True
+SYS,Close,LSTM,10.79,76.12,True
+SYS,Close,GRU,11.05,73.38,True
+TRG,Open,Linear Regression,0.84,9.29,True
+TRG,Open,Random Forest,0.86,22.64,True
+TRG,Open,XGBoost,0.87,10.24,True
+TRG,Open,LSTM,0.88,13.59,True
+TRG,Open,GRU,0.89,9.86,True
+TRG,Close,Linear Regression,1.87,9.36,True
+TRG,Close,Random Forest,1.89,22.78,True
+TRG,Close,XGBoost,1.89,10.96,True
+TRG,Close,LSTM,1.9,12.56,True
+TRG,Close,GRU,1.95,9.87,True
+UBL,Open,Linear Regression,2.11,26.78,True
+UBL,Open,Random Forest,2.04,30.6,True
+UBL,Open,XGBoost,2.07,34.76,True
+UBL,Open,LSTM,2.2,30.71,True
+UBL,Open,GRU,2.31,22.88,True
+UBL,Close,Linear Regression,4.62,26.63,True
+UBL,Close,Random Forest,4.59,29.52,True
+UBL,Close,XGBoost,4.57,31.13,True
+UBL,Close,LSTM,4.87,32.79,True
+UBL,Close,GRU,5.09,22.65,True
+UNITY,Open,Linear Regression,0.23,6.06,True
+UNITY,Open,Random Forest,0.24,8.44,True
+UNITY,Open,XGBoost,0.24,6.52,True
+UNITY,Open,LSTM,0.24,9.16,True
+UNITY,Open,GRU,0.26,5.74,True
+UNITY,Close,Linear Regression,0.66,6.08,True
+UNITY,Close,Random Forest,0.68,8.38,True
+UNITY,Close,XGBoost,0.68,6.35,True
+UNITY,Close,LSTM,0.67,9.65,True
+UNITY,Close,GRU,0.71,5.81,True

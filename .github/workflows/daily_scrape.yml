@@ -1,0 +1,53 @@
+name: Daily PSX Data Update
+
+on:
+  schedule:
+    # 13:00 UTC = 18:00 PKT, weekdays. PSX trading closes mid-afternoon PKT,
+    # so this stays safely after market close. Cron is UTC and has no
+    # weekday-timezone concept, so Mon-Fri UTC is used as the closest match.
+    - cron: "0 13 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy requests beautifulsoup4 scikit-learn
+
+      - name: Scrape newest trading day
+        run: python daily_scraper.py
+
+      - name: Clean data
+        run: python clean_data.py
+
+      - name: Feature engineering
+        run: python feature_engineering.py
+
+      - name: Merge and split
+        run: python merge_and_split.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add psx_data_8years data/master_dataset.csv models/ticker_encoder.pkl
+          if git diff --cached --quiet; then
+            echo "No data changes, nothing to commit (expected on holidays/weekends)."
+          else
+            git commit -m "Automated data update $(date -u +%Y-%m-%d)"
+            git push
+          fi

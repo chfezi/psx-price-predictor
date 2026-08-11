@@ -1,0 +1,51 @@
+Ticker,Target,N_Rows,Best_Single_Model,Best_Single_MAE,Ensemble_MAE,Ensemble_Beats_Single
+BAHL,High,216,Random Forest,1.21,1.24,False
+COLG,High,216,XGBoost,10.54,11.04,False
+DGKC,High,216,Linear Regression,1.11,1.1,True
+EFERT,High,216,XGBoost,1.92,1.94,False
+ENGROH,High,216,Random Forest,2.33,2.34,False
+FFC,High,216,XGBoost,3.21,3.25,False
+HBL,High,216,XGBoost,1.52,1.58,False
+HUBC,High,216,XGBoost,1.68,1.7,False
+ILP,High,216,Linear Regression,0.84,0.85,False
+INDU,High,216,Linear Regression,17.68,17.67,True
+LUCK,High,216,Linear Regression,9.23,9.46,False
+MARI,High,216,XGBoost,37.42,39.16,False
+MCB,High,216,XGBoost,2.44,2.48,False
+MEBL,High,216,Random Forest,2.41,2.45,False
+MLCF,High,216,Random Forest,0.5,0.5,True
+NESTLE,High,182,Random Forest,79.18,78.9,True
+NETSOL,High,216,Random Forest,2.08,2.09,False
+OGDC,High,216,Random Forest,2.05,2.07,False
+PAKT,High,191,Linear Regression,20.68,20.76,False
+PPL,High,216,XGBoost,1.72,1.76,False
+PSO,High,216,Linear Regression,3.0,3.04,False
+SYS,High,216,Random Forest,5.45,5.52,False
+TRG,High,216,XGBoost,1.03,1.03,False
+UBL,High,216,Random Forest,3.09,3.18,False
+UNITY,High,216,Linear Regression,0.39,0.39,False
+BAHL,Low,216,LSTM,1.18,1.22,False
+COLG,Low,216,Linear Regression,9.32,9.32,False
+DGKC,Low,216,LSTM,1.02,1.02,True
+EFERT,Low,216,Random Forest,1.56,1.58,False
+ENGROH,Low,216,LSTM,1.79,1.79,False
+FFC,Low,216,Linear Regression,2.4,2.41,False
+HBL,Low,216,XGBoost,1.13,1.17,False
+HUBC,Low,216,Linear Regression,1.61,1.62,False
+ILP,Low,216,Random Forest,0.83,0.84,False
+INDU,Low,216,LSTM,17.59,17.91,False
+LUCK,Low,216,LSTM,8.44,8.51,False
+MARI,Low,216,LSTM,36.03,37.76,False
+MCB,Low,216,Random Forest,2.26,2.26,False
+MEBL,Low,216,Random Forest,2.28,2.31,False
+MLCF,Low,216,Random Forest,0.47,0.47,False
+NESTLE,Low,182,LSTM,70.66,70.2,True
+NETSOL,Low,216,Linear Regression,2.03,2.02,True
+OGDC,Low,216,LSTM,1.6,1.62,False
+PAKT,Low,191,LSTM,21.37,21.35,True
+PPL,Low,216,Random Forest,1.47,1.48,False
+PSO,Low,216,LSTM,2.42,2.47,False
+SYS,Low,216,LSTM,4.92,4.92,False
+TRG,Low,216,Random Forest,0.9,0.9,False
+UBL,Low,216,Random Forest,2.44,2.51,False
+UNITY,Low,216,Linear Regression,0.3,0.31,False
