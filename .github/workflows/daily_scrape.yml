@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy requests beautifulsoup4 scikit-learn torch xgboost tensorflow
+          pip install pandas numpy requests beautifulsoup4 scikit-learn torch xgboost tensorflow tensorboard
 
       - name: Download Random Forest models
         # The 10 phase9_rf_*.pkl combos generate_predictions.py needs are
