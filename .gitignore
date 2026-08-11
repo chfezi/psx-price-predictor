@@ -31,8 +31,15 @@ models/phase9_rf_*.pkl
 models/phase10_rf_*.pkl
 
 # Never-selected Phase 9 combos, kept for reference but not needed to run
-# the app - see manage_model_storage.py / Phases/phase_9_notes.md
-models_evaluation_only/
+# the app - see manage_model_storage.py / Phases/phase_9_notes.md. The 3
+# Random Forest files here are handled like the ones above (GitHub Release
+# asset, not git). The 3 GRU .pt files are tiny (~32KB) and generate_
+# predictions.py needs them at inference time, so those are committed
+# directly rather than adding a 4th storage path for 96KB total.
+models_evaluation_only/*
+!models_evaluation_only/phase9_gru_close_1d.pt
+!models_evaluation_only/phase9_gru_close_20d.pt
+!models_evaluation_only/phase9_gru_open_1d.pt
 
 # TensorBoard training logs - local training artifact, not needed to run
 # the app or the automation.

@@ -26,7 +26,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas numpy requests beautifulsoup4 scikit-learn
+          pip install pandas numpy requests beautifulsoup4 scikit-learn torch xgboost tensorflow
+
+      - name: Download Random Forest models
+        # The 10 phase9_rf_*.pkl combos generate_predictions.py needs are
+        # too large for a normal git push (see .gitignore), so they're
+        # published as GitHub Release assets instead and pulled down here.
+        run: |
+          mkdir -p models
+          base_url="https://github.com/${{ github.repository }}/releases/download/phase9-rf-models"
+          for horizon in 1d 5d 10d 20d 60d; do
+            for target in open close; do
+              name="phase9_rf_${target}_${horizon}.pkl"
+              curl -sL -f -o "models/${name}" "${base_url}/${name}"
+            done
+          done
 
       - name: Scrape newest trading day
         run: python daily_scraper.py
@@ -40,11 +54,14 @@ jobs:
       - name: Merge and split
         run: python merge_and_split.py
 
+      - name: Generate predictions
+        run: python generate_predictions.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add psx_data_8years data/master_dataset.csv models/ticker_encoder.pkl
+          git add psx_data_8years data/master_dataset.csv data/phase9_predictions.csv models/ticker_encoder.pkl
           if git diff --cached --quiet; then
             echo "No data changes, nothing to commit (expected on holidays/weekends)."
           else
