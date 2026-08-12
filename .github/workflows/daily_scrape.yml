@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add psx_data_8years data/master_dataset.csv data/phase9_predictions.csv models/ticker_encoder.pkl
+          git add psx_data_8years data/phase9_predictions.csv models/ticker_encoder.pkl
           if git diff --cached --quiet; then
             echo "No data changes, nothing to commit (expected on holidays/weekends)."
           else

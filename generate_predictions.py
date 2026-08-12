@@ -1,28 +1,31 @@
 """
 Assembly step the Phase 8 dashboard needs (Phases/frontend.md "Data the
-dashboard expects"): runs each stock's latest feature row through every
-Phase 9 model for every (target, horizon) cell, blends the 5 model types'
-predictions with the ensemble weights train_models_phase9.py already
-computed, and writes one row per stock to data/phase9_predictions.csv, in
-the schema app.py's load_predictions() reads.
+dashboard expects"): runs each stock's latest feature row through the single
+best Phase 9 model for every (target, horizon) cell, and writes one row per
+stock to data/phase9_predictions.csv, in the schema app.py's
+load_predictions() reads.
 
-Ensemble, not single-best-model: earlier versions of this script served
-whichever single model type had the best Improvement_over_Naive_% per
-(ticker, target, horizon). That number is a single train/test split's
-estimate, though, with sampling noise of its own - picking a single winner
-by it throws away the other 4 models' information entirely. Blending all 5
-with models/phase9_ensemble_weights.pkl's inverse-MAE weights (lower a
-model's per-stock MAE, the more weight its prediction gets - see
-model_utils.compute_ensemble_weights) was computed during training but
-never actually used anywhere until now; using it is the cheap, already-paid-
-for improvement over picking one model and discarding the rest.
+Single best model, not the ensemble blend: an ensemble version of this
+script shipped for a while (see Phases/frontend_notes.md), but blending in
+LSTM/GRU's weaker cells dragged the served Improvement_over_Naive_% down
+compared to just serving whichever one of the 5 model types actually has
+the best real backtested Improvement_over_Naive_% for that specific
+(ticker, target, horizon) - reverted per that explicit tradeoff. "Best" is
+read straight from data/phase9_model_comparison_per_stock.csv, the same
+per-stock evaluation table train_models_phase9.py already produced; always
+picks the best of the 5 (no naive-baseline fallback), matching the last
+single-model-era decision documented in Phases/frontend_notes.md.
 
-Needs every one of the 50 (horizon, target, model_type) combos available
-somewhere, unlike the single-best-model version which only needed whichever
-combo actually won per stock - checks models_evaluation_only/ as well as
-models/, since manage_model_storage.py moved 6 combos there that were never
-a single-model serving choice for any stock, but are still inputs to the
-blend for whichever ticker/horizon/target they weren't the winner for.
+The confidence band's Std_Error, and the Improvement_over_Naive_%/
+Directional_Accuracy_% shown on the detail view, are the chosen model's own
+numbers - read here and baked straight into phase9_predictions.csv - rather
+than the ensemble's, so the dashboard's stats describe the model actually
+being served.
+
+Only needs whichever (horizon, target, model_type) combo actually wins a
+given stock's serving slot, not all 50 - checks models_evaluation_only/ as
+well as models/ regardless, since manage_model_storage.py's own selection
+rule differs slightly and may have moved a combo there that still wins here.
 """
 
 import pickle
@@ -32,8 +35,8 @@ import pandas as pd
 import torch
 import xgboost as xgb
 
-from model_utils import WINDOW_SIZE, ensemble_predict
-from train_models_phase9 import FEATURE_COLUMNS, GRUModel, HORIZONS, MODEL_TYPES, TARGETS
+from model_utils import WINDOW_SIZE
+from train_models_phase9 import FEATURE_COLUMNS, GRUModel, HORIZONS, TARGETS
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -51,7 +54,19 @@ MODEL_FILE_INFO = {
 _model_cache = {}
 
 
+def load_comparison_table():
+    return pd.read_csv(DATA_DIR / "phase9_model_comparison_per_stock.csv")
+
+
+def load_error_distributions():
+    with open(MODELS_DIR / "phase9_error_distributions.pkl", "rb") as f:
+        return pickle.load(f)
+
+
 def load_ensemble_weights():
+    """Not used for serving any more (see module docstring), but
+    evaluate_ensemble.py still imports this to run its own ensemble-vs-
+    single-model diagnostic against data/test.csv."""
     with open(MODELS_DIR / "phase9_ensemble_weights.pkl", "rb") as f:
         return pickle.load(f)
 
@@ -130,19 +145,17 @@ def predict_price(model_type, target, horizon, ticker_df, scaler):
     return latest_close * (1 + pred_return)
 
 
-def predict_ensemble(ticker, target, horizon, ticker_df, scaler, ensemble_weights):
-    """Blends all 5 model types' point predictions for one (ticker, target,
-    horizon) cell using that ticker's own inverse-MAE weights, and returns
-    the blend plus whichever model type carries the most weight in it, for
-    display."""
-    weights = ensemble_weights[ticker][target][horizon]
-    predictions_by_type = {
-        model_type: predict_price(model_type, target, horizon, ticker_df, scaler)
-        for model_type in MODEL_TYPES
-    }
-    blended = ensemble_predict(predictions_by_type, weights)
-    top_model = max(weights, key=weights.get)
-    return blended, top_model
+def choose_best_model(comparison_df, ticker, target, horizon):
+    """Whichever of the 5 model types has the best real backtested
+    Improvement_over_Naive_% for this (ticker, target, horizon) cell, always
+    - no naive-baseline fallback on a tie/loss (see module docstring)."""
+    rows = comparison_df[
+        (comparison_df["Ticker"] == ticker)
+        & (comparison_df["Target"] == f"Target_{target}")
+        & (comparison_df["Horizon"] == horizon)
+    ]
+    best = rows.loc[rows["Improvement_over_Naive_%"].idxmax()]
+    return best["Model"], float(best["Improvement_over_Naive_%"]), float(best["Directional_Accuracy_%"])
 
 
 def main():
@@ -152,7 +165,8 @@ def main():
     with open(MODELS_DIR / "phase9_feature_scaler.pkl", "rb") as f:
         scaler = pickle.load(f)
 
-    ensemble_weights = load_ensemble_weights()
+    comparison_df = load_comparison_table()
+    error_distributions = load_error_distributions()
 
     rows = []
     for ticker in sorted(master_df["Ticker"].unique()):
@@ -167,10 +181,15 @@ def main():
         }
         for horizon in HORIZONS:
             for target in TARGETS:
-                pred, top_model = predict_ensemble(ticker, target, horizon, ticker_df, scaler, ensemble_weights)
+                model_type, improvement, dir_acc = choose_best_model(comparison_df, ticker, target, horizon)
+                pred = predict_price(model_type, target, horizon, ticker_df, scaler)
+                std_error = error_distributions[ticker][target][horizon][model_type]["std_error"]
+
                 row[f"Pred_{target}_{horizon}d"] = round(pred, 2)
-                row[f"Model_{target}_{horizon}d"] = "Ensemble"
-                row[f"Top_Model_{target}_{horizon}d"] = top_model
+                row[f"Model_{target}_{horizon}d"] = model_type
+                row[f"Improvement_{target}_{horizon}d"] = round(improvement, 2)
+                row[f"Directional_Accuracy_{target}_{horizon}d"] = round(dir_acc, 2)
+                row[f"Std_Error_{target}_{horizon}d"] = round(std_error, 4)
 
         rows.append(row)
         print(f"{ticker}: done")

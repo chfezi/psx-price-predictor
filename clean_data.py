@@ -13,7 +13,14 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent
 RAW_DIR = BASE_DIR / "psx_data_8years"
 PROCESSED_DIR = BASE_DIR / "processed"
-EXCLUDED_TICKERS = {"FFBL"}
+EXCLUDED_TICKERS = {
+    "FFBL",
+    # DHPL (DH Partners): a 2024 demerger entity, only ~276 rows of history,
+    # none of which fall in the 2018-2023 train or 2024 test splits - no way
+    # to backtest a served model against it. Revisit once it has 2+ years of
+    # history. See Phases/kse_100_expand.md.
+    "DHPL",
+}
 
 
 def ticker_from_filename(filename):

@@ -17,6 +17,15 @@ data/test.csv
 data/validate.csv
 data/final_validation.csv
 
+# master_dataset.csv: same category as the above - regenerable from
+# psx_data_8years/ via merge_and_split.py (which the daily workflow already
+# runs every time), and app.py only ever reads phase9_predictions.csv /
+# phase9_top_drivers.csv, never this file directly. Moved here during the
+# KSE-100 expansion (Phases/kse_100_expand.md) once it grew past GitHub's
+# 100MB per-file push limit at 97 tickers - a 25-ticker version fit under
+# the limit, but that was incidental, not a property to depend on.
+data/master_dataset.csv
+
 # Large model files, too big for a normal git push (several sit right at
 # GitHub's 100MB per-file limit). phase7_rf_* predates Phase 9's Open/Close
 # retrain and is kept here since app.py still serves off it until Phase 8 is

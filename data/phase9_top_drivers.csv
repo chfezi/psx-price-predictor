@@ -1,0 +1,267 @@
+Ticker,Target,Horizon,Model,Feature_1,Direction_1,Feature_2,Direction_2,Feature_3,Direction_3
+AGP,Open,1,Random Forest,Volume,up,Close_to_EMA_12,up,Volume_SMA_20,down
+AHCL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Close_to_EMA_12,down
+AICL,Open,1,XGBoost,Return_lag_1,up,Volume,up,Volume_SMA_20,up
+AIRLINK,Open,1,XGBoost,Volume,up,DayOfWeek,up,Volume_SMA_20,up
+ATRL,Open,1,Random Forest,Volume,up,Return_lag_1,up,Volume_SMA_20,up
+BAFL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Log_Return,down
+BAHL,Open,1,XGBoost,Volume,up,Close_to_EMA_12,down,Open_Close_Range,up
+CHCC,Open,1,XGBoost,Lower_Wick,down,Upper_Wick,up,Close_to_EMA_12,down
+CNERGY,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Return_lag_2,up
+CPHL,Open,1,Random Forest,Volume,up,Return_lag_1,up,DayOfWeek,up
+DGKC,Open,1,XGBoost,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+EFERT,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+ENGROH,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+FABL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+FATIMA,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+FFC,Open,1,Random Forest,Volume,up,Return_lag_1,up,DayOfWeek,up
+GADT,Open,1,Random Forest,Return_lag_5,down,Volume_SMA_20,down,Close_to_EMA_12,down
+GAL,Open,1,XGBoost,Volume,up,Upper_Wick,up,Volume_SMA_20,up
+GHGL,Open,1,Random Forest,Volume,up,Volume_SMA_20,down,Close_to_EMA_12,down
+GHNI,Open,1,Random Forest,Volume,up,Volume_SMA_20,down,Upper_Wick,up
+GLAXO,Open,1,Random Forest,Volume,up,Volume_SMA_20,down,Close_to_EMA_12,up
+HBL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Open_Close_Range,up
+HMB,Open,1,XGBoost,Volume,up,Close_to_EMA_12,down,Open_Close_Range,up
+HUBC,Open,1,Random Forest,Volume,up,Return_lag_1,up,Volume_SMA_20,up
+ILP,Open,1,XGBoost,Volume,up,Upper_Wick,down,Open_Close_Range,up
+JVDC,Open,1,XGBoost,Volume,up,Close_to_EMA_12,down,Return_1d,down
+KAPCO,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Return_lag_1,up
+LOTCHEM,Open,1,XGBoost,Volume,up,Volume_SMA_20,up,Lower_Wick,up
+MEBL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Return_1d,down
+MLCF,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+NBP,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+NETSOL,Open,1,Random Forest,Volume,up,Volume_SMA_20,down,DayOfWeek,up
+NML,Open,1,XGBoost,Volume,up,Volume_SMA_20,up,Return_1d,down
+OGDC,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Return_lag_1,down
+PABC,Open,1,XGBoost,Close_to_EMA_12,down,Volume,down,Volume_lag_1,down
+PAEL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Return_lag_1,up
+PGLC,Open,1,XGBoost,Volume,down,ATR_Pct,down,Open_Close_Range,up
+PIBTL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Rolling_Max_20,down
+PKGS,Open,1,Random Forest,Close_to_EMA_12,up,Open_Close_Range,up,Volume_SMA_20,down
+PPL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+PSX,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Volume_lag_5,up
+PTC,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+SAZEW,Open,1,XGBoost,Lower_Wick,down,Upper_Wick,up,Volume,up
+SHFA,Open,1,Random Forest,Volume,down,Open_Close_Range,down,Volume_SMA_20,down
+SNGP,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Open_Close_Range,up
+SSGC,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Open_Close_Range,up
+SSOM,Open,1,Random Forest,Volume,down,Close_to_EMA_12,up,Volume_SMA_20,down
+TGL,Open,1,Random Forest,Volume_SMA_20,down,Volume,up,Open_Close_Range,down
+UBL,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,DayOfWeek,up
+UNITY,Open,1,Random Forest,Volume,up,Volume_SMA_20,up,Rolling_Min_20,up
+YOUW,Open,1,XGBoost,Ticker_encoded,up,Volume,up,Low,down
+ABL,Open,5,Random Forest,Close_to_SMA_50,down,Month,up,Volume,up
+AKBL,Open,5,XGBoost,Rolling_Min_20,down,Volume_Ratio,down,Close_to_SMA_200,down
+APL,Open,5,Random Forest,Volume,down,Month,up,Close_to_SMA_50,down
+BAHL,Open,5,XGBoost,Rolling_Min_20,down,ATR_Pct,up,Close_to_SMA_200,down
+BOP,Open,5,XGBoost,Volume_SMA_20,down,Volume_lag_5,down,Ticker_encoded,down
+BWCL,Open,5,XGBoost,Rolling_Min_20,down,Open,up,ATR_Pct,up
+CHCC,Open,5,Random Forest,Month,up,Return_10d,up,Volume,up
+CNERGY,Open,5,Random Forest,Close_to_SMA_50,up,Volume_SMA_20,up,Month,down
+GADT,Open,5,XGBoost,Rolling_Min_20,down,Return_lag_5,down,ATR_Pct,down
+GAL,Open,5,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,up,Close_to_SMA_50,up
+HBL,Open,5,Random Forest,Close_to_SMA_50,up,Return_10d,up,Volume,up
+HMB,Open,5,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,ATR_Pct,up
+HUMNL,Open,5,XGBoost,ATR_Pct,up,BB_Bandwidth,down,Close_to_SMA_200,down
+KAPCO,Open,5,XGBoost,Close_to_SMA_200,down,ATR_Pct,up,Volume,up
+MLCF,Open,5,Random Forest,Month,up,Return_10d,up,Volume,up
+MUREB,Open,5,Random Forest,Volume,down,Close_to_SMA_50,down,BB_Bandwidth,down
+NML,Open,5,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,ATR_Pct,up
+OGDC,Open,5,XGBoost,Rolling_Min_20,down,Open,up,Close_to_SMA_200,down
+PAKT,Open,5,XGBoost,Rolling_Min_20,down,ATR_Pct,up,Ticker_encoded,up
+PGLC,Open,5,Random Forest,Month,up,Volume,down,ATR_Pct,down
+POWER,Open,5,XGBoost,Return_10d,up,Rolling_Min_20,up,Close_to_SMA_200,up
+PSX,Open,5,XGBoost,Volume,up,ATR_Pct,up,Return_10d,up
+SNGP,Open,5,Random Forest,Month,up,Return_10d,up,Volume,up
+SSGC,Open,5,XGBoost,Volume_SMA_20,down,Return_10d,up,Close_to_SMA_200,down
+SSOM,Open,5,Random Forest,Volume,down,Close_to_SMA_50,down,Month,up
+ABOT,Open,10,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Month,up
+AKBL,Open,10,Random Forest,Rolling_Min_20,down,Month,up,Close_to_SMA_200,down
+BWCL,Open,10,XGBoost,Rolling_Min_20,down,BB_Bandwidth,down,Close_to_SMA_200,down
+CHCC,Open,10,XGBoost,Rolling_Min_20,down,Rolling_Max_20,up,Close_to_SMA_200,down
+COLG,Open,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+GADT,Open,10,XGBoost,Rolling_Min_20,down,MACD_Hist_Pct,down,ATR_Pct,down
+GAL,Open,10,Random Forest,Close_to_SMA_200,up,Close_to_SMA_50,up,Rolling_Min_20,down
+HBL,Open,10,XGBoost,Rolling_Min_20,down,Close_to_SMA_50,up,ATR_Pct,up
+HINOON,Open,10,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Month,up
+HMB,Open,10,XGBoost,Close_to_SMA_200,down,BB_Bandwidth,down,Rolling_Min_20,down
+KAPCO,Open,10,XGBoost,Close_to_SMA_200,down,ATR_Pct,up,BB_Bandwidth,down
+MUREB,Open,10,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,BB_Bandwidth,down
+PGLC,Open,10,Random Forest,ATR_Pct,down,Month,up,Close_to_SMA_200,down
+PPL,Open,10,Random Forest,Rolling_Min_20,down,Month,up,Close_to_SMA_200,down
+PSEL,Open,10,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Volume_SMA_20,up
+SSGC,Open,10,XGBoost,Volume_SMA_20,down,Close_to_SMA_200,down,Ticker_encoded,down
+SSOM,Open,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+ABL,Open,20,Random Forest,Close_to_SMA_200,down,Month,down,Rolling_Min_20,down
+AKBL,Open,20,XGBoost,Month,down,BB_Bandwidth,down,Rolling_Min_20,down
+BNWM,Open,20,XGBoost,Month,down,Rolling_Max_20,up,BB_Bandwidth,down
+BOP,Open,20,XGBoost,Volume_SMA_20,down,Close_to_SMA_200,down,Month,down
+BWCL,Open,20,XGBoost,Month,down,Rolling_Min_20,down,Volume_SMA_20,up
+GAL,Open,20,Random Forest,Month,down,Ticker_encoded,down,Close_to_SMA_200,up
+GHNI,Open,20,Random Forest,Ticker_encoded,down,Close_to_SMA_200,up,MACD_Pct,up
+PABC,Open,20,Random Forest,Close_to_SMA_200,down,Rolling_Max_20,up,Volume_SMA_20,up
+PAKT,Open,20,Random Forest,Close_to_SMA_200,down,Month,down,Close_to_SMA_50,down
+POWER,Open,20,XGBoost,Month,down,Volume_SMA_20,down,Rolling_Min_20,up
+PPL,Open,20,Random Forest,Month,down,Close_to_SMA_200,down,Rolling_Min_20,down
+PTC,Open,20,Random Forest,Close_to_SMA_200,up,Month,down,Volume_SMA_20,down
+SEARL,Open,20,XGBoost,Close_to_SMA_200,down,Rolling_Max_20,up,Month,down
+SSOM,Open,20,Random Forest,Month,down,Close_to_SMA_200,down,Close_to_SMA_50,down
+SYS,Open,20,XGBoost,Close_to_SMA_200,down,Ticker_encoded,up,Month,down
+AHCL,Open,60,XGBoost,Ticker_encoded,up,Rolling_Max_20,up,Rolling_Min_20,up
+AIRLINK,Open,60,XGBoost,Rolling_Max_20,down,Close_to_SMA_200,down,Month,up
+ATLH,Open,60,Random Forest,Rolling_Min_20,down,Month,up,Volume_SMA_20,up
+BNWM,Open,60,XGBoost,Ticker_encoded,down,Volatility_20,down,Month,up
+BWCL,Open,60,Random Forest,Rolling_Min_20,down,Month,up,Close_to_SMA_200,down
+CPHL,Open,60,XGBoost,Close_to_SMA_200,down,Volatility_20,down,Month,up
+ENGROH,Open,60,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Volume_SMA_20,down
+GAL,Open,60,Random Forest,Ticker_encoded,down,Rolling_Min_20,down,Month,up
+HMB,Open,60,XGBoost,Volatility_20,down,Ticker_encoded,up,Close_to_SMA_200,down
+JVDC,Open,60,Random Forest,Close_to_SMA_200,up,Volatility_20,down,Rolling_Min_20,down
+KEL,Open,60,XGBoost,Volume_SMA_20,down,Ticker_encoded,down,Volume_lag_1,down
+MUREB,Open,60,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Month,up
+NBP,Open,60,XGBoost,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+NETSOL,Open,60,XGBoost,Volatility_20,down,Rolling_Min_20,down,Close_to_SMA_200,down
+NML,Open,60,XGBoost,Month,up,Close_to_SMA_200,down,Rolling_Min_20,down
+PABC,Open,60,XGBoost,Close_to_SMA_200,down,Volatility_20,down,Rolling_Min_20,down
+PAKT,Open,60,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,Rolling_Max_20,down
+PGLC,Open,60,XGBoost,Rolling_Min_20,up,Volume_SMA_20,up,Month,up
+POL,Open,60,Random Forest,Rolling_Min_20,down,Month,up,Volatility_20,down
+PTC,Open,60,Random Forest,Close_to_SMA_200,up,Month,up,Rolling_Min_20,up
+SAZEW,Open,60,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,Volatility_20,down
+SHFA,Open,60,Random Forest,Rolling_Min_20,down,Month,up,Volatility_20,down
+UBL,Open,60,Random Forest,Month,up,Ticker_encoded,up,Rolling_Min_20,down
+ABL,Close,1,XGBoost,Body,down,ATR_Pct,up,Return_lag_5,up
+AICL,Close,1,XGBoost,ATR_Pct,down,DayOfWeek,up,Open_Close_Range,up
+AKBL,Close,1,XGBoost,DayOfWeek,up,Return_lag_5,up,BB_PercentB,up
+APL,Close,1,XGBoost,Close_to_SMA_50,down,Price_Range,down,Lower_Wick,up
+ATLH,Close,1,Random Forest,Open_Close_Range,down,DayOfWeek,up,Volume,down
+BAFL,Close,1,XGBoost,Return_1d,up,Body,up,Month,up
+BOP,Close,1,XGBoost,Volume_SMA_20,down,Return_lag_5,up,Open_Close_Range,up
+COLG,Close,1,Random Forest,DayOfWeek,up,Open_Close_Range,down,Return_1d,down
+CPHL,Close,1,XGBoost,High,up,Low,down,Open_Close_Range,down
+ENGROH,Close,1,XGBoost,Body,down,DayOfWeek,up,Open_Close_Range,down
+FABL,Close,1,XGBoost,Return_lag_5,up,Volume_Ratio,up,Close_to_SMA_50,down
+GAL,Close,1,XGBoost,Open_Close_Range,up,Body,up,Lower_Wick,up
+GLAXO,Close,1,Random Forest,DayOfWeek,up,Open_Close_Range,down,Month,up
+HALEON,Close,1,XGBoost,Body,up,Upper_Wick,down,Volume_Ratio,up
+HBL,Close,1,XGBoost,Open_Close_Range,up,Body,up,Return_1d,down
+HMB,Close,1,XGBoost,Open_Close_Range,down,Body,down,BB_PercentB,up
+ILP,Close,1,Random Forest,Open_Close_Range,down,DayOfWeek,up,Month,up
+KOHC,Close,1,Random Forest,Open_Close_Range,up,Month,up,RSI_14,up
+KTML,Close,1,Random Forest,Open_Close_Range,down,DayOfWeek,up,Month,up
+MARI,Close,1,Random Forest,Open_Close_Range,down,DayOfWeek,up,Month,up
+MCB,Close,1,Random Forest,Open_Close_Range,down,RSI_14,up,Month,up
+MEBL,Close,1,XGBoost,Open_Close_Range,up,Body,up,Upper_Wick,down
+MTL,Close,1,Random Forest,MACD_Hist_Pct,down,Open_Close_Range,down,DayOfWeek,up
+NATF,Close,1,Random Forest,Open_Close_Range,up,Month,up,DayOfWeek,up
+NBP,Close,1,Random Forest,Open_Close_Range,up,DayOfWeek,up,Month,up
+NESTLE,Close,1,Random Forest,DayOfWeek,up,Open_Close_Range,down,Volume_lag_1,up
+NML,Close,1,XGBoost,BB_PercentB,up,DayOfWeek,up,Volume_Ratio,down
+OGDC,Close,1,XGBoost,DayOfWeek,up,Body,down,Return_lag_5,down
+PABC,Close,1,Random Forest,Month,up,Upper_Wick,down,RSI_14,up
+PAEL,Close,1,XGBoost,Open_Close_Range,down,Month,up,Volume_lag_5,up
+PGLC,Close,1,XGBoost,DayOfWeek,up,ATR_Pct,down,Month,up
+PIBTL,Close,1,Random Forest,Open_Close_Range,down,Month,up,RSI_14,up
+PKGS,Close,1,XGBoost,Body,down,Lower_Wick,up,Upper_Wick,down
+PSEL,Close,1,Random Forest,Open_Close_Range,up,Volume,down,DayOfWeek,up
+PSX,Close,1,XGBoost,Open_Close_Range,up,Return_1d,down,Body,up
+PTC,Close,1,Random Forest,DayOfWeek,up,Open_Close_Range,down,Month,up
+RMPL,Close,1,Random Forest,Volume,down,Volume_SMA_20,up,DayOfWeek,up
+SAZEW,Close,1,Random Forest,Open_Close_Range,up,DayOfWeek,up,Rolling_Max_20,up
+SSGC,Close,1,Random Forest,Open_Close_Range,up,Log_Return,down,Return_1d,down
+SSOM,Close,1,XGBoost,Upper_Wick,down,Lower_Wick,up,Price_Range,down
+TGL,Close,1,Random Forest,DayOfWeek,up,Open_Close_Range,up,Month,up
+THALL,Close,1,XGBoost,Volume_Ratio,down,DayOfWeek,up,Volume,down
+UNITY,Close,1,XGBoost,MACD_Hist_Pct,down,Close_to_SMA_20,down,Volume,down
+UPFL,Close,1,Random Forest,Volume_SMA_20,up,DayOfWeek,up,Volume,down
+ABL,Close,5,Random Forest,Close_to_SMA_200,down,Month,up,ATR_Pct,up
+AKBL,Close,5,XGBoost,Close_to_SMA_200,down,Rolling_Min_20,down,ATR_Pct,up
+APL,Close,5,XGBoost,Rolling_Min_20,down,Open,up,Close_to_SMA_200,down
+BAHL,Close,5,XGBoost,Rolling_Min_20,down,ATR_Pct,up,Close_to_SMA_200,down
+BNWM,Close,5,XGBoost,Close_to_SMA_200,down,ATR_Pct,up,Volume_SMA_20,up
+BOP,Close,5,Random Forest,Return_10d,up,Close_to_SMA_200,down,Month,up
+BWCL,Close,5,Random Forest,Close_to_SMA_200,down,ATR_Pct,up,Month,up
+CHCC,Close,5,XGBoost,Rolling_Min_20,down,Open,up,Close_to_SMA_200,down
+FCCL,Close,5,XGBoost,Volume_SMA_20,down,ATR_Pct,up,Volume_Ratio,up
+GADT,Close,5,XGBoost,Rolling_Min_20,down,Return_lag_5,down,Open,up
+GAL,Close,5,Random Forest,Close_to_SMA_200,up,Close_to_SMA_50,up,ATR_Pct,up
+HBL,Close,5,Random Forest,Close_to_SMA_50,up,Close_to_SMA_200,down,Volatility_20,up
+HINOON,Close,5,XGBoost,Rolling_Min_20,down,Open,up,Body,up
+HMB,Close,5,Random Forest,Close_to_SMA_200,down,Month,up,Close_to_SMA_50,down
+IBFL,Close,5,XGBoost,ATR_Pct,down,Rolling_Min_20,down,Return_lag_1,up
+MLCF,Close,5,XGBoost,Volume_SMA_20,down,Rolling_Max_20,up,Close_to_SMA_200,down
+MUREB,Close,5,Random Forest,Close_to_SMA_200,down,Month,up,ATR_Pct,up
+NML,Close,5,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,Rolling_Max_20,up
+PABC,Close,5,XGBoost,Close_to_SMA_200,down,Rolling_Min_20,down,ATR_Pct,up
+POWER,Close,5,XGBoost,Return_10d,up,Close_to_SMA_200,up,Volume_SMA_20,down
+PSX,Close,5,XGBoost,Volume_SMA_20,down,ATR_Pct,up,Volume_Ratio,up
+RMPL,Close,5,Random Forest,Close_to_SMA_200,down,Month,up,ATR_Pct,up
+SHFA,Close,5,XGBoost,Rolling_Min_20,down,Open,up,Close_to_SMA_200,down
+TRG,Close,5,Random Forest,Close_to_SMA_200,down,Month,up,Return_10d,down
+ABOT,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+AGP,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+AICL,Close,10,XGBoost,ATR_Pct,down,BB_Bandwidth,up,Rolling_Max_20,up
+AKBL,Close,10,Random Forest,Close_to_SMA_200,down,Month,up,Rolling_Min_20,down
+APL,Close,10,XGBoost,Rolling_Min_20,down,BB_Bandwidth,down,ATR_Pct,up
+BOP,Close,10,Random Forest,Volume_SMA_20,down,Close_to_SMA_200,down,Rolling_Min_20,up
+BWCL,Close,10,XGBoost,Rolling_Min_20,down,ATR_Pct,up,Close_to_SMA_200,down
+CHCC,Close,10,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,ATR_Pct,up
+COLG,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+FCCL,Close,10,Random Forest,Volume_SMA_20,down,Rolling_Min_20,up,Month,up
+GAL,Close,10,Random Forest,Close_to_SMA_200,up,Close_to_SMA_50,up,Rolling_Min_20,down
+HBL,Close,10,XGBoost,Rolling_Min_20,down,Close_to_SMA_50,up,ATR_Pct,up
+HINOON,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+MEHT,Close,10,Random Forest,Close_to_SMA_200,up,BB_Bandwidth,up,MACD_Pct,up
+MUREB,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+PABC,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+PGLC,Close,10,Random Forest,ATR_Pct,down,Month,up,Close_to_SMA_200,down
+PPL,Close,10,Random Forest,Rolling_Min_20,down,Close_to_SMA_200,down,Month,up
+PSO,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+SEARL,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Max_20,up,Rolling_Min_20,down
+SHFA,Close,10,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+SSOM,Close,10,XGBoost,Close_to_SMA_200,down,BB_Bandwidth,down,Rolling_Min_20,down
+ABL,Close,20,Random Forest,Close_to_SMA_200,down,Month,down,Rolling_Min_20,down
+AIRLINK,Close,20,XGBoost,Month,down,Close_to_SMA_200,down,Volume_SMA_20,down
+AKBL,Close,20,Random Forest,Month,down,Close_to_SMA_200,down,Volume_SMA_20,down
+APL,Close,20,XGBoost,Month,down,ATR_Pct,up,Close_to_SMA_200,down
+ATRL,Close,20,XGBoost,Rolling_Min_20,down,Month,down,Ticker_encoded,down
+BNWM,Close,20,XGBoost,Rolling_Max_20,up,Month,down,Volatility_20,down
+BWCL,Close,20,XGBoost,Month,down,Close_to_SMA_200,down,Volume_SMA_20,up
+GAL,Close,20,Random Forest,Month,down,Ticker_encoded,down,Volume_SMA_20,down
+GLAXO,Close,20,Random Forest,Month,down,Close_to_SMA_200,down,Rolling_Min_20,down
+NESTLE,Close,20,Random Forest,Volume_SMA_20,up,Close_to_SMA_200,down,Close_to_SMA_50,down
+NETSOL,Close,20,Random Forest,Month,down,Close_to_SMA_200,down,Rolling_Min_20,down
+PABC,Close,20,Random Forest,Close_to_SMA_200,down,BB_Bandwidth,down,Month,down
+PAKT,Close,20,XGBoost,Ticker_encoded,down,Low,down,Month,down
+PKGS,Close,20,XGBoost,Month,down,Rolling_Min_20,down,BB_Bandwidth,down
+POWER,Close,20,XGBoost,Month,down,Volume_SMA_20,down,Rolling_Min_20,up
+PTC,Close,20,Random Forest,Close_to_SMA_200,up,Volume_SMA_20,down,Month,down
+RMPL,Close,20,Random Forest,Volume_SMA_20,up,Close_to_SMA_200,down,Month,down
+SAZEW,Close,20,XGBoost,Rolling_Max_20,up,Volume_SMA_20,up,Month,down
+SHFA,Close,20,XGBoost,Month,down,Close_to_SMA_200,down,Volatility_20,down
+SSOM,Close,20,Random Forest,Month,down,Rolling_Min_20,down,Close_to_SMA_200,down
+SYS,Close,20,XGBoost,Close_to_SMA_200,down,Month,down,Ticker_encoded,up
+ABL,Close,60,XGBoost,Volatility_20,down,Ticker_encoded,up,Close_to_SMA_200,down
+AIRLINK,Close,60,XGBoost,Month,up,Rolling_Max_20,down,Close_to_SMA_200,down
+APL,Close,60,Random Forest,Volatility_20,down,Month,up,Rolling_Min_20,down
+BAHL,Close,60,XGBoost,Volatility_20,down,Close_to_SMA_200,down,Rolling_Max_20,down
+BNWM,Close,60,XGBoost,Volatility_20,down,Month,up,Ticker_encoded,down
+BWCL,Close,60,Random Forest,Month,up,Volatility_20,down,Rolling_Min_20,down
+CPHL,Close,60,XGBoost,Close_to_SMA_200,down,Volatility_20,down,Month,up
+ENGROH,Close,60,XGBoost,Rolling_Max_20,down,Rolling_Min_20,down,Ticker_encoded,down
+HCAR,Close,60,Random Forest,Close_to_SMA_200,down,Rolling_Min_20,down,Month,up
+HINOON,Close,60,XGBoost,Rolling_Min_20,down,Ticker_encoded,up,Volatility_20,down
+HMB,Close,60,XGBoost,Volatility_20,down,Ticker_encoded,up,Close_to_SMA_200,down
+JVDC,Close,60,Random Forest,Volatility_20,down,Close_to_SMA_200,up,Month,up
+MARI,Close,60,Random Forest,Month,up,Volatility_20,down,Rolling_Min_20,down
+MUREB,Close,60,Random Forest,Volatility_20,down,Rolling_Min_20,down,Close_to_SMA_200,down
+NBP,Close,60,XGBoost,Close_to_SMA_200,down,Month,up,Rolling_Max_20,down
+NETSOL,Close,60,XGBoost,Volatility_20,down,Rolling_Min_20,down,Ticker_encoded,down
+PABC,Close,60,XGBoost,Close_to_SMA_200,down,Volatility_20,down,Month,up
+PAKT,Close,60,XGBoost,Rolling_Min_20,down,Volatility_20,down,Close_to_SMA_200,down
+PGLC,Close,60,XGBoost,Rolling_Min_20,up,Volume_SMA_20,up,Rolling_Max_20,up
+POL,Close,60,Random Forest,Volatility_20,down,Month,up,Rolling_Min_20,down
+PTC,Close,60,Random Forest,Close_to_SMA_200,up,Month,up,Rolling_Min_20,up
+SAZEW,Close,60,XGBoost,Rolling_Min_20,down,Close_to_SMA_200,down,Ticker_encoded,down
+SHFA,Close,60,Random Forest,Volatility_20,down,Rolling_Min_20,down,Month,up
+SSGC,Close,60,XGBoost,Volume_SMA_20,down,Close_to_SMA_200,down,Ticker_encoded,down

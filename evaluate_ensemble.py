@@ -33,7 +33,7 @@ import torch
 from sklearn.metrics import mean_absolute_error
 
 from generate_predictions import load_ensemble_weights, load_model
-from model_utils import WINDOW_SIZE, ensemble_predict, to_price
+from model_utils import WINDOW_SIZE, compute_backtested_error_distribution, ensemble_predict, to_price
 from train_models_phase9 import (
     FEATURE_COLUMNS, HORIZONS, MODEL_TYPES, TARGETS,
     create_sequences_h, get_training_rows_for_horizon,
@@ -146,6 +146,13 @@ def evaluate_horizon_target(test_h, target, horizon, scaler, ensemble_weights):
         t_model_mae = {m: mean_absolute_error(aligned_actual[mask], preds[mask]) for m, preds in single_preds.items()}
         t_best_model = min(t_model_mae, key=t_model_mae.get)
         t_best_mae = t_model_mae[t_best_model]
+        t_dir_acc = 100 * float(np.mean(np.sign(actual_return[mask]) == np.sign(ensemble_return[mask])))
+        # Backtested error distribution of the ensemble blend itself, per
+        # ticker/target/horizon - the Phases/frontend.md detail view's
+        # confidence-band bounds are sized from this (Std_Error, via
+        # model_utils.predict_range_from_error_distribution), not recomputed
+        # live in app.py.
+        error_stats = compute_backtested_error_distribution(aligned_actual[mask], blended[mask])
         per_ticker_rows.append({
             "Ticker": ticker, "Target": target, "Horizon": horizon, "N_Rows": int(mask.sum()),
             "Naive_MAE": round(t_naive_mae, 2),
@@ -154,6 +161,10 @@ def evaluate_horizon_target(test_h, target, horizon, scaler, ensemble_weights):
             "Ensemble_MAE": round(t_ensemble_mae, 2),
             "Ensemble_Beats_Single": bool(t_ensemble_mae < t_best_mae),
             "Ensemble_Improvement_over_Naive_%": improvement(t_ensemble_mae, t_naive_mae),
+            "Ensemble_Directional_Accuracy_%": round(t_dir_acc, 2),
+            "Std_Error": round(error_stats["std_error"], 4),
+            "P10": round(error_stats["p10"], 4),
+            "P90": round(error_stats["p90"], 4),
         })
 
     return overall_row, per_ticker_rows

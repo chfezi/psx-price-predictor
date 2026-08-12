@@ -1,188 +1,194 @@
-# Frontend (Phase 8): PSX Predictor dashboard
+# Stock detail view design
 
-This document covers the Phase 8 dashboard for the PSX stock prediction project, built after the Phase 9 migration to Open and Close prediction targets. The dashboard is a single Streamlit page meant for a demo audience that includes non-technical viewers, so it stays on one screen and keeps interaction to a minimum.
+This is a companion to `frontend.md`. That file covers the main dashboard: a
+single-page grid of all 25 stocks with the summary stat cards at the top.
+This file covers a second piece, a detail view for one stock at a time,
+styled after the FundForge dashboard's Bitcoin detail screen. It only
+appears when a user selects a stock, so the main page stays as simple as the
+supervisor asked for.
 
-## Design decisions
+## Layout
 
-The page has no sidebar, no multi-step flow, and no separate detail view. Everything a viewer needs sits on one scrollable page.
+**Header.** Ticker and company name sit on the left. The right side shows
+yesterday's actual open and close, in large text, with the date directly
+below in smaller muted text. This is deliberately the previous day's real
+prices, not a prediction, so the user has a fixed reference point before
+looking at anything the model produced.
 
-Each stock gets a card. A card holds yesterday's actual Open and Close, a horizon selector, the predicted Open and Close for the selected horizon with a percentage change against yesterday's actual price, and a trend line for the predicted Close across all five horizons.
+**Horizon selector.** Five pills: 1d, 5d, 10d, 20d, 60d. Selecting one
+updates the chart and every stat below it.
 
-The horizon selector (1d, 5d, 10d, 20d, 60d) is the one interactive control on the page. It was added after the earlier no-button design proved too limited: without it, a viewer had no way to see the predicted price at a specific horizon, only the overall trend line. Everything else on the page is visible without a click.
+**Chart.** A solid line shows price history up to today. A dashed vertical
+line marks today. From that point, the chart splits into three dashed lines:
+an upper bound, a lower bound, and a center line running to the predicted
+close at the selected horizon. The area between the upper and lower bound is
+filled at low opacity, so the band widens visibly as the horizon grows. This
+mirrors what your Phase 6 and 7 work already produces: the error-distribution
+range around each prediction, not a flat point estimate.
 
-The trend line plots Close only, not Open. Two overlapping lines per card made the grid harder to read, and Close is the figure most people already associate with a stock's daily price.
+**Stat row.** Three cards:
 
-A summary row at the top gives three numbers: how many stocks are tracked, how many are predicted to rise from yesterday's Close by the next trading day, and how many are predicted to fall.
+1. Predicted open and close for the selected horizon.
+2. Improvement over the naive baseline, as a percentage.
+3. Directional accuracy, as a percentage.
 
-Color follows a plain rule throughout: green for a predicted increase, red for a predicted decrease. Streamlit's `st.metric` widget applies this automatically from the sign of the delta, so the badges do not need custom styling.
+The 100 minus MAPE accuracy score used in the Phase 4 through 7 dashboards is
+left out on purpose. Your own naive baseline test found it scores close to
+the model itself for most PSX stocks (HBL's XGBoost model was ahead of naive
+by only 0.5 to 0.7 points), because daily price moves are small enough that
+"no change from yesterday" already looks accurate on that metric. Improvement
+over naive and directional accuracy are the two numbers that actually say
+whether the model is doing something naive cannot.
 
-## Data the dashboard expects
+**Day over day change.** A line below the stat row showing the percentage
+change from yesterday's actual open to the predicted open, and from
+yesterday's actual close to the predicted close.
 
-The dashboard reads a CSV with one row per stock and these columns:
+**Top drivers.** Three small tags showing the top SHAP features for this
+prediction, each with an up or down arrow and colored green or red depending
+on whether that feature pushed the prediction up or down. This reuses the
+SHAP top-3 output already wired into the Phase 6 app, just displayed as tags
+instead of a table.
 
-```
-Ticker, Yesterday_Open, Yesterday_Close,
-Pred_Open_1d, Pred_Close_1d,
-Pred_Open_5d, Pred_Close_5d,
-Pred_Open_10d, Pred_Close_10d,
-Pred_Open_20d, Pred_Close_20d,
-Pred_Open_60d, Pred_Close_60d
-```
+## Where each number comes from
 
-`manage_model_storage.py` already produces Open and Close model files per horizon after Phase 9. This dashboard does not load those model files directly. It expects a separate assembly step that runs each stock's latest feature row through the right model for each horizon and target, then writes the results into the file above. If that assembly script does not exist yet, `load_predictions()` below falls back to sample data for four stocks so the dashboard can be built and reviewed on its own.
+| Element | Source |
+|---|---|
+| Yesterday's open and close | Last row of the stock's data before the prediction date, in the Phase 9 dataset |
+| Predicted open and close | `phase9_predictions.csv` (or the equivalent assembly script output), keyed by ticker and horizon |
+| Confidence band bounds | `compute_backtested_error_distribution()` in `model_utils.py`, at the selected horizon |
+| Improvement over naive | `Improvement_over_Naive_%` column from the Phase 7 eval table, per ticker and horizon |
+| Directional accuracy | `Directional Accuracy` column from the same eval table |
+| Top drivers | Existing SHAP output already computed in the Phase 6 app |
 
-## Full code
+None of these need to be computed live in the Streamlit app. They should all
+be precomputed and read from the saved CSVs and pickled eval tables, the same
+way the rest of the dashboard already works.
+
+## Fitting this into the existing page
+
+The main page from `frontend.md` stays the default view: the summary stat
+cards and the grid or list of all 25 stocks. Add a click handler (or a
+`st.selectbox` as a simpler alternative) that sets a ticker in
+`st.session_state`. When a ticker is selected, render this detail view below
+or beside the main grid. No new page and no navigation bar, the whole thing
+stays on one screen.
+
+## Streamlit implementation
 
 ```python
-"""
-Phase 8 dashboard for the PSX stock prediction project.
-Single page, built for a demo audience that includes non-technical
-viewers. The horizon selector is the only interactive control on
-the page. Everything else is visible without a click.
-
-Requires streamlit >= 1.36 for st.segmented_control. On an older
-version, swap that call for st.radio(horizontal=True).
-"""
-
 import streamlit as st
-import pandas as pd
-from datetime import datetime
+import plotly.graph_objects as go
 
-st.set_page_config(page_title="PSX Predictor", layout="wide")
-
-HORIZONS = ["1d", "5d", "10d", "20d", "60d"]
-
-COMPANY_NAMES = {
-    "HBL": "Habib Bank",
-    "ENGRO": "Engro Corp",
-    "LUCK": "Lucky Cement",
-    "FFC": "Fauji Fertilizer",
-    "OGDC": "Oil and Gas Dev",
-    "MEBL": "Meezan Bank",
-}
+HORIZON_DAYS = {"1d": 1, "5d": 5, "10d": 10, "20d": 20, "60d": 60}
 
 
-def load_predictions(path: str = "phase9_predictions.csv") -> pd.DataFrame:
+def render_stock_detail(ticker, data, horizon="5d"):
     """
-    Loads the Phase 9 predictions file. See the column list in
-    frontend.md for the expected schema. Falls back to sample_predictions()
-    if the file is not found, so the dashboard can be tested before the
-    prediction assembly step is wired up.
+    data keys:
+        company_name, yesterday_open, yesterday_close, date,
+        predicted_open, predicted_close,
+        improvement_vs_naive, directional_accuracy,
+        top_drivers: list of (feature_name, "up" or "down"),
+        history_prices: list of recent closes ending at today,
+        cone_upper_end, cone_lower_end: predicted band bounds at the horizon
     """
-    try:
-        return pd.read_csv(path)
-    except FileNotFoundError:
-        st.warning(f"{path} not found. Showing sample data.")
-        return sample_predictions()
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown(f"### {ticker}")
+        st.caption(data["company_name"])
+    with col2:
+        oc1, oc2 = st.columns(2)
+        oc1.metric("Open", f"{data['yesterday_open']:.2f}")
+        oc2.metric("Close", f"{data['yesterday_close']:.2f}")
+        st.caption(data["date"])
 
+    horizon = st.segmented_control(
+        "Horizon",
+        list(HORIZON_DAYS.keys()),
+        default=horizon,
+        key=f"horizon_{ticker}",
+    )
+    horizon_days = HORIZON_DAYS[horizon]
 
-def sample_predictions() -> pd.DataFrame:
-    """Sample data for four stocks, used only when the real predictions
-    file is missing."""
-    rows = [
-        dict(Ticker="HBL", Yesterday_Open=146.80, Yesterday_Close=148.20,
-             Pred_Open_1d=149.50, Pred_Close_1d=151.30,
-             Pred_Open_5d=151.10, Pred_Close_5d=153.20,
-             Pred_Open_10d=153.10, Pred_Close_10d=155.80,
-             Pred_Open_20d=155.30, Pred_Close_20d=158.30,
-             Pred_Open_60d=157.80, Pred_Close_60d=161.20),
-        dict(Ticker="ENGRO", Yesterday_Open=306.90, Yesterday_Close=305.50,
-             Pred_Open_1d=304.20, Pred_Close_1d=302.80,
-             Pred_Open_5d=302.30, Pred_Close_5d=299.10,
-             Pred_Open_10d=299.20, Pred_Close_10d=294.50,
-             Pred_Open_20d=296.40, Pred_Close_20d=290.80,
-             Pred_Open_60d=295.30, Pred_Close_60d=288.90),
-        dict(Ticker="LUCK", Yesterday_Open=810.20, Yesterday_Close=812.75,
-             Pred_Open_1d=815.40, Pred_Close_1d=818.20,
-             Pred_Open_5d=821.10, Pred_Close_5d=825.60,
-             Pred_Open_10d=829.20, Pred_Close_10d=835.10,
-             Pred_Open_20d=835.20, Pred_Close_20d=842.30,
-             Pred_Open_60d=842.10, Pred_Close_60d=850.40),
-        dict(Ticker="FFC", Yesterday_Open=131.10, Yesterday_Close=132.40,
-             Pred_Open_1d=133.20, Pred_Close_1d=133.80,
-             Pred_Open_5d=134.30, Pred_Close_5d=135.90,
-             Pred_Open_10d=136.10, Pred_Close_10d=138.20,
-             Pred_Open_20d=138.00, Pred_Close_20d=140.50,
-             Pred_Open_60d=139.80, Pred_Close_60d=142.60),
-    ]
-    return pd.DataFrame(rows)
+    history = data["history_prices"]
+    n = len(history)
+    future_x = [n - 1, n - 1 + horizon_days]
 
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=list(range(n)), y=history, mode="lines",
+        line=dict(color="#5F5E5A", width=2), name="History",
+    ))
+    fig.add_trace(go.Scatter(
+        x=future_x + future_x[::-1],
+        y=[history[-1], data["cone_upper_end"],
+           data["cone_lower_end"], history[-1]],
+        fill="toself", fillcolor="rgba(29,158,117,0.12)",
+        line=dict(color="rgba(0,0,0,0)"), showlegend=False,
+    ))
+    fig.add_trace(go.Scatter(
+        x=future_x, y=[history[-1], data["predicted_close"]],
+        mode="lines+markers",
+        line=dict(color="#1D9E75", width=2, dash="dash"),
+        name="Prediction",
+    ))
+    fig.add_vline(x=n - 1, line_dash="dot", line_color="gray",
+                  annotation_text="Today")
+    fig.update_layout(height=280, margin=dict(l=10, r=10, t=10, b=10),
+                       showlegend=False)
+    st.plotly_chart(fig, use_container_width=True)
 
-def pct_change(new_value, old_value):
-    return (new_value - old_value) / old_value * 100
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Predicted open / close",
+              f"{data['predicted_open']:.2f} / {data['predicted_close']:.2f}")
+    m2.metric("Improvement vs naive",
+              f"{data['improvement_vs_naive']:+.1f}%")
+    m3.metric("Directional accuracy",
+              f"{data['directional_accuracy']:.0f}%")
 
+    open_chg = (data["predicted_open"] - data["yesterday_open"]) \
+        / data["yesterday_open"] * 100
+    close_chg = (data["predicted_close"] - data["yesterday_close"]) \
+        / data["yesterday_close"] * 100
+    st.caption(
+        f"Open vs yesterday: {open_chg:+.2f}%    "
+        f"Close vs yesterday: {close_chg:+.2f}%"
+    )
 
-def render_card(row: pd.Series):
-    ticker = row["Ticker"]
-    name = COMPANY_NAMES.get(ticker, ticker)
-
-    with st.container(border=True):
-        top_left, top_right = st.columns([2, 3])
-        with top_left:
-            st.markdown(f"**{ticker}**")
-            st.caption(name)
-        with top_right:
-            horizon = st.segmented_control(
-                "Horizon", HORIZONS, default="1d",
-                key=f"horizon_{ticker}", label_visibility="collapsed",
-            )
-        if horizon is None:
-            horizon = "1d"
-
-        st.caption(
-            f"Kal: Open Rs {row['Yesterday_Open']:.2f}, "
-            f"Close Rs {row['Yesterday_Close']:.2f}"
+    st.caption("Top drivers")
+    tags = []
+    for feature, direction in data["top_drivers"]:
+        bg = "#EAF3DE" if direction == "up" else "#FCEBEB"
+        fg = "#27500A" if direction == "up" else "#791F1F"
+        arrow = "up" if direction == "up" else "down"
+        tags.append(
+            f'<span style="background:{bg}; color:{fg}; padding:3px 10px; '
+            f'border-radius:999px; font-size:12px; margin-right:6px;">'
+            f'{arrow} {feature}</span>'
         )
-
-        open_val = row[f"Pred_Open_{horizon}"]
-        close_val = row[f"Pred_Close_{horizon}"]
-        open_pct = pct_change(open_val, row["Yesterday_Open"])
-        close_pct = pct_change(close_val, row["Yesterday_Close"])
-
-        col1, col2 = st.columns(2)
-        col1.metric("Predicted Open", f"Rs {open_val:.2f}", f"{open_pct:+.1f}%")
-        col2.metric("Predicted Close", f"Rs {close_val:.2f}", f"{close_pct:+.1f}%")
-
-        trend = pd.DataFrame(
-            {"Close": [row[f"Pred_Close_{h}"] for h in HORIZONS]},
-            index=HORIZONS,
-        )
-        st.line_chart(trend, height=120)
-
-
-def main():
-    df = load_predictions()
-
-    st.markdown("### PSX Predictor")
-    st.caption(f"Last updated {datetime.now().strftime('%b %d, %Y, %I:%M %p')}")
-
-    gainers = (df["Pred_Close_1d"] > df["Yesterday_Close"]).sum()
-    losers = (df["Pred_Close_1d"] < df["Yesterday_Close"]).sum()
-
-    stat1, stat2, stat3 = st.columns(3)
-    stat1.metric("Stocks tracked", len(df))
-    stat2.metric("Gainers today", int(gainers))
-    stat3.metric("Losers today", int(losers))
-
-    cols_per_row = 3
-    chunks = [df.iloc[i:i + cols_per_row] for i in range(0, len(df), cols_per_row)]
-    for chunk in chunks:
-        cols = st.columns(cols_per_row)
-        for col, (_, row) in zip(cols, chunk.iterrows()):
-            with col:
-                render_card(row)
-
-
-if __name__ == "__main__":
-    main()
+    st.markdown(" ".join(tags), unsafe_allow_html=True)
 ```
 
-## Wiring it into the pipeline
+## Selecting a stock from the main grid
 
-Two things stand between this file and a working demo. First, `COMPANY_NAMES` only covers the six tickers used while testing the layout in this document. It needs an entry for all 25 stocks in the dataset, or a lookup against whatever name field already exists in `master_dataset.csv`. Second, and more important, `phase9_predictions.csv` does not exist yet. It needs a script that loads each of the 50 Phase 9 models, runs the latest feature row for each stock through the right model for each horizon and target, and writes one row per stock into the schema shown above. That script can live alongside `train_models_phase9.py` or as a new `generate_predictions.py`, whichever fits the rest of the Phase 9 file layout better.
+```python
+if "selected_ticker" not in st.session_state:
+    st.session_state.selected_ticker = None
 
-## Known limits
+st.session_state.selected_ticker = st.selectbox(
+    "View detail for", options=all_tickers,
+    index=None, placeholder="Select a stock",
+)
 
-A 3-column grid across 25 stocks runs to roughly nine rows, so the page requires scrolling. That is expected for a single-page layout at this stock count and does not conflict with the no-navigation goal, since scrolling is not a control the viewer has to learn.
+if st.session_state.selected_ticker:
+    render_stock_detail(
+        st.session_state.selected_ticker,
+        get_stock_data(st.session_state.selected_ticker),
+    )
+```
 
-`st.segmented_control` needs Streamlit 1.36 or newer. If the deployment environment pins an older version, `st.radio(horizontal=True)` is a direct substitute with the same one-selection-per-card behavior, though it renders as radio buttons rather than pills.
+Replace the `st.selectbox` with a click handler on the grid cards if you want
+selection from the grid itself rather than a separate dropdown. Either way,
+`get_stock_data()` should pull from the sources listed in the table above,
+not recompute anything on the fly.
